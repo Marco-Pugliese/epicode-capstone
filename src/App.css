@@ -23,6 +23,7 @@
 }
 #navBarUp {
   background-color: #fff5e1;
+
   /* #00a86b #00ced1 #000000 #fff5e1 #fff44f; */
 }
 #navBarDown {
@@ -56,4 +57,10 @@
 .number {
   color: rgba(56, 56, 56, 0.785);
   font-size: 0.9em;
+}
+.smaller {
+  font-size: 0.8em;
+}
+.verdeMain {
+  color: #00a86b;
 }
