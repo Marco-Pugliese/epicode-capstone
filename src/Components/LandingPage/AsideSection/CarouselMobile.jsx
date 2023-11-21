@@ -10,7 +10,7 @@ const CarouselMobile = () => {
       <Carousel className="d-block d-md-none">
         {articles.articles.map((singleArticle) => {
           return (
-            <CarouselItem key={singleArticle.id}>
+            <CarouselItem className="py-4 px-2" key={singleArticle.id}>
               <SingleCard article={singleArticle} />
             </CarouselItem>
           );

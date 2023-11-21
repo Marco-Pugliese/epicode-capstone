@@ -66,14 +66,26 @@ body {
 .text-blue {
   color: var(--primary-Blue);
 }
+.text-green {
+  color: var(--primary-Green);
+}
 .text-blueDark {
   color: var(--primary-BlueDark);
 }
 .bg-yellow {
   background-color: var(--primary-Yellow);
 }
+.bg-sand {
+  background-color: var(--primary-Sand);
+}
 .bg-bluedark {
   background-color: var(--primary-BlueDark);
+}
+.border-yellow {
+  border-color: var(--primary-Yellow);
+}
+#footer .border-yellow {
+  border-color: var(--primary-Yellow) !important;
 }
 /* -----------------------------------------------HEADER---------------------------------------- */
 #header {
@@ -181,4 +193,17 @@ body {
 }
 #subAside {
   height: 75vh;
+}
+.carousel-control-prev-icon {
+  position: relative;
+  left: -1.5vw;
+  scale: 1.2;
+}
+.carousel-control-next-icon {
+  position: relative;
+  left: 1.5vw;
+  scale: 1.2;
+
+  border-top-right-radius: 50px;
+  border-bottom-right-radius: 50px;
 }

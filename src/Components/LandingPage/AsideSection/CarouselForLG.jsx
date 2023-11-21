@@ -7,7 +7,7 @@ const CarouselForLG = () => {
 
   return (
     <Carousel className="d-none d-xl-block myCarousel">
-      <Carousel.Item>
+      <Carousel.Item className="py-4 px-5">
         <Row>
           {articles.articles
             .filter((allArticles, i) => i < 5)
@@ -20,7 +20,7 @@ const CarouselForLG = () => {
             })}
         </Row>
       </Carousel.Item>
-      <Carousel.Item>
+      <Carousel.Item className="py-4 px-5">
         <Row>
           {articles.articles
             .filter((allArticles, i) => i > 4 && i < 10)
@@ -33,7 +33,7 @@ const CarouselForLG = () => {
             })}
         </Row>
       </Carousel.Item>
-      <Carousel.Item>
+      <Carousel.Item className="py-4 px-5">
         <Row>
           {articles.articles
             .filter((allArticles, i) => i > 9 && i < 15)

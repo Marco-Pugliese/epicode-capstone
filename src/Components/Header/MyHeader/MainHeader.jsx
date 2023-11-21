@@ -12,7 +12,10 @@ const MainHeader = () => {
       <Navbar expand="lg" id="navBarUp" className="py-2">
         <Container fluid className="mx-5 ">
           <Link to="/" className="nav-link fs-5 p-2 pe-5">
-            <div>MMPTREE IMAGE</div>
+            <div>
+              <img src="https://picsum.photos/75/50" alt="logo" />
+              <span className="mx-2 text-blueLight">LOREM_MUSIC</span>
+            </div>
           </Link>
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav">

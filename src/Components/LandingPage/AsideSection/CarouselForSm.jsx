@@ -12,7 +12,7 @@ const CarouselForSM = () => {
           .filter((allArticles, i) => i < 10)
           .map((singleArticle) => {
             return (
-              <CarouselItem key={singleArticle.id}>
+              <CarouselItem className="py-4 px-2" key={singleArticle.id}>
                 <SingleCard article={singleArticle} />
               </CarouselItem>
             );
@@ -23,7 +23,7 @@ const CarouselForSM = () => {
           .filter((allArticles, i) => i > 9 && i < 20)
           .map((singleArticle) => {
             return (
-              <CarouselItem key={singleArticle.id}>
+              <CarouselItem className="py-4 px-2" key={singleArticle.id}>
                 <SingleCard article={singleArticle} />
               </CarouselItem>
             );
