@@ -1,0 +1,226 @@
+[
+  {
+    "name": "Marco",
+    "surname": "Rossi",
+    "age": 25,
+    "email": "marcorossi@example.com",
+    "gender": "male",
+    "password": "marcopass"
+  },
+  {
+    "name": "Giulia",
+    "surname": "Bianchi",
+    "age": 30,
+    "email": "giuliabianchi@example.com",
+    "gender": "female",
+    "password": "giuliapass"
+  },
+  {
+    "name": "Luca",
+    "surname": "Verdi",
+    "age": 28,
+    "email": "lucaverdi@example.com",
+    "gender": "male",
+    "password": "lucapass"
+  },
+  {
+    "name": "Elena",
+    "surname": "Neri",
+    "age": 22,
+    "email": "elenaneri@example.com",
+    "gender": "female",
+    "password": "elenapass"
+  },
+  {
+    "name": "Alessandro",
+    "surname": "Marroni",
+    "age": 32,
+    "email": "alessandromarroni@example.com",
+    "gender": "male",
+    "password": "alessandropass"
+  },
+  {
+    "name": "Chiara",
+    "surname": "Gialli",
+    "age": 27,
+    "email": "chiaragialli@example.com",
+    "gender": "female",
+    "password": "chiarapass"
+  },
+  {
+    "name": "Simone",
+    "surname": "Blu",
+    "age": 29,
+    "email": "simoneblu@example.com",
+    "gender": "male",
+    "password": "simonepass"
+  },
+  {
+    "name": "Francesca",
+    "surname": "Rosa",
+    "age": 24,
+    "email": "francescarosa@example.com",
+    "gender": "female",
+    "password": "francescapass"
+  },
+  {
+    "name": "Matteo",
+    "surname": "Verde",
+    "age": 31,
+    "email": "matteoverde@example.com",
+    "gender": "male",
+    "password": "matteopass"
+  },
+  {
+    "name": "Laura",
+    "surname": "Neri",
+    "age": 26,
+    "email": "lauraneri@example.com",
+    "gender": "female",
+    "password": "laurapass"
+  },
+  {
+    "name": "Andrea",
+    "surname": "Giallo",
+    "age": 33,
+    "email": "andreagiallo@example.com",
+    "gender": "male",
+    "password": "andreapass"
+  },
+  {
+    "name": "Valentina",
+    "surname": "Rossa",
+    "age": 23,
+    "email": "valentinarossa@example.com",
+    "gender": "female",
+    "password": "valentinapass"
+  },
+  {
+    "name": "Davide",
+    "surname": "Marrone",
+    "age": 27,
+    "email": "davidemarrone@example.com",
+    "gender": "male",
+    "password": "davidepass"
+  },
+  {
+    "name": "Sara",
+    "surname": "Gialli",
+    "age": 29,
+    "email": "saragialli@example.com",
+    "gender": "female",
+    "password": "sarapass"
+  },
+  {
+    "name": "Roberto",
+    "surname": "Blu",
+    "age": 26,
+    "email": "robertoblu@example.com",
+    "gender": "male",
+    "password": "robertopass"
+  },
+  {
+    "name": "Elena",
+    "surname": "Rosa",
+    "age": 31,
+    "email": "elenarosa@example.com",
+    "gender": "female",
+    "password": "elenapass"
+  },
+  {
+    "name": "Luigi",
+    "surname": "Verdi",
+    "age": 28,
+    "email": "luigiverdi@example.com",
+    "gender": "male",
+    "password": "luigipass"
+  },
+  {
+    "name": "Martina",
+    "surname": "Neri",
+    "age": 24,
+    "email": "martinaneri@example.com",
+    "gender": "female",
+    "password": "martinapass"
+  },
+  {
+    "name": "Giovanni",
+    "surname": "Marroni",
+    "age": 32,
+    "email": "giovannimarroni@example.com",
+    "gender": "male",
+    "password": "giovannipass"
+  },
+  {
+    "name": "Anna",
+    "surname": "Gialli",
+    "age": 27,
+    "email": "annagialli@example.com",
+    "gender": "female",
+    "password": "annapass"
+  },
+  {
+    "name": "Paolo",
+    "surname": "Blu",
+    "age": 29,
+    "email": "paoloblu@example.com",
+    "gender": "male",
+    "password": "paolopass"
+  },
+  {
+    "name": "Elisa",
+    "surname": "Rosa",
+    "age": 22,
+    "email": "elisarosa@example.com",
+    "gender": "female",
+    "password": "elisapass"
+  },
+  {
+    "name": "Federico",
+    "surname": "Verde",
+    "age": 31,
+    "email": "federicoverde@example.com",
+    "gender": "male",
+    "password": "federicopass"
+  },
+  {
+    "name": "Silvia",
+    "surname": "Neri",
+    "age": 26,
+    "email": "silvianeri@example.com",
+    "gender": "female",
+    "password": "silviapass"
+  },
+  {
+    "name": "Andrea",
+    "surname": "Giallo",
+    "age": 33,
+    "email": "andreagiallo@example.com",
+    "gender": "male",
+    "password": "andreapass"
+  },
+  {
+    "name": "Valentina",
+    "surname": "Rossa",
+    "age": 23,
+    "email": "valentinarossa@example.com",
+    "gender": "female",
+    "password": "valentinapass"
+  },
+  {
+    "name": "Davide",
+    "surname": "Marrone",
+    "age": 27,
+    "email": "davidemarrone@example.com",
+    "gender": "male",
+    "password": "davidepass"
+  },
+  {
+    "name": "Sara",
+    "surname": "Gialli",
+    "age": 29,
+    "email": "saragialli@example.com",
+    "gender": "female",
+    "password": "sarapass"
+  }
+]

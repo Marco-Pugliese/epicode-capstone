@@ -37,6 +37,7 @@ const MainHeader = () => {
                 >
                   <InputGroup className="my-auto">
                     <Form.Control
+                      id="formControl"
                       value={input}
                       onChange={(e) => {
                         setInput(e.target.value);
@@ -44,11 +45,11 @@ const MainHeader = () => {
                       placeholder="Cerca..."
                       aria-label="Recipient's username"
                       aria-describedby="basic-addon2"
-                      className="bg-transparent searchInputField border-0 "
+                      className="bg-transparent rounded-start-5 searchInputField border-0 "
                     />
                     <InputGroup.Text
                       id="basic-addon2"
-                      className="bg-transparent border-0 border-start"
+                      className="bg-transparent border-0 border-start rounded-end-5"
                     >
                       <Search className="searchIcon" />
                     </InputGroup.Text>

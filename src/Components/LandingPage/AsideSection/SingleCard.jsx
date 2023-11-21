@@ -1,16 +1,16 @@
 import { Card } from "react-bootstrap";
-import { ArrowRightSquare, ArrowRightSquareFill } from "react-bootstrap-icons";
+import { ArrowRightSquareFill } from "react-bootstrap-icons";
 import { Link } from "react-router-dom";
 
-const SingleCard = () => {
+const SingleCard = ({ article }) => {
   return (
-    <Card className="mx-2 shadow-sm">
-      <Card.Img variant="top" src="https://placekitten.com/300/300" />
-      <Card.Body className="p-0 mx-0 text-center">
-        <Card.Title className="smaller">Card Title</Card.Title>
-        <Card.Text className="smaller number">Card Description</Card.Text>
+    <Card className="mx-2 shadow-sm h-100">
+      <Card.Img variant="top" src="https://picsum.photos/1000/800" />
+      <Card.Body className="p-0 mx-0 text-center d-flex flex-column justify-content-between py-1 ">
+        <Card.Title className="smaller">{article.title}</Card.Title>
+        <Card.Text className="smaller number">{article.subtitle}</Card.Text>
         <div className="text-end me-2 mb-1">
-          <Link to="/articles">
+          <Link to={`/articles/${article.id}`}>
             <ArrowRightSquareFill className="fs-5 verdeMain" />
           </Link>
         </div>

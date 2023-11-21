@@ -1,66 +1,184 @@
-.searchInputField:focus {
-  box-shadow: none !important;
-  border: 1.5px solid white;
+:root {
+  --primary-Yellow: #f2c879;
+  --primary-Sand: #d9c49c;
+  --primary-Green: #00a86b;
+  --primary-Blue: #1c3659;
+  --primary-BlueLight: #0798f2;
+  --primary-BlueDark: #171b26;
+  --primary-Light: #fff5e1;
+
+  --primary-Gray: #383838c8;
 }
+body {
+  background-color: var(--primary-BlueDark);
+}
+/* ------------------------------------------ANIMATION------------------------------------------ */
+.special {
+  color: var(--primary-Orange) !important;
+}
+.slide-top {
+  -webkit-animation: slide-top 1.25s ease-in-out infinite alternate-reverse both;
+  animation: slide-top 1.25s ease-in-out infinite alternate-reverse both;
+}
+
+@keyframes slide-top {
+  0% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  30% {
+    transform: translateX(0px);
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(-150px);
+    opacity: 0;
+  }
+}
+
+.slide-top2 {
+  animation: slide-top2 1.25s ease-in-out 1.25s infinite alternate-reverse both;
+}
+@keyframes slide-top2 {
+  0% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  30% {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-150px);
+    opacity: 0;
+  }
+}
+/* ---------------------------------------------------------------------------------------------- */
+.text-yellow {
+  color: var(--primary-Yellow);
+}
+.text-sand {
+  color: var(--primary-Sand);
+}
+.text-blueLight {
+  color: var(--primary-BlueLight);
+}
+.text-blue {
+  color: var(--primary-Blue);
+}
+.text-blueDark {
+  color: var(--primary-BlueDark);
+}
+.bg-yellow {
+  background-color: var(--primary-Yellow);
+}
+.bg-bluedark {
+  background-color: var(--primary-BlueDark);
+}
+/* -----------------------------------------------HEADER---------------------------------------- */
+#header {
+  z-index: 2;
+}
+
 .searchInputField,
 .searchIcon,
 #basic-addon2 {
   transition: all 0.6s;
 }
 .formSearch {
-  border: 2px solid #00a86b !important;
+  border: 2px solid var(--primary-Sand) !important;
 }
-.formSearch2 {
-  border: 2px solid #00a86b !important;
-  width: 100%;
+#formControl {
+  background-color: var(--primary-Sand) !important;
 }
-#basic-addon2:hover {
-  border: 1.5px solid white;
+#formControl::placeholder {
+  color: var(--primary-BlueDark) !important;
+}
+
+.searchIcon {
+  color: var(--primary-Sand);
 }
 .searchIcon:hover {
   cursor: pointer;
   scale: 1.2;
+  color: var(--primary-BlueLight);
 }
 #navBarUp {
-  background-color: #fff5e1;
-
-  /* #00a86b #00ced1 #000000 #fff5e1 #fff44f; */
+  z-index: 3;
+  background-color: var(--primary-BlueDark) !important;
 }
 #navBarDown {
-  background-color: #f6dfb1;
+  z-index: 3;
+  background-color: var(--primary-BlueDark);
 }
-.bg-chiaro {
-  background-color: #fff5e1;
-}
+
 .navHover {
   transition: all 0.6s;
+  color: var(--primary-Sand) !important;
 }
 .navHover:hover {
   scale: 1.1;
   transition: all 0.8s;
-  color: #00a86b !important;
+  color: var(--primary-BlueLight) !important;
   font-weight: 600;
 }
 .subNavHover {
-  color: #00a86b;
+  color: var(--primary-BlueLight);
 }
 .subNavHover:hover {
   transition: all 0.8s;
   font-weight: 600;
 }
+/* ------------------------------------------------------------------------------------------- */
+/* ------------------------------------------HERO--------------------------------------------- */
 #heroSection {
-  background-color: #00a86b;
+  background-color: var(--primary-Blue);
+  height: 66vh;
 }
+/* ----------------------------------SUBHERO_SEARCH SECTION------------------------------------ */
+
 #SearchHeroSection {
   width: 40%;
+  background-color: var(--primary-Sand);
 }
-.number {
-  color: rgba(56, 56, 56, 0.785);
-  font-size: 0.9em;
+#searchContainer {
+  background-color: var(--primary-BlueDark);
 }
+
+.searchInputField:focus {
+  box-shadow: none !important;
+  border: 1.5px solid white;
+}
+.formSearch2 {
+  border: 2px solid var(--primary-BlueDark);
+  width: 100%;
+}
+.searchInputField::placeholder {
+  color: var(--primary-BlueDark) !important;
+}
+#basic-addon2 {
+  background-color: var(--primary-BlueDark) !important;
+}
+
+/* ----------------------------------------------------------------------------------------------- */
+
 .smaller {
   font-size: 0.8em;
 }
-.verdeMain {
-  color: #00a86b;
+
+#footer {
+  background-color: var(--primary-BlueDark);
+}
+
+#landingPage {
+  z-index: 1;
+}
+
+/* --------------------------------------------CAROUSELS-------------------------------------------- */
+
+.myCarusel {
+  height: 100%;
+}
+#subAside {
+  height: 75vh;
 }

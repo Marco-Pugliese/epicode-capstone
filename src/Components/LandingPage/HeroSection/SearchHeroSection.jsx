@@ -9,10 +9,10 @@ const SearchHeroSection = () => {
   const [query2, setQuery2] = useState("");
   const navigate = useNavigate();
   return (
-    <div className="position-relative bg-chiaro">
+    <div id="searchContainer" className="position-relative">
       <div
         id="SearchHeroSection"
-        className="position-relative translate-middle start-50 p-5 bg-white rounded-5 shadow-lg"
+        className="position-relative translate-middle start-50 p-5 rounded-5 shadow-lg"
       >
         <Form
           className="formSearch2 rounded-5"
@@ -24,7 +24,7 @@ const SearchHeroSection = () => {
         >
           <InputGroup className="my-auto">
             <Form.Control
-              className="bg-transparent searchInputField border-0"
+              className="bg-transparent searchInputField border-0 "
               value={input2}
               onChange={(e) => {
                 setInput2(e.target.value);
@@ -34,7 +34,7 @@ const SearchHeroSection = () => {
             />
             <InputGroup.Text
               id="basic-addon2"
-              className="bg-transparent border-0 border-start"
+              className="bg-transparent border-0 border-start rounded-end-5"
             >
               <Search className="searchIcon" />
             </InputGroup.Text>

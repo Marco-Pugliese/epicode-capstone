@@ -1,0 +1,174 @@
+[
+  {
+    "name": "DJ Harmony",
+    "kind_of": "DJ",
+    "num_of": 1,
+    "genre": "Electronic",
+    "_events": [],
+    "band_components": ["Harold Thompson"],
+    "registered_mails": ["djharmony@example.com"],
+    "address": "Milano, Lombardia"
+  },
+  {
+    "name": "Funky Groovers",
+    "kind_of": "Band",
+    "num_of": 5,
+    "genre": "Funk",
+    "_events": [],
+    "band_components": [
+      "Sara Brown",
+      "Mike Davis",
+      "Chris White",
+      "Emma Turner",
+      "David Smith"
+    ],
+    "registered_mails": [
+      "sarab@example.com",
+      "miked@example.com",
+      "chrisw@example.com",
+      "emmat@example.com",
+      "davids@example.com"
+    ],
+    "address": "Roma, Lazio"
+  },
+  {
+    "name": "Melody Maker",
+    "kind_of": "Cantautore",
+    "num_of": 1,
+    "genre": "Pop",
+    "_events": [],
+    "band_components": ["George Miller"],
+    "registered_mails": ["melodym@example.com"],
+    "address": "Firenze, Toscana"
+  },
+  {
+    "name": "Reggae Roots",
+    "kind_of": "Band",
+    "num_of": 4,
+    "genre": "Reggae",
+    "_events": [],
+    "band_components": [
+      "John Davis",
+      "Lisa Smith",
+      "Carlos Brown",
+      "Emily Turner"
+    ],
+    "registered_mails": [
+      "johnd@example.com",
+      "lisas@example.com",
+      "carlosb@example.com",
+      "emilyt@example.com"
+    ],
+    "address": "Napoli, Campania"
+  },
+  {
+    "name": "Indie Dream",
+    "kind_of": "Cantautore",
+    "num_of": 1,
+    "genre": "Indie",
+    "_events": [],
+    "band_components": ["Isaac Turner"],
+    "registered_mails": ["indied@example.com"],
+    "address": "Torino, Piemonte"
+  },
+  {
+    "name": "Electronic Vibes",
+    "kind_of": "Band",
+    "num_of": 3,
+    "genre": "Electronic",
+    "_events": [],
+    "band_components": ["Alex Turner", "Julia Davis", "Max Smith"],
+    "registered_mails": [
+      "alext@example.com",
+      "juliad@example.com",
+      "maxs@example.com"
+    ],
+    "address": "Venezia, Veneto"
+  },
+  {
+    "name": "Soulful Sounds",
+    "kind_of": "Band",
+    "num_of": 6,
+    "genre": "Soul",
+    "_events": [],
+    "band_components": [
+      "Chris Smith",
+      "Emma Turner",
+      "Mike Davis",
+      "Sara Brown",
+      "David Turner",
+      "Laura Smith"
+    ],
+    "registered_mails": [
+      "chriss@example.com",
+      "emmat@example.com",
+      "miked@example.com",
+      "sarab@example.com",
+      "davidt@example.com",
+      "lauras@example.com"
+    ],
+    "address": "Bologna, Emilia-Romagna"
+  },
+  {
+    "name": "Acoustic Dream",
+    "kind_of": "Cantautore",
+    "num_of": 1,
+    "genre": "Acoustic",
+    "_events": [],
+    "band_components": ["Daniel Adams"],
+    "registered_mails": ["acousticd@example.com"],
+    "address": "Palermo, Sicilia"
+  },
+  {
+    "name": "Latin Grooves",
+    "kind_of": "Band",
+    "num_of": 4,
+    "genre": "Latin",
+    "_events": [],
+    "band_components": [
+      "Carlos Brown",
+      "Luisa Turner",
+      "Miguel Davis",
+      "Elena Smith"
+    ],
+    "registered_mails": [
+      "carlosb@example.com",
+      "luisat@example.com",
+      "migueld@example.com",
+      "elenas@example.com"
+    ],
+    "address": "Cagliari, Sardegna"
+  },
+  {
+    "name": "Alternative Explorer",
+    "kind_of": "Cantautore",
+    "num_of": 1,
+    "genre": "Alternative",
+    "_events": [],
+    "band_components": ["Andrew Anderson"],
+    "registered_mails": ["alternativee@example.com"],
+    "address": "Genova, Liguria"
+  },
+  {
+    "name": "Jazz Fusion Masters",
+    "kind_of": "Band",
+    "num_of": 5,
+    "genre": "Jazz",
+    "_events": [],
+    "band_components": [
+      "Emily Turner",
+      "John Davis",
+      "Lisa Smith",
+      "Mike Smith",
+      "Chris Brown"
+    ],
+    "registered_mails": [
+      "emilyt@example.com",
+      "johnd@example.com",
+      "lisas@example.com",
+      "mikes@example.com",
+      "chrisb@example.com"
+    ],
+    "address": "Reggio di Calabria, Calabria"
+  }
+]
