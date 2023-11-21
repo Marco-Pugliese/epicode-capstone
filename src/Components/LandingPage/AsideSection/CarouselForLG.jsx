@@ -3,13 +3,14 @@ import SingleCard from "./SingleCard";
 import { useSelector } from "react-redux";
 
 const CarouselForLG = () => {
-  const articles = useSelector((state) => state.articles);
-
-  return (
+  const articles = useSelector((state) => state.MyFetches.articles);
+  return articles === undefined ? (
+    ""
+  ) : (
     <Carousel className="d-none d-xl-block myCarousel">
       <Carousel.Item className="py-4 px-5">
         <Row>
-          {articles.articles
+          {articles
             .filter((allArticles, i) => i < 5)
             .map((singleArticle) => {
               return (
@@ -22,7 +23,7 @@ const CarouselForLG = () => {
       </Carousel.Item>
       <Carousel.Item className="py-4 px-5">
         <Row>
-          {articles.articles
+          {articles
             .filter((allArticles, i) => i > 4 && i < 10)
             .map((singleArticle) => {
               return (
@@ -35,7 +36,7 @@ const CarouselForLG = () => {
       </Carousel.Item>
       <Carousel.Item className="py-4 px-5">
         <Row>
-          {articles.articles
+          {articles
             .filter((allArticles, i) => i > 9 && i < 15)
             .map((singleArticle) => {
               return (

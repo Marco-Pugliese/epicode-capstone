@@ -78,6 +78,9 @@ body {
 .bg-sand {
   background-color: var(--primary-Sand);
 }
+.bg-blue {
+  background-color: var(--primary-Blue);
+}
 .bg-bluedark {
   background-color: var(--primary-BlueDark);
 }
@@ -191,7 +194,7 @@ body {
 .myCarusel {
   height: 100%;
 }
-#subAside {
+#subAsideSection {
   height: 75vh;
 }
 .carousel-control-prev-icon {
@@ -206,4 +209,11 @@ body {
 
   border-top-right-radius: 50px;
   border-bottom-right-radius: 50px;
+}
+#article {
+  transition: all 0.6s;
+  cursor: pointer;
+}
+#article:hover {
+  scale: 1.05;
 }

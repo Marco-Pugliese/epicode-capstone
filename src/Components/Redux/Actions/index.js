@@ -1,32 +1,90 @@
-export const SHOW_ARTISTS = "SHOW ARTISTS";
-export const SHOW_ARTICLES = "SHOW ARTICLES";
-export const SHOW_USERS = "SHOW USERS";
-export const SHOW_ACTIVITIES = "SHOW ACTIVITIES";
+export const GET_USERS_FETCH = "GET_USERS_FETCH";
+export const GET_ARTISTS_FETCH = "GET_ARTISTS_FETCH";
+export const GET_ACTIVITIES_FETCH = "GET_ACTIVITIES_FETCH";
+export const GET_ARTICLES_FETCH = "GET_ARTICLES_FETCH";
 
-export const showArtistsAction = (payload) => {
-  return {
-    type: SHOW_ARTISTS,
-    payload: payload,
+export const getUsersAction = () => {
+  return (dispatch) => {
+    fetch(`http://localhost:3000/users`)
+      .then((res) => {
+        if (res.ok) {
+          return res.json();
+        } else {
+          throw new Error("Error while getting the datas");
+        }
+      })
+      .then((datas) => {
+        dispatch({
+          type: GET_USERS_FETCH,
+          payload: datas,
+        });
+      })
+      .catch((err) => {
+        console.log("error:", err);
+      });
   };
 };
 
-export const showArticlesAction = (payload) => {
-  return {
-    type: SHOW_ARTICLES,
-    payload: payload,
+export const getArtistsAction = () => {
+  return (dispatch) => {
+    fetch(`http://localhost:3000/artists`)
+      .then((res) => {
+        if (res.ok) {
+          return res.json();
+        } else {
+          throw new Error("Error while getting the datas");
+        }
+      })
+      .then((datas) => {
+        dispatch({
+          type: GET_ARTISTS_FETCH,
+          payload: datas,
+        });
+      })
+      .catch((err) => {
+        console.log("error:", err);
+      });
   };
 };
-
-export const showUsersAction = (payload) => {
-  return {
-    type: SHOW_USERS,
-    payload: payload,
+export const getActivitiesAction = () => {
+  return (dispatch) => {
+    fetch(`http://localhost:3000/activities`)
+      .then((res) => {
+        if (res.ok) {
+          return res.json();
+        } else {
+          throw new Error("Error while getting the datas");
+        }
+      })
+      .then((datas) => {
+        dispatch({
+          type: GET_ACTIVITIES_FETCH,
+          payload: datas,
+        });
+      })
+      .catch((err) => {
+        console.log("error:", err);
+      });
   };
 };
-
-export const showActivitiesAction = (payload) => {
-  return {
-    type: SHOW_ACTIVITIES,
-    payload: payload,
+export const getArticlesAction = () => {
+  return (dispatch) => {
+    fetch(`http://localhost:3000/articles`)
+      .then((res) => {
+        if (res.ok) {
+          return res.json();
+        } else {
+          throw new Error("Error while getting the datas");
+        }
+      })
+      .then((datas) => {
+        dispatch({
+          type: GET_ARTICLES_FETCH,
+          payload: datas,
+        });
+      })
+      .catch((err) => {
+        console.log("error:", err);
+      });
   };
 };

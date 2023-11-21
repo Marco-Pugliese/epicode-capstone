@@ -1,15 +1,9 @@
 import { configureStore } from "@reduxjs/toolkit";
 import { combineReducers } from "@reduxjs/toolkit";
-import activities from "../Reducers/activities";
-import articles from "../Reducers/articles";
-import artists from "../Reducers/artists";
-import users from "../Reducers/users";
+import MyFetches from "../Reducers/MyFetches";
 
 const combinedReducers = combineReducers({
-  users,
-  artists,
-  articles,
-  activities,
+  MyFetches,
 });
 
 const store = configureStore({
