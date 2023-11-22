@@ -1,15 +1,18 @@
-import { Container } from "react-bootstrap";
-import { useDispatch } from "react-redux";
-import { logOutAction } from "../../Redux/Actions";
 import { Link } from "react-router-dom";
+import { useDispatch } from "react-redux";
+import { logOutAction } from "../Redux/Actions";
 
-const LogOutHeader = () => {
+const WelcomeMessage = ({ user }) => {
   const dispatch = useDispatch();
   return (
-    <Container id="navBarDown" fluid className="px-5">
+    <>
+      <div className="text-end pe-3 fw-bold ">
+        <span className="fw-normal">Ciao, </span>
+        {user[0].name}
+      </div>
       <div className="d-flex justify-content-end">
         <Link
-          to="/"
+          to="../"
           className="nav-link"
           onClick={() => {
             dispatch(logOutAction());
@@ -18,7 +21,7 @@ const LogOutHeader = () => {
           <div className="mx-2 subNavHover">Esegui Log-Out...</div>
         </Link>
       </div>
-    </Container>
+    </>
   );
 };
-export default LogOutHeader;
+export default WelcomeMessage;

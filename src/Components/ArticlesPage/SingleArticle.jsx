@@ -11,15 +11,23 @@ const SingleArticle = ({ article }) => {
                 <Card.Img variant="top" src="https://picsum.photos/1000/800" />
                 <Card.Body className="bg-sand">
                   <Card.Title>
-                    <div className="display-6 text-center fw-bold">
-                      {article.title}{" "}
-                    </div>
-                    <div className="text-end">
-                      <span className="smaller">di {article.author}</span>
-                      <span className="smaller">. il {article.date}</span>
+                    <div className="display-6 fw-bold">{article.title} </div>
+                    <div className="text-end extrasmall text-gray">
+                      <span className="smaller">
+                        di
+                        <span className="fw-bold fst-italic ms-1">
+                          {article.author}
+                        </span>
+                      </span>
+                      <span className="smaller">
+                        . in data:
+                        <span className="fw-bold fst-italic ms-1">
+                          {article.date}
+                        </span>
+                      </span>
                     </div>
                   </Card.Title>
-                  <Card.Text className="fw-bold fs-6 text-center">
+                  <Card.Text className="fw-bold fs-6 ">
                     {article.subtitle}
                   </Card.Text>
                   <Card.Text>{article.article}</Card.Text>

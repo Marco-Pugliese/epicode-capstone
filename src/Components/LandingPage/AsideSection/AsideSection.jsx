@@ -3,7 +3,7 @@ import SubAside from "./SubAside";
 
 const AsideSection = () => {
   return (
-    <div className="bg-yellow">
+    <div className="bg-sand">
       <MainAside />
       <SubAside />
     </div>

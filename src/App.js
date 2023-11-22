@@ -15,6 +15,7 @@ import {
 } from "./Components/Redux/Actions";
 import ArticlesPage from "./Components/ArticlesPage/ArticlesPage";
 import LogInPage from "./Components/LogInPage/LogInPage";
+import AccountPage from "./Components/AccountPage/AccountPage";
 
 function App() {
   const dispatch = useDispatch();
@@ -35,6 +36,7 @@ function App() {
           <Route path="/" element={<LandingPage />} />
           <Route path="/articles/:id" element={<ArticlesPage />} />
           <Route path="/login" element={<LogInPage />} />
+          <Route path="/account/:id" element={<AccountPage />} />
         </Routes>
       </div>
       <MyFooter />
