@@ -65,7 +65,7 @@ const SignUp = () => {
           <Form.Check type="checkbox" label="I accept the terms of use" />
         </Form.Group>
         <Button variant="primary" type="submit">
-          Submit
+          Sign-In
         </Button>
       </Form>
     </Col>
