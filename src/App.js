@@ -14,6 +14,7 @@ import {
   getUsersAction,
 } from "./Components/Redux/Actions";
 import ArticlesPage from "./Components/ArticlesPage/ArticlesPage";
+import LogInPage from "./Components/LogInPage/LogInPage";
 
 function App() {
   const dispatch = useDispatch();
@@ -26,14 +27,18 @@ function App() {
   }, []);
 
   return (
-    <>
+    <div className="d-flex flex-column h-100">
       <MyHeader />
-      <Routes>
-        <Route path="/" element={<LandingPage />} />
-        <Route path="/articles/:id" element={<ArticlesPage />} />
-      </Routes>
+
+      <div className="flex-grow-1">
+        <Routes>
+          <Route path="/" element={<LandingPage />} />
+          <Route path="/articles/:id" element={<ArticlesPage />} />
+          <Route path="/login" element={<LogInPage />} />
+        </Routes>
+      </div>
       <MyFooter />
-    </>
+    </div>
   );
 }
 
