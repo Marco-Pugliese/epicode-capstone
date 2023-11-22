@@ -9,18 +9,23 @@ const LogInPage = () => {
   return (
     <Container fluid className="bg-blueLight py-5 h-100 ">
       <Row className="justify-content-center">
-        <div
-          className="d-flex justify-content-center pt-4 pb-2 "
-          onClick={() => {
-            setRegistered(!registered);
-          }}
-        >
+        <div className="d-flex justify-content-center pt-4 pb-2 ">
           {registered === true ? (
-            <div className="loginsignin px-1 text-center">
+            <div
+              className="loginsignin px-1 text-center"
+              onClick={() => {
+                setRegistered(!registered);
+              }}
+            >
               Don't have an account?
             </div>
           ) : (
-            <div className="loginsignin px-1 text-center">
+            <div
+              className="loginsignin px-1 text-center"
+              onClick={() => {
+                setRegistered(!registered);
+              }}
+            >
               Already have an account?
             </div>
           )}

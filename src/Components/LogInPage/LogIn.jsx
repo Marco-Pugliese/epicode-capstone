@@ -1,9 +1,11 @@
 import { useEffect, useState } from "react";
 import { Alert, Button, Col, Form } from "react-bootstrap";
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
+import { logInAction } from "../Redux/Actions";
 
 const LogIn = () => {
+  const dispatch = useDispatch();
   const navigate = useNavigate();
   const [isPasswordWrong, setIsPasswordWrong] = useState(false);
   const allUsers = useSelector((state) => state.MyFetches.users);
@@ -17,7 +19,7 @@ const LogIn = () => {
         allUsers.filter((user) => user.password === password)
       ) {
         allUsers.map((user) =>
-          user.email === email ? setAccountLoggedIn(user) : console.log("gne")
+          user.email === email ? setAccountLoggedIn(user) : null
         );
       }
     }
@@ -34,6 +36,10 @@ const LogIn = () => {
           e.preventDefault();
           console.log("password utente", accountLoggedIn.password);
           console.log("password scritta:", password);
+          accountLoggedIn.id !== undefined &&
+          accountLoggedIn.password === password
+            ? dispatch(logInAction(accountLoggedIn))
+            : setIsPasswordWrong(true);
           accountLoggedIn.id !== undefined &&
           accountLoggedIn.password === password
             ? navigate(`../account/${accountLoggedIn.id}`)

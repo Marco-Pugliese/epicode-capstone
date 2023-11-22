@@ -53,6 +53,94 @@
       "gender": "female",
       "password": "chiarapass",
       "id": "6"
+    },
+    {
+      "name": "Marco",
+      "surname": "Pugliese",
+      "email": "marco.pugliese92@yahoo.com",
+      "password": "marcomarco",
+      "id": 7,
+      "birthday": "1992-03-12"
+    },
+    {
+      "name": "Andrea",
+      "surname": "Pugliese",
+      "email": "andrea@email.it",
+      "password": "password",
+      "id": 8,
+      "birthday": "1989-08-14"
+    },
+    {
+      "name": "salvatore",
+      "surname": "pugliese",
+      "email": "salvatore@test.it",
+      "password": "test",
+      "id": 9,
+      "birthday": "275760-02-27"
+    },
+    {
+      "name": "mamma",
+      "surname": "mamma",
+      "email": "mamma@test.it",
+      "password": "test",
+      "id": 10,
+      "birthday": "1212-12-12"
+    },
+    {
+      "name": "papa",
+      "surname": "papa",
+      "email": "papa@test.it",
+      "password": "test",
+      "id": 11,
+      "birthday": "1010-10-10"
+    },
+    {
+      "name": "mama",
+      "surname": "msms",
+      "email": "mamama@mama.ma",
+      "password": "mama",
+      "id": 12,
+      "birthday": "1212-12-12"
+    },
+    {
+      "name": "fdsassssss",
+      "surname": "fldkanfladmnfal",
+      "email": "mamaiiii@example.it",
+      "password": "examplenononono",
+      "id": 13,
+      "birthday": "1998-12-12"
+    },
+    {
+      "name": "marcomama",
+      "surname": "mamamarco",
+      "email": "esempio@test.it",
+      "password": "test",
+      "id": 14,
+      "birthday": "1212-03-12"
+    },
+    {
+      "name": "marco",
+      "surname": "marcomarco",
+      "email": "marcomarco@marco.it",
+      "password": "marco",
+      "id": 15,
+      "birthday": "1289-12-19"
+    },
+    {
+      "name": "kajdkal",
+      "surname": "kfjalfkan",
+      "email": "marcoomaoifal@ghaj.uc",
+      "password": "alfalkjf",
+      "id": 16,
+      "birthday": "2281-09-12"
+    },
+    {
+      "name": "gadòkfjdalkjfalks",
+      "surname": "KDFJLAKFJALKJFALKJ",
+      "email": "gkdldkfgfgag@fladkfjlak.com",
+      "password": "goaijflakjlsakdjlaklsdjlaksdjaks",
+      "id": 17,
+      "birthday": "1888-12-18"
     }
   ],
   "artists": [
@@ -62,8 +150,12 @@
       "num_of": 1,
       "genre": "Electronic",
       "_events": [],
-      "band_components": ["Harold Thompson"],
-      "registered_mails": ["djharmony@example.com"],
+      "band_components": [
+        "Harold Thompson"
+      ],
+      "registered_mails": [
+        "djharmony@example.com"
+      ],
       "address": "Milano, Lombardia",
       "id": "1"
     },
@@ -96,8 +188,12 @@
       "num_of": 1,
       "genre": "Pop",
       "_events": [],
-      "band_components": ["George Miller"],
-      "registered_mails": ["melodym@example.com"],
+      "band_components": [
+        "George Miller"
+      ],
+      "registered_mails": [
+        "melodym@example.com"
+      ],
       "address": "Firenze, Toscana",
       "id": "3"
     },
@@ -128,8 +224,12 @@
       "num_of": 1,
       "genre": "Indie",
       "_events": [],
-      "band_components": ["Isaac Turner"],
-      "registered_mails": ["indied@example.com"],
+      "band_components": [
+        "Isaac Turner"
+      ],
+      "registered_mails": [
+        "indied@example.com"
+      ],
       "address": "Torino, Piemonte",
       "id": "5"
     }

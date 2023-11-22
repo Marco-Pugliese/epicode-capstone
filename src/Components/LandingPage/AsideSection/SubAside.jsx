@@ -19,9 +19,7 @@ const SubAside = () => {
             <CarouselForSM articles={articles.articles} />
             <CarouselMobile articles={articles.articles} />
           </>
-        ) : (
-          console.log("Aija")
-        )}
+        ) : null}
       </Container>
     </Container>
   );
