@@ -182,6 +182,7 @@
       ],
       "registered_mails": [
         "sarab@example.com",
+        "marcorossi@example.com",
         "miked@example.com",
         "chrisw@example.com",
         "emmat@example.com",
@@ -221,7 +222,8 @@
         "johnd@example.com",
         "lisas@example.com",
         "carlosb@example.com",
-        "emilyt@example.com"
+        "emilyt@example.com",
+        "marcorossi@example.com"
       ],
       "address": "Napoli, Campania",
       "id": "4"
@@ -240,6 +242,134 @@
       ],
       "address": "Torino, Piemonte",
       "id": "5"
+    },
+    {
+      "name": "Oasis",
+      "kind_of": "Band",
+      "genre": "BritRock",
+      "_events": [],
+      "band_components": [
+        "Noel, Liam"
+      ],
+      "registered_mails": [
+        "marcorossi@example.com",
+        "ciccioscala@esempio.it"
+      ],
+      "address": "Procida, Campania, Italia",
+      "id": 6
+    },
+    {
+      "name": "AGR",
+      "kind_of": "Band",
+      "genre": "NeoPop",
+      "_events": [],
+      "band_components": [
+        "AGR, Ciccio, DellaMonica"
+      ],
+      "registered_mails": [
+        "marcorossi@example.com",
+        "germinario@esempio.it, ciccio@esempio.it, dellamonica@rock.it"
+      ],
+      "address": "Procida, Campania, Italia",
+      "id": 7
+    },
+    {
+      "name": "Ielloston",
+      "kind_of": "Band",
+      "genre": "Rock",
+      "_events": [],
+      "band_components": [
+        "shafmerd, ruoppolo, rafèl"
+      ],
+      "registered_mails": [
+        "marcorossi@example.com"
+      ],
+      "address": "Napoli, Campania, Italia",
+      "id": 8
+    },
+    {
+      "name": "Ciao",
+      "kind_of": "Ciao",
+      "genre": "Ciao",
+      "_events": [],
+      "band_components": [
+        "Ciao"
+      ],
+      "registered_mails": [
+        "marcorossi@example.com"
+      ],
+      "address": "Ciao",
+      "id": 9
+    },
+    {
+      "name": "Nonloso",
+      "kind_of": "Nonloso",
+      "genre": "Nonloso",
+      "_events": [],
+      "band_components": [
+        "Nonloso"
+      ],
+      "registered_mails": [
+        "marcorossi@example.com"
+      ],
+      "address": "Nonloso",
+      "id": 10
+    },
+    {
+      "name": "ChiloSa?",
+      "kind_of": "ChiloSa?",
+      "genre": "ChiloSa?",
+      "_events": [],
+      "band_components": [
+        "ChiloSa?"
+      ],
+      "registered_mails": [
+        "marcorossi@example.com"
+      ],
+      "address": "ChiloSa?",
+      "id": 11
+    },
+    {
+      "name": "ChiloSa? TU?",
+      "kind_of": "ChiloSa? TU?",
+      "genre": "ChiloSa? TU?",
+      "_events": [],
+      "band_components": [
+        "ChiloSa? TU?"
+      ],
+      "registered_mails": [
+        "marcorossi@example.com"
+      ],
+      "address": "ChiloSa? TU?",
+      "id": 12
+    },
+    {
+      "name": "NONDIRMELO",
+      "kind_of": "NONLOSO",
+      "genre": "ANGOLOANGOLO",
+      "_events": [],
+      "band_components": [
+        "TRAFFICO"
+      ],
+      "registered_mails": [
+        "marcorossi@example.com"
+      ],
+      "address": "ACCELLERATO",
+      "id": 13
+    },
+    {
+      "name": "FUNZIONI QUINDI",
+      "kind_of": "SEI SANO",
+      "genre": "GRAZIE",
+      "_events": [],
+      "band_components": [
+        "DAVVERO"
+      ],
+      "registered_mails": [
+        "marcorossi@example.com"
+      ],
+      "address": "PANICO",
+      "id": 14
     }
   ],
   "articles": [
@@ -427,6 +557,12 @@
       "kind_of_activity": "Bar",
       "address": "Via Roma 123, Roma, Lazio",
       "img": "https://www.placedog.net/300/200",
+      "registered_mails": [
+        "mailnumero9@test.it",
+        "mailnumero29@test.it",
+        "mailnumero39@test.it",
+        "mailnumero49@test.it"
+      ],
       "logo": "url_logo_1.jpg",
       "id": "1"
     },
@@ -436,6 +572,12 @@
       "kind_of_activity": "Discoteca",
       "address": "Corso Napoli 789, Napoli, Campania",
       "img": "https://www.placedog.net/300/200",
+      "registered_mails": [
+        "mailnumero1@test.it",
+        "mailnumero11@test.it",
+        "mailnumero21@test.it",
+        "mailnumero31@test.it"
+      ],
       "logo": "url_logo_3.jpg",
       "id": "2"
     },
@@ -445,6 +587,12 @@
       "kind_of_activity": "Ristorante",
       "address": "Via Milano 456, Milano, Lombardia",
       "img": "https://www.placedog.net/300/200",
+      "registered_mails": [
+        "mailnumero2@test.it",
+        "mailnumero12@test.it",
+        "mailnumero22@test.it",
+        "mailnumero42@test.it"
+      ],
       "logo": "url_logo_2.jpg",
       "id": "3"
     },
@@ -454,6 +602,12 @@
       "kind_of_activity": "Teatro",
       "address": "Via Venezia 202, Venezia, Veneto",
       "img": "https://www.placedog.net/300/200",
+      "registered_mails": [
+        "mailnumero3@test.it",
+        "mailnumero13@test.it",
+        "mailnumero43@test.it",
+        "mailnumero83@test.it"
+      ],
       "logo": "url_logo_5.jpg",
       "id": "4"
     },
@@ -463,6 +617,13 @@
       "kind_of_activity": "Galleria d'Arte",
       "address": "Corso Pittore 15, Trieste, Friuli-Venezia Giulia",
       "img": "https://www.placedog.net/300/200",
+      "registered_mails": [
+        "mailnumero6@test.it",
+        "mailnumero16@test.it",
+        "marcorossi@example.com",
+        "mailnumero66@test.it",
+        "mailnumero6646@test.it"
+      ],
       "logo": "url_logo_12.jpg",
       "id": "5"
     }

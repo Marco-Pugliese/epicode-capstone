@@ -1,13 +1,13 @@
 import { Col, Container, Row } from "react-bootstrap";
 import { useSelector } from "react-redux";
-
 import WelcomeMessage from "./WelcomeMessage";
 import { useState } from "react";
-
-import HeroSection from "../LandingPage/HeroSection/HeroSection";
 import AsideSection from "../LandingPage/AsideSection/AsideSection";
 import ArtistActivityContent from "./ArtistActivityContent";
 import { Link, useNavigate } from "react-router-dom";
+import MainHeroSection from "../LandingPage/HeroSection/MainHeroSection";
+import SearchHeroSection from "../LandingPage/HeroSection/SearchHeroSection";
+import SubHeroSection from "../LandingPage/HeroSection/SubHeroSection";
 
 const AccountPage = () => {
   const user = useSelector((state) => state.LoggedIn);
@@ -56,7 +56,9 @@ const AccountPage = () => {
             <Col className=" col-10 bg-sand d-flex justify-content-around p-0 m-0">
               {isProfile === true ? (
                 <div className="d-flex flex-column">
-                  <HeroSection noLogOut={true} />
+                  <MainHeroSection />
+                  <SearchHeroSection />
+                  <SubHeroSection />
                   <AsideSection />
                 </div>
               ) : (

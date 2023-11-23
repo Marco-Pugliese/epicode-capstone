@@ -5,10 +5,14 @@ import { logOutAction } from "../Redux/Actions";
 const WelcomeMessage = ({ user }) => {
   const dispatch = useDispatch();
   return (
-    <>
-      <div className="text-end pe-3 fw-bold ">
-        <span className="fw-normal">Ciao, </span>
-        {user[0].name}
+    <div className="text-end bg-blue">
+      <div className="pe-3 fw-bold  fs-5 bg-blue">
+        <Link to={`/account/${user[0].id}`} className="nav-link">
+          <div className="text-blueDark">
+            <span className="fw-normal  ">Ciao, </span>
+            <span className="text-blueLight">{user[0].name}</span>
+          </div>
+        </Link>
       </div>
       <div className="d-flex justify-content-end">
         <Link
@@ -18,10 +22,10 @@ const WelcomeMessage = ({ user }) => {
             dispatch(logOutAction());
           }}
         >
-          <div className="mx-2 subNavHover">Esegui Log-Out...</div>
+          <div className="pe-2 bg-blue subNavHover">Esegui Log-Out...</div>
         </Link>
       </div>
-    </>
+    </div>
   );
 };
 export default WelcomeMessage;
