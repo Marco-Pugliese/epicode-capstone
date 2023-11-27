@@ -20,10 +20,10 @@ const SubHeroSection = () => {
             <div className="display-3 p-0 m-0">BARDOO??</div>
           </div>
 
-          <p>
+          <div>
             <MainAside />
-          </p>
-          <h2 className="text-end display-3">FACILE, NO?!</h2>
+          </div>
+          <div className="text-end display-3">FACILE, NO?!</div>
         </Col>
       </Row>
     </Container>

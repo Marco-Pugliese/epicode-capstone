@@ -3,12 +3,14 @@ import {
   GET_ARTICLES_FETCH,
   GET_ARTISTS_FETCH,
   GET_USERS_FETCH,
+  GET_EVENTS_FETCH,
 } from "../Actions";
 const initialState = {
   users: {},
   artists: {},
   articles: {},
   activities: {},
+  events: {},
 };
 
 const myFetch = (state = initialState, action) => {
@@ -32,6 +34,11 @@ const myFetch = (state = initialState, action) => {
       return {
         ...state,
         articles: action.payload,
+      };
+    case GET_EVENTS_FETCH:
+      return {
+        ...state,
+        events: action.payload,
       };
     default:
       return state;

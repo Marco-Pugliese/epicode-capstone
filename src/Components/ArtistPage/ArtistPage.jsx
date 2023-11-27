@@ -41,14 +41,14 @@ const ArtistPage = () => {
                 Link YouTube + iFrame video
               </div>
             </Col>
-            <Col className="col-3 shadow">
-              <div className="py-1">
-                <h3 className="m-0 p-0">Attività Recenti</h3>
-                <div className="smaller">map dei concerti fatti</div>
-              </div>
-              <div className="py-1">
+            <Col className="col-3 shadow d-flex flex-column">
+              <div className="py-1 h-50">
                 <h3 className="m-0 p-0">Eventi in Programma</h3>
                 <div className="smaller">map degli eventi in Programma</div>
+              </div>
+              <div className="py-1 h-50">
+                <h3 className="m-0 p-0">Attività Recenti</h3>
+                <div className="smaller">map dei concerti fatti</div>
               </div>
             </Col>
           </Row>

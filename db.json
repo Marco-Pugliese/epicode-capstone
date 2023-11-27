@@ -166,12 +166,8 @@
       "num_of": 1,
       "genre": "Electronic",
       "_events": [],
-      "band_components": [
-        "Harold Thompson"
-      ],
-      "registered_mails": [
-        "djharmony@example.com"
-      ],
+      "band_components": ["Harold Thompson"],
+      "registered_mails": ["djharmony@example.com"],
       "address": "Milano, Lombardia",
       "id": "1"
     },
@@ -205,12 +201,8 @@
       "num_of": 1,
       "genre": "Pop",
       "_events": [],
-      "band_components": [
-        "George Miller"
-      ],
-      "registered_mails": [
-        "melodym@example.com"
-      ],
+      "band_components": ["George Miller"],
+      "registered_mails": ["melodym@example.com"],
       "address": "Firenze, Toscana",
       "id": "3"
     },
@@ -242,12 +234,8 @@
       "num_of": 1,
       "genre": "Indie",
       "_events": [],
-      "band_components": [
-        "Isaac Turner"
-      ],
-      "registered_mails": [
-        "indied@example.com"
-      ],
+      "band_components": ["Isaac Turner"],
+      "registered_mails": ["indied@example.com"],
       "address": "Torino, Piemonte",
       "id": "5"
     },
@@ -256,13 +244,8 @@
       "kind_of": "Band",
       "genre": "BritRock",
       "_events": [],
-      "band_components": [
-        "Noel, Liam"
-      ],
-      "registered_mails": [
-        "marcorossi@example.com",
-        "ciccioscala@esempio.it"
-      ],
+      "band_components": ["Noel, Liam"],
+      "registered_mails": ["marcorossi@example.com", "ciccioscala@esempio.it"],
       "address": "Procida, Campania, Italia",
       "id": 6
     },
@@ -271,9 +254,7 @@
       "kind_of": "Band",
       "genre": "NeoPop",
       "_events": [],
-      "band_components": [
-        "AGR, Ciccio, DellaMonica"
-      ],
+      "band_components": ["AGR, Ciccio, DellaMonica"],
       "registered_mails": [
         "marcorossi@example.com",
         "germinario@esempio.it, ciccio@esempio.it, dellamonica@rock.it"
@@ -286,12 +267,8 @@
       "kind_of": "Ciao",
       "genre": "Ciao",
       "_events": [],
-      "band_components": [
-        "Ciao"
-      ],
-      "registered_mails": [
-        "marcorossi@example.com"
-      ],
+      "band_components": ["Ciao"],
+      "registered_mails": ["marcorossi@example.com"],
       "address": "Ciao",
       "id": 9
     },
@@ -300,12 +277,8 @@
       "kind_of": "Nonloso",
       "genre": "Nonloso",
       "_events": [],
-      "band_components": [
-        "Nonloso"
-      ],
-      "registered_mails": [
-        "marcorossi@example.com"
-      ],
+      "band_components": ["Nonloso"],
+      "registered_mails": ["marcorossi@example.com"],
       "address": "Nonloso",
       "id": 10
     },
@@ -314,12 +287,8 @@
       "kind_of": "ChiloSa?",
       "genre": "ChiloSa?",
       "_events": [],
-      "band_components": [
-        "ChiloSa?"
-      ],
-      "registered_mails": [
-        "marcorossi@example.com"
-      ],
+      "band_components": ["ChiloSa?"],
+      "registered_mails": ["marcorossi@example.com"],
       "address": "ChiloSa?",
       "id": 11
     },
@@ -328,12 +297,8 @@
       "kind_of": "ChiloSa? TU?",
       "genre": "ChiloSa? TU?",
       "_events": [],
-      "band_components": [
-        "ChiloSa? TU?"
-      ],
-      "registered_mails": [
-        "marcorossi@example.com"
-      ],
+      "band_components": ["ChiloSa? TU?"],
+      "registered_mails": ["marcorossi@example.com"],
       "address": "ChiloSa? TU?",
       "id": 12
     },
@@ -342,12 +307,8 @@
       "kind_of": "NONLOSO",
       "genre": "ANGOLOANGOLO",
       "_events": [],
-      "band_components": [
-        "TRAFFICO"
-      ],
-      "registered_mails": [
-        "marcorossi@example.com"
-      ],
+      "band_components": ["TRAFFICO"],
+      "registered_mails": ["marcorossi@example.com"],
       "address": "ACCELLERATO",
       "id": 13
     },
@@ -356,12 +317,8 @@
       "kind_of": "SEI SANO",
       "genre": "GRAZIE",
       "_events": [],
-      "band_components": [
-        "DAVVERO"
-      ],
-      "registered_mails": [
-        "marcorossi@example.com"
-      ],
+      "band_components": ["DAVVERO"],
+      "registered_mails": ["marcorossi@example.com"],
       "address": "PANICO",
       "id": 14
     },
@@ -370,12 +327,8 @@
       "kind_of": "Artista",
       "genre": "Punk Death Rock",
       "_events": [],
-      "band_components": [
-        "ilmiomagicoamico"
-      ],
-      "registered_mails": [
-        "michele@michele.it"
-      ],
+      "band_components": ["ilmiomagicoamico"],
+      "registered_mails": ["michele@michele.it"],
       "image_url": "https://placedog.net/300/300",
       "address": "procida,campania,italia",
       "id": 15
@@ -385,12 +338,8 @@
       "kind_of": "oppureNo=",
       "genre": "?",
       "_events": [],
-      "band_components": [
-        "dhgdjkla"
-      ],
-      "registered_mails": [
-        "marcorossi@example.com"
-      ],
+      "band_components": ["dhgdjkla"],
+      "registered_mails": ["marcorossi@example.com"],
       "image_url": "https://placedog.net/300/300",
       "address": "fdkaj,jfkal,òòò",
       "id": 16
@@ -657,12 +606,28 @@
       "kind_of_activity": "Pub",
       "address": "Via Comunicanti 12, Roma, Liguria",
       "img": "https://www.placedog.net/300/200",
-      "registered_mails": [
-        "marcorossi@example.com"
-      ],
+      "registered_mails": ["marcorossi@example.com"],
       "logo": "url_logo_6.jpg",
       "id": 6,
       "_events": []
+    }
+  ],
+  "events": [
+    {
+      "name_event": "Capodanno2023/2024",
+      "date_event": "31-12-2023 H 21:00",
+      "hosted_by": {
+        "name_activity": "Luna Blu Lounge",
+        "name_owner": "Alex Rossi",
+        "kind_of_activity": "Bar",
+        "address": "Via Roma 123, Roma, Lazio",
+        "img": "https://www.placedog.net/280/200",
+
+        "logo": "url_logo_1.jpg",
+        "id": "1"
+      },
+      "img": "https://www.placedog.net/600/200",
+      "id": "0"
     }
   ]
 }

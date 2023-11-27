@@ -1,6 +1,8 @@
 import { Col, Container, Row } from "react-bootstrap";
+import Calendar from "react-calendar";
 import { useSelector } from "react-redux";
 import { useParams } from "react-router-dom";
+import AddAnEvent from "./AddAnEvent";
 
 const ActivityPage = () => {
   const userLogged = useSelector((state) => state.LoggedIn.user[0]);
@@ -43,14 +45,15 @@ const ActivityPage = () => {
                   <div className="py-1">
                     <h3 className="m-0 p-0">Eventi in Programma</h3>
                     <div className="smaller">map degli eventi in Programma</div>
-                    <div className="smaller">aggiungi un evento+</div>
                   </div>
                   <div className="py-1">
                     <h3 className="m-0 p-0">Attività Recenti</h3>
                     <div className="smaller">map dei concerti fatti</div>
                   </div>
                 </div>
-                <div>Calendario</div>
+                <div>
+                  <AddAnEvent />
+                </div>
               </div>
             </Col>
           </Row>
