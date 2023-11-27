@@ -1,11 +1,13 @@
 import { useEffect, useState } from "react";
 import { Button, Form, InputGroup, Modal } from "react-bootstrap";
 
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { useParams } from "react-router-dom";
+import { getEventsAction } from "../Redux/Actions";
 
-const AddAnEvent = () => {
+const AddAnEvent = ({ activity }) => {
   const { id } = useParams();
+  const dispatch = useDispatch();
   const [show, setShow] = useState(false);
   const [eventId, setEventId] = useState(0);
   const allEvents = useSelector((state) => state.MyFetches.events);
@@ -18,28 +20,13 @@ const AddAnEvent = () => {
       });
     }
   };
-  const [activity, setActivity] = useState();
-  const myActivity = () => {
-    if (allActivity !== undefined && allActivity.length > 0) {
-      allActivity.map((singleActivity) =>
-        singleActivity.id === id ? setActivity(singleActivity) : null
-      );
-    }
-  };
-
-  const allActivity = useSelector((state) => state.MyFetches.activities);
 
   useEffect(() => {
     myLog();
 
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [allEvents]);
-  useEffect(() => {
-    myActivity();
-    console.log(activity);
 
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [activity]);
   const [name, setName] = useState("");
   const [date, setDate] = useState("");
   const [details, setDetails] = useState("");
@@ -51,15 +38,13 @@ const AddAnEvent = () => {
     fetch(`http://localhost:3000/events`, {
       method: "POST",
       body: JSON.stringify({
-        // name: name,
-        // kind_of: kindOf,
-        // genre: genre,
-        // _events: [],
-        // band_components: [components],
-        // registered_mails: [emailLogged],
-        // image_url: "https://placedog.net/300/300",
-        // address: address,
-        // id: id,
+        name_event: name,
+        detail: details,
+        richiesta: richiesta,
+        date_event: date,
+        hosted_by: activity,
+        img: "https://www.placedog.net/600/200",
+        id: id,
       }),
       headers: {
         "Content-type": "application/json",
@@ -67,9 +52,9 @@ const AddAnEvent = () => {
     })
       .then((res) => {
         if (res.ok) {
-          console.log("Utente registrato");
+          console.log("Evento registrato");
         } else {
-          throw new Error("Error while registering new Artist");
+          throw new Error("Error while adding new Event");
         }
       })
       .catch((err) => console.log("Error: ", err));
@@ -141,7 +126,15 @@ const AddAnEvent = () => {
           <Button variant="secondary" onClick={handleClose}>
             Close
           </Button>
-          <Button variant="primary" onClick={() => {}}>
+          <Button
+            variant="primary"
+            onClick={() => {
+              addEvent();
+              setEventId(eventId + 1);
+              dispatch(getEventsAction());
+              handleClose();
+            }}
+          >
             Pubblica Evento!
           </Button>
         </Modal.Footer>

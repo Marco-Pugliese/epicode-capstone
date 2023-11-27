@@ -1,15 +1,32 @@
 import { Col, Container, Row } from "react-bootstrap";
-import Calendar from "react-calendar";
+
 import { useSelector } from "react-redux";
 import { useParams } from "react-router-dom";
 import AddAnEvent from "./AddAnEvent";
+import InProgramm from "./InProgramm";
+import { useEffect, useState } from "react";
+import DoneEvents from "./DoneEvents";
 
 const ActivityPage = () => {
   const userLogged = useSelector((state) => state.LoggedIn.user[0]);
   const { id } = useParams();
   const allArtists = useSelector((state) => state.MyFetches.artists);
   const ArtistWithIdParam = allArtists[id].registered_mails;
-  console.log(ArtistWithIdParam, userLogged.email);
+  const allActivity = useSelector((state) => state.MyFetches.activities);
+  const [activity, setActivity] = useState();
+  const myActivity = () => {
+    if (allActivity !== undefined && allActivity.length > 0) {
+      allActivity.map((singleActivity) =>
+        singleActivity.id === id ? setActivity(singleActivity) : null
+      );
+    }
+  };
+  useEffect(() => {
+    myActivity();
+    console.log(activity);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
+  // console.log(ArtistWithIdParam, userLogged.email);
   return (
     <Container fluid className="h-100 bg-bluedark py-1 text-yellow">
       <Row className="justify-content-center">
@@ -44,15 +61,17 @@ const ActivityPage = () => {
                 <div className="w-50">
                   <div className="py-1">
                     <h3 className="m-0 p-0">Eventi in Programma</h3>
-                    <div className="smaller">map degli eventi in Programma</div>
+                    <InProgramm />
                   </div>
                   <div className="py-1">
                     <h3 className="m-0 p-0">Attività Recenti</h3>
-                    <div className="smaller">map dei concerti fatti</div>
+                    <div className="smaller">
+                      <DoneEvents />
+                    </div>
                   </div>
                 </div>
                 <div>
-                  <AddAnEvent />
+                  <AddAnEvent activity={activity} />
                 </div>
               </div>
             </Col>

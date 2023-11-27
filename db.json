@@ -610,24 +610,87 @@
       "logo": "url_logo_6.jpg",
       "id": 6,
       "_events": []
+    },
+    {
+      "name_activity": "BAR BONE",
+      "name_owner": "Elena",
+      "kind_of_activity": "bar",
+      "address": "via turturellu, Milano, Lombardia, It",
+      "img": "https://www.placedog.net/300/200",
+      "registered_mails": ["elenaneri@example.com"],
+      "logo": "url_logo_7.jpg",
+      "id": 7,
+      "_events": []
     }
   ],
   "events": [
     {
       "name_event": "Capodanno2023/2024",
-      "date_event": "31-12-2023 H 21:00",
+      "date_event": "2023-12-31T21:00",
       "hosted_by": {
-        "name_activity": "Luna Blu Lounge",
-        "name_owner": "Alex Rossi",
-        "kind_of_activity": "Bar",
-        "address": "Via Roma 123, Roma, Lazio",
-        "img": "https://www.placedog.net/280/200",
-
-        "logo": "url_logo_1.jpg",
-        "id": "1"
+        "name_activity": "Arte in Movimento",
+        "name_owner": "Alice Artista",
+        "kind_of_activity": "Galleria d'Arte",
+        "address": "Corso Pittore 15, Trieste, Friuli-Venezia Giulia",
+        "img": "https://www.placedog.net/300/200",
+        "registered_mails": [
+          "mailnumero6@test.it",
+          "mailnumero16@test.it",
+          "marcorossi@example.com",
+          "mailnumero66@test.it",
+          "mailnumero6646@test.it"
+        ],
+        "logo": "url_logo_12.jpg",
+        "id": "5"
       },
       "img": "https://www.placedog.net/600/200",
       "id": "0"
+    },
+    {
+      "name_event": "Capodanno2023/2024",
+      "date_event": "2023-12-31T21:00",
+      "hosted_by": {
+        "name_activity": "Arte in Movimento",
+        "name_owner": "Alice Artista",
+        "kind_of_activity": "Galleria d'Arte",
+        "address": "Corso Pittore 15, Trieste, Friuli-Venezia Giulia",
+        "img": "https://www.placedog.net/300/200",
+        "registered_mails": [
+          "mailnumero6@test.it",
+          "mailnumero16@test.it",
+          "marcorossi@example.com",
+          "mailnumero66@test.it",
+          "mailnumero6646@test.it"
+        ],
+        "logo": "url_logo_12.jpg",
+        "id": "5"
+      },
+      "img": "https://www.placedog.net/600/200",
+      "id": "1"
+    },
+    {
+      "name_event": "un altro capodanno insieme",
+      "detail": "capodanno insieme in metal",
+      "richiesta": "Cercasi Metal Band",
+      "date_event": "2023-12-31T21:21",
+      "hosted_by": {
+        "name_activity": "Arte in Movimento",
+        "name_owner": "Alice Artista",
+        "kind_of_activity": "Galleria d'Arte",
+        "address": "Corso Pittore 15, Trieste, Friuli-Venezia Giulia",
+        "img": "https://www.placedog.net/300/200",
+        "registered_mails": [
+          "mailnumero6@test.it",
+          "mailnumero16@test.it",
+          "marcorossi@example.com",
+          "mailnumero66@test.it",
+          "mailnumero6646@test.it"
+        ],
+        "logo": "url_logo_12.jpg",
+        "id": "5"
+      },
+      "img": "https://www.placedog.net/600/200",
+      "id": "5"
     }
   ]
 }
