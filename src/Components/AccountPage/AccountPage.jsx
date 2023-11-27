@@ -2,12 +2,12 @@ import { Col, Container, Row } from "react-bootstrap";
 import { useSelector } from "react-redux";
 import WelcomeMessage from "./WelcomeMessage";
 import { useState } from "react";
-import AsideSection from "../LandingPage/AsideSection/AsideSection";
 import ArtistActivityContent from "./ArtistActivityContent";
 import { Link, useNavigate } from "react-router-dom";
 import MainHeroSection from "../LandingPage/HeroSection/MainHeroSection";
 import SearchHeroSection from "../LandingPage/HeroSection/SearchHeroSection";
 import SubHeroSection from "../LandingPage/HeroSection/SubHeroSection";
+import BlogSection from "../LandingPage/HeroSection/BlogSection";
 
 const AccountPage = () => {
   const user = useSelector((state) => state.LoggedIn);
@@ -20,46 +20,49 @@ const AccountPage = () => {
   };
   const [isProfile, setIsProfile] = useState(true);
   return (
-    <Container fluid className="bg-blue h-100">
+    <Container fluid className="h-100">
       {user.isLogged === true ? (
         <>
           <Row className="justify-content-center">
-            <Col className="col-12">
-              <div className="bg-blue text-yellow ">
+            <Col className="col-12 bg-bluedark">
+              <div className="text-white">
                 {user.isLogged === true ? (
-                  <WelcomeMessage user={user.user} />
+                  <div className="d-flex align-items-center">
+                    <Col className="rounded-3 col-10 d-flex justify-content-around p-0 m-0">
+                      <div
+                        onClick={() => {
+                          setIsProfile(true);
+                        }}
+                        className="text-center fw-bold w-100 rounded-top-3 pointer me-1  text-white"
+                      >
+                        Home
+                      </div>
+                      <div
+                        onClick={() => {
+                          setIsProfile(false);
+                        }}
+                        className="text-center fw-bold w-100 rounded-top-3 pointer ms-1 text-white"
+                      >
+                        Gestisci Profili
+                      </div>
+                    </Col>
+                    <Col>
+                      <WelcomeMessage user={user.user} />
+                    </Col>
+                  </div>
                 ) : null}
               </div>
             </Col>
           </Row>
-          <Row className="justify-content-center bg-blue">
-            <Col className="rounded-3 col-10 d-flex justify-content-around p-0 m-0">
-              <div
-                onClick={() => {
-                  setIsProfile(true);
-                }}
-                className="text-center fw-bold py-2 w-100 rounded-top-3 shadow-lg pointer me-1 bg-blue text-yellow"
-              >
-                User
-              </div>
-              <div
-                onClick={() => {
-                  setIsProfile(false);
-                }}
-                className="text-center fw-bold py-2 w-100 rounded-top-3 shadow-lg pointer ms-1 bg-sand text-blue"
-              >
-                Artist/Activity
-              </div>
-            </Col>
-          </Row>
-          <Row className="h-100 justify-content-center">
-            <Col className=" col-10 bg-sand d-flex justify-content-around p-0 m-0">
+
+          <Row className="h-100 justify-content-center pt-5 py-5">
+            <Col className=" col-10  d-flex justify-content-around p-0 m-0">
               {isProfile === true ? (
                 <div className="d-flex flex-column">
                   <MainHeroSection />
                   <SearchHeroSection />
                   <SubHeroSection />
-                  <AsideSection />
+                  <BlogSection />
                 </div>
               ) : (
                 <ArtistActivityContent />

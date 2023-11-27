@@ -1,4 +1,4 @@
-import { Container } from "react-bootstrap";
+import { Container, Row } from "react-bootstrap";
 import { useDispatch, useSelector } from "react-redux";
 import WelcomeActivityMessage from "./WelcomeActivityMessage";
 import ActivityLink from "./ActivityLink";
@@ -30,10 +30,10 @@ const ArtistActivityContent = () => {
       <Container fluid className="text-center py-2 fs-6">
         {userLogged.name !== null ? <WelcomeActivityMessage /> : null}
       </Container>
-      <div className="d-flex">
+      <div className="d-flex flex-column flex-lg-row">
         <Container className="mx-2 py-2 shadow-sm">
           <h3>Artists/Bands: </h3>
-          <div className="shadow">
+          <Row className="shadow">
             {allTheArtists.map((artist) =>
               artist.registered_mails.map((singleEmail) =>
                 singleEmail === emailLogged ? (
@@ -42,7 +42,7 @@ const ArtistActivityContent = () => {
               )
             )}
             <AddAnArtist />
-          </div>
+          </Row>
         </Container>
         <Container className="mx-2 py-2 shadow-sm">
           <h3>Activities: </h3>

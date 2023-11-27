@@ -5,7 +5,6 @@ const MainAside = () => {
   return (
     <>
       <Container className="d-flex flex-column align-items-center justify-content-center pt-5 text-blueDark ">
-        <div className="py-2 fw-bold fs-2">COME FUNZIONA</div>
         <div className="py-2 fs-5 position-relative">
           Cercare
           <span className=" mx-2 position-relative fw-bold text-blueLight">

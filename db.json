@@ -55,14 +55,6 @@
       "id": "6"
     },
     {
-      "name": "Marco",
-      "surname": "Pugliese",
-      "email": "marco.pugliese92@yahoo.com",
-      "password": "marcomarco",
-      "id": 7,
-      "birthday": "1992-03-12"
-    },
-    {
       "name": "Andrea",
       "surname": "Pugliese",
       "email": "andrea@email.it",
@@ -149,6 +141,22 @@
       "password": "saraesempio",
       "id": 18,
       "birthday": "0001-01-01"
+    },
+    {
+      "name": "michele",
+      "surname": "michelemichele",
+      "email": "michele@michele.it",
+      "password": "esempiodimichele",
+      "id": 19,
+      "birthday": "1221-12-12"
+    },
+    {
+      "name": "marco",
+      "surname": "puglia",
+      "email": "marcono@esempio.com",
+      "password": "marcopass",
+      "id": 20,
+      "birthday": "1994-03-12"
     }
   ],
   "artists": [
@@ -274,20 +282,6 @@
       "id": 7
     },
     {
-      "name": "Ielloston",
-      "kind_of": "Band",
-      "genre": "Rock",
-      "_events": [],
-      "band_components": [
-        "shafmerd, ruoppolo, rafèl"
-      ],
-      "registered_mails": [
-        "marcorossi@example.com"
-      ],
-      "address": "Napoli, Campania, Italia",
-      "id": 8
-    },
-    {
       "name": "Ciao",
       "kind_of": "Ciao",
       "genre": "Ciao",
@@ -370,6 +364,36 @@
       ],
       "address": "PANICO",
       "id": 14
+    },
+    {
+      "name": "cover band di mina",
+      "kind_of": "Artista",
+      "genre": "Punk Death Rock",
+      "_events": [],
+      "band_components": [
+        "ilmiomagicoamico"
+      ],
+      "registered_mails": [
+        "michele@michele.it"
+      ],
+      "image_url": "https://placedog.net/300/300",
+      "address": "procida,campania,italia",
+      "id": 15
+    },
+    {
+      "name": "vai?",
+      "kind_of": "oppureNo=",
+      "genre": "?",
+      "_events": [],
+      "band_components": [
+        "dhgdjkla"
+      ],
+      "registered_mails": [
+        "marcorossi@example.com"
+      ],
+      "image_url": "https://placedog.net/300/300",
+      "address": "fdkaj,jfkal,òòò",
+      "id": 16
     }
   ],
   "articles": [
@@ -626,6 +650,19 @@
       ],
       "logo": "url_logo_12.jpg",
       "id": "5"
+    },
+    {
+      "name_activity": "Bar Etto",
+      "name_owner": "Ettore Etto",
+      "kind_of_activity": "Pub",
+      "address": "Via Comunicanti 12, Roma, Liguria",
+      "img": "https://www.placedog.net/300/200",
+      "registered_mails": [
+        "marcorossi@example.com"
+      ],
+      "logo": "url_logo_6.jpg",
+      "id": 6,
+      "_events": []
     }
   ]
 }

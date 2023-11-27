@@ -5,6 +5,7 @@ import SubHeader from "../../Header/MyHeader/SubHeader";
 import { useSelector } from "react-redux";
 import LogOutHeader from "../../Header/MyHeader/LogOutHeader";
 import WelcomeMessage from "../../AccountPage/WelcomeMessage";
+import BlogSection from "./BlogSection";
 
 const HeroSection = ({ noLogOut }) => {
   const isLogged = useSelector((state) => state.LoggedIn.isLogged);
@@ -19,8 +20,9 @@ const HeroSection = ({ noLogOut }) => {
         <WelcomeMessage user={user.user} />
       )}
       <MainHeroSection />
-      <SearchHeroSection />
       <SubHeroSection />
+      <SearchHeroSection />
+      <BlogSection />
     </div>
   );
 };

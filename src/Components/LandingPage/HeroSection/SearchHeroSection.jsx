@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Form, InputGroup } from "react-bootstrap";
+import { Col, Container, Form, InputGroup, Row } from "react-bootstrap";
 import { Search } from "react-bootstrap-icons";
 import { useNavigate } from "react-router-dom";
 
@@ -9,11 +9,8 @@ const SearchHeroSection = () => {
   const [query2, setQuery2] = useState("");
   const navigate = useNavigate();
   return (
-    <div id="searchContainer" className="position-relative">
-      <div
-        id="SearchHeroSection"
-        className="position-relative translate-middle start-50 p-5 rounded-5 shadow-lg"
-      >
+    <Container id="searchHeroSection">
+      <div className="w-50 mx-auto">
         <Form
           className="formSearch2 rounded-5"
           onSubmit={(e) => {
@@ -40,8 +37,24 @@ const SearchHeroSection = () => {
             </InputGroup.Text>
           </InputGroup>
         </Form>
+        <section className="pt-4">
+          <div className="text-center">FILTRA PER</div>
+
+          <Row className="justify-content-evenly">
+            <Col className="col-5 btn border bg-white mt-2 rounded-4">
+              GENERE{" "}
+            </Col>
+            <Col className="col-5 btn border bg-white mt-2 rounded-4">
+              PREZZO
+            </Col>
+            <Col className="col-5 btn border bg-white mt-2 rounded-4">DATE</Col>
+            <Col className="col-5 btn border bg-white mt-2 rounded-4">
+              ALTRO
+            </Col>
+          </Row>
+        </section>
       </div>
-    </div>
+    </Container>
   );
 };
 export default SearchHeroSection;

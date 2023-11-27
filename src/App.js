@@ -16,6 +16,8 @@ import {
 import ArticlesPage from "./Components/ArticlesPage/ArticlesPage";
 import LogInPage from "./Components/LogInPage/LogInPage";
 import AccountPage from "./Components/AccountPage/AccountPage";
+import ArtistPage from "./Components/ArtistPage/ArtistPage";
+import ActivityPage from "./Components/ActivityPage/ActivityPage";
 
 function App() {
   const dispatch = useDispatch();
@@ -37,6 +39,8 @@ function App() {
           <Route path="/articles/:id" element={<ArticlesPage />} />
           <Route path="/login" element={<LogInPage />} />
           <Route path="/account/:id" element={<AccountPage />} />
+          <Route path={`/artist/:id`} element={<ArtistPage />} />
+          <Route path={`/activity/:id`} element={<ActivityPage />} />
         </Routes>
       </div>
       <MyFooter />

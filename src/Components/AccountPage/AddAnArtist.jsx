@@ -40,6 +40,7 @@ const AddAnArtist = () => {
         _events: [],
         band_components: [components],
         registered_mails: [emailLogged],
+        image_url: "https://placedog.net/300/300",
         address: address,
         id: id,
       }),
