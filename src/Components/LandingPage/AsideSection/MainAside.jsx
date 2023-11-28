@@ -5,7 +5,7 @@ const MainAside = () => {
   return (
     <div>
       <Container className=" d-flex flex-column  align-items-center justify-content-center pt-5 text-yellow ">
-        <div className="py-2 fs-5 position-relative text-white ">
+        <div className="py-2 fs-4 position-relative text-white ">
           Cercare
           <span className=" mx-2 position-relative fw-bold text-yellow">
             <span className="slide-top2 ms-2 position-absolute tranlate-middle">
@@ -26,7 +26,7 @@ const MainAside = () => {
             </div>
             <div className="d-flex flex-column align-items-center justify-content-center">
               <h3>STEP 1</h3>
-              <p className="px-3 text-center">
+              <p className="px-2 text-center smaller fw-bold">
                 Usa i nostri filtri di ricerca per trovare facilmente tutto ciò
                 di cui hai bisogno
               </p>
@@ -38,7 +38,7 @@ const MainAside = () => {
             </div>
             <div className="d-flex flex-column align-items-center justify-content-center">
               <h3>STEP 2</h3>
-              <p className="px-3 text-center">
+              <p className="px-2 text-center smaller fw-bold">
                 Visualizza le recensioni degli eventi, delle strutture, e degli
                 artisti
               </p>
@@ -50,7 +50,7 @@ const MainAside = () => {
             </div>
             <div className="d-flex flex-column align-items-center justify-content-center">
               <h3>STEP 3</h3>
-              <p className="px-3 text-center">
+              <p className="px-2 text-center smaller fw-bold">
                 Usa i nostri servizi se hai bisogno di contattare artisti o
                 candidarti ad Eventi Organizzati
               </p>

@@ -439,18 +439,21 @@ body,
   background-color: var(--primary-BlueDark) !important;
   color: white !important;
 }
+.double-o {
+  position: absolute;
+  left: 0;
+  top: 20px;
+}
+.o2 {
+  top: 13px;
+}
+
 /* -----------------------MEDIA------------------------------ */
 #freccia-dx {
   position: absolute;
-  top: -220px;
-  left: -200px;
+  bottom: 30px;
+  right: 90px;
   scale: 0.6;
-}
-#freccia-giu {
-  position: absolute;
-  top: -350px;
-  left: 50px;
-  scale: 0.7;
 }
 
 #landing {

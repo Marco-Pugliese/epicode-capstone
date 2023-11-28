@@ -6,7 +6,7 @@ const MainHeroSection = () => {
     <Container className="pt-3 text-white">
       <Row className="justify-content-center">
         <Col className="col-12 col-lg-5 ">
-          <div className="display-4 pe-5 pb-5 position-relative">
+          <div className="display-4 pe-5 pb-5 position-relative fw-bold">
             ISCRIVITI GRATIS E REGISTRATI COME
             <img
               src="/assets/images/details&logo/freccia-dx-bianca.png"
@@ -15,10 +15,10 @@ const MainHeroSection = () => {
               className="d-none d-lg-block"
             />
             <img
-              src="/assets/images/details&logo/frecciagiublue.png"
+              src="/assets/images/details&logo/freccia-giu-bianca.png"
               alt="freccia giu"
               id="freccia-giu"
-              className="d-lg-none"
+              className="d-lg-none ms-5"
             />
           </div>
 

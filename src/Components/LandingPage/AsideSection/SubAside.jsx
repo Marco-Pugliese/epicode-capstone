@@ -8,7 +8,9 @@ const SubAside = () => {
   const articles = useSelector((state) => state.MyFetches);
   return (
     <Container fluid id="subAsideSection" class="text-white px-5">
-      <div className="display-5 fw-bold px-5 py-1">POTREBBE INTERESSARTI</div>
+      <div className="display-5 fw-bold px-5 py-1 text-white">
+        POTREBBE INTERESSARTI
+      </div>
       <div className="fs-1 px-5 text-yellow  ">
         IL NOSTRO BL
         <span>
