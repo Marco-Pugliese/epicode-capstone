@@ -1,6 +1,9 @@
 const LandingHero = () => {
   return (
-    <div className="home d-flex flex-column justify-content-center align-items-center display-1 text-white fw-bold py-5">
+    <div
+      id="landing"
+      className="home d-flex flex-column justify-content-center align-items-center display-1 text-white fw-bold py-5"
+    >
       <div id="bardoo">BARDOO</div>
       <div className="display-5">
         FIND YOUR BAR

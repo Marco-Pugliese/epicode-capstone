@@ -3,13 +3,17 @@ import { Card, Col, Container, Row } from "react-bootstrap";
 const SingleArticle = ({ article }) => {
   return (
     <>
-      <div className="bg-blue py-5">
-        <Container className="bg-blue">
+      <div className="py-5">
+        <Container className="">
           <Row className="justify-content-center">
-            <Col className="col-8 col-xl-5">
-              <Card id="article" className="bg-blue shadow-lg">
-                <Card.Img variant="top" src="https://picsum.photos/1000/800" />
-                <Card.Body className="bg-sand">
+            <Col className="col-8 col-xl-5 ">
+              <Card id="article" className="bg-blue shadow-lg rounded-4">
+                <Card.Img
+                  variant="top"
+                  src="https://picsum.photos/1000/800"
+                  className="rounded-top-4"
+                />
+                <Card.Body className="bg-sand rounded-bottom-4">
                   <Card.Title>
                     <div className="display-6 fw-bold">{article.title} </div>
                     <div className="text-end extrasmall text-gray">

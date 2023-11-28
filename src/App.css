@@ -23,14 +23,36 @@ body {
   background: linear-gradient(
     to bottom,
 
-    var(--primary-BlueDark),
     var(--primary-BlueLight),
     var(--primary-BlueLight),
-    var(--primary-BlueDark)
+    var(--primary-BlueLight),
+    rgb(120, 120, 120),
+    var(--primary-BlueLight)
   );
 }
 /* ------------------------------------------ANIMATION------------------------------------------ */
-
+.text-pop-up-top {
+  animation: text-pop-up-top 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) infinite
+    alternate-reverse both;
+}
+@keyframes text-pop-up-top {
+  0% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+    -webkit-transform-origin: 50% 50%;
+    transform-origin: 50% 50%;
+    text-shadow: none;
+  }
+  100% {
+    -webkit-transform: translateY(-50px);
+    transform: translateY(-50px);
+    -webkit-transform-origin: 50% 50%;
+    transform-origin: 50% 50%;
+    text-shadow: 0 1px 0 #cccccc, 0 2px 0 #cccccc, 0 3px 0 #cccccc,
+      0 4px 0 #cccccc, 0 5px 0 #cccccc, 0 6px 0 #cccccc, 0 7px 0 #cccccc,
+      0 8px 0 #cccccc, 0 9px 0 #cccccc, 0 50px 30px rgba(0, 0, 0, 0.3);
+  }
+}
 .text-flicker-in-glow {
   animation: text-flicker-in-glow 6s linear 1s infinite alternate-reverse both;
 }
@@ -379,7 +401,7 @@ body,
   cursor: pointer;
 }
 #article:hover {
-  scale: 1.05;
+  scale: 1.02;
 }
 /* ------------------------------------------------------------------------------------------------- */
 .loginsignin {
@@ -429,4 +451,8 @@ body,
   top: -350px;
   left: 50px;
   scale: 0.7;
+}
+
+#landing {
+  height: 90vh;
 }
