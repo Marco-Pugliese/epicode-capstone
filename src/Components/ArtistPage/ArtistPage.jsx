@@ -9,7 +9,11 @@ const ArtistPage = () => {
   const ArtistWithIdParam = allArtists[id].registered_mails;
   console.log(ArtistWithIdParam, userLogged.email);
   return (
-    <Container fluid className="h-100 bg-bluedark py-1 text-yellow">
+    <Container
+      id="artistPage"
+      fluid
+      className="h-100 bg-bluedark py-1 text-yellow"
+    >
       <Row className="justify-content-center">
         <Col className="col-9 ">
           <Row className="gx-5">

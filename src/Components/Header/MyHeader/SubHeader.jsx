@@ -6,7 +6,9 @@ const SubHeader = () => {
     <Container id="navBarDown" fluid className="px-5">
       <div className="d-flex justify-content-end">
         <Link to="/login" className="nav-link">
-          <div className="mx-2 subNavHover">Accedi/Registrati Ora...</div>
+          <div className="mx-2 text-white subNavHover">
+            Accedi/Registrati Ora...
+          </div>
         </Link>
       </div>
     </Container>

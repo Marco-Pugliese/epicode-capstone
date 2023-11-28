@@ -6,9 +6,9 @@ const WelcomeMessage = ({ user }) => {
   const dispatch = useDispatch();
   return (
     <div className="text-end bg-bluedark">
-      <div className="pe-3 fw-bold  fs-5 bg-bluedark">
+      <div className="pe-3 fw-bold text-white fs-5 bg-bluedark">
         <Link to={`/account/${user[0].id}`} className="nav-link">
-          <div className="text-yellow">
+          <div>
             <span className="fw-normal  ">Ciao, </span>
             <span className="text-blueLight">{user[0].name}</span>
           </div>

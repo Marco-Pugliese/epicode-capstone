@@ -1,16 +1,28 @@
 import { Col, Container, Row } from "react-bootstrap";
-import { ArrowRight, MusicNote } from "react-bootstrap-icons";
+import { MusicNote } from "react-bootstrap-icons";
 
 const MainHeroSection = () => {
   return (
-    <Container className="pt-3">
+    <Container className="pt-3 text-white">
       <Row className="justify-content-center">
-        <Col className="col-5 ">
-          <div className="display-4 pe-5 pb-5">
-            ISCRIVITI GRATIS E REGISTRATI COME <ArrowRight />
+        <Col className="col-12 col-lg-5 ">
+          <div className="display-4 pe-5 pb-5 position-relative">
+            ISCRIVITI GRATIS E REGISTRATI COME
+            <img
+              src="/assets/images/details&logo/freccia-dx-bianca.png"
+              alt="freccia destra"
+              id="freccia-dx"
+              className="d-none d-lg-block"
+            />
+            <img
+              src="/assets/images/details&logo/frecciagiublue.png"
+              alt="freccia giu"
+              id="freccia-giu"
+              className="d-lg-none"
+            />
           </div>
 
-          <div className="pt-5">
+          <div className="pt-5 d-none d-lg-block">
             <div>
               <MusicNote /> BENE
             </div>
@@ -24,21 +36,26 @@ const MainHeroSection = () => {
         </Col>
         <Col>
           <Row className="justify-content-center gx-4">
-            <Col className="pe-4">
+            <Col className="pe-4 position-relative">
               <img
-                src="https://placedog.net/349/600"
+                src="/assets/images/general/photo-band.avif"
                 alt="cercatore"
-                className="w-100 rounded-3"
+                className="w-100 rounded-4"
               />
-              <div className="text-end fs-3  me-3">ARTISTA</div>
+
+              <div className="text-center fs-2 fw-bold text-yellow">
+                ARTISTA
+              </div>
             </Col>
             <Col className="ps-4">
               <img
-                src="https://placedog.net/350/600"
+                src="/assets/images/general/fotobar1.avif"
                 alt="cercatore"
-                className="w-100 rounded-3"
+                className="w-100 rounded-4"
               />
-              <div className="text-end fs-3  me-3">ATTIVITA'</div>
+              <div className="text-center text-yellow fs-2 fw-bold ">
+                ATTIVITA'
+              </div>
             </Col>
           </Row>
         </Col>

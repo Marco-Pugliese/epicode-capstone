@@ -42,9 +42,10 @@ const AddAnEvent = ({ activity }) => {
         detail: details,
         richiesta: richiesta,
         date_event: date,
+        isConfirmed: false,
         hosted_by: activity,
         img: "https://www.placedog.net/600/200",
-        id: id,
+        id: eventId,
       }),
       headers: {
         "Content-type": "application/json",
@@ -121,6 +122,7 @@ const AddAnEvent = ({ activity }) => {
               />
             </InputGroup>
           </Form>
+          {console.log(eventId + 1)}
         </Modal.Body>
         <Modal.Footer>
           <Button variant="secondary" onClick={handleClose}>
@@ -129,8 +131,8 @@ const AddAnEvent = ({ activity }) => {
           <Button
             variant="primary"
             onClick={() => {
-              addEvent();
               setEventId(eventId + 1);
+              addEvent();
               dispatch(getEventsAction());
               handleClose();
             }}

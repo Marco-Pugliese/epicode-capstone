@@ -20,7 +20,7 @@ const AccountPage = () => {
   };
   const [isProfile, setIsProfile] = useState(true);
   return (
-    <Container fluid className="h-100">
+    <Container id="accountPage" fluid className="h-100">
       {user.isLogged === true ? (
         <>
           <Row className="justify-content-center">

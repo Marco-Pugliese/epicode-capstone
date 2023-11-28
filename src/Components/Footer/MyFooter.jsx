@@ -10,11 +10,11 @@ import { Link } from "react-router-dom";
 
 const MyFooter = () => {
   return (
-    <div id="footer" className="pt-5 pb-4">
-      <Container className="text-center text-yellow mt-2 pb-2">
+    <div id="footer" className="pt-5 pb-4 text-white">
+      <Container className="text-center  mt-2 pb-2">
         ©LOREM_MUSIC all rights reserved -{" "}
       </Container>
-      <Container className="d-flex border-top border-yellow pt-2">
+      <Container className="d-flex border-top pt-2">
         <ListGroup className="d-flex flex-row justify-content-around w-50">
           <Link className="nav-link navHover" to="/">
             Home

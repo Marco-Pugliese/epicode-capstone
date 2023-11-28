@@ -2,14 +2,16 @@ import { Col } from "react-bootstrap";
 
 const SingleEvent = ({ event }) => {
   return (
-    <Col>
-      {event !== undefined && (
+    <>
+      {event !== undefined && event.isConfirmed ? (
         <>
-          <div className="fw-bold">{event.name_event}</div>
-          <div>{event.date_event}</div>
+          <Col>
+            <div className="fw-bold">{event.name_event}</div>
+            <div>{event.date_event}</div>
+          </Col>
         </>
-      )}
-    </Col>
+      ) : null}
+    </>
   );
 };
 export default SingleEvent;

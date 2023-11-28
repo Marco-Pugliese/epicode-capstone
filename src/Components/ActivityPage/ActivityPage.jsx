@@ -10,8 +10,7 @@ import DoneEvents from "./DoneEvents";
 const ActivityPage = () => {
   const userLogged = useSelector((state) => state.LoggedIn.user[0]);
   const { id } = useParams();
-  const allArtists = useSelector((state) => state.MyFetches.artists);
-  const ArtistWithIdParam = allArtists[id].registered_mails;
+
   const allActivity = useSelector((state) => state.MyFetches.activities);
   const [activity, setActivity] = useState();
   const myActivity = () => {
@@ -23,12 +22,16 @@ const ActivityPage = () => {
   };
   useEffect(() => {
     myActivity();
-    console.log(activity);
+    console.log(userLogged);
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
   // console.log(ArtistWithIdParam, userLogged.email);
   return (
-    <Container fluid className="h-100 bg-bluedark py-1 text-yellow">
+    <Container
+      id="activityPage"
+      fluid
+      className="h-100 bg-bluedark py-1 text-yellow"
+    >
       <Row className="justify-content-center">
         <Col className="col-7 ">
           <Row className="gx-5">

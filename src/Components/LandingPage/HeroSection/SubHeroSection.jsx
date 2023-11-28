@@ -4,26 +4,28 @@ import MainAside from "../AsideSection/MainAside";
 
 const SubHeroSection = () => {
   return (
-    <Container>
+    <Container className="text-white">
       <Row className="py-3">
         <Col className="col-4 ">
           <img
-            src="https://www.placedog.net/500/800"
+            src="/assets/images/general/musiclive.avif"
             alt="peopledrinking"
-            className="w-100"
+            className="w-100 rounded-4"
           />
         </Col>
         <Col>
-          <div>
-            <div className="display-3 p-0 m-0">COME</div>
-            <div className="display-3 p-0 m-0">FUNZIONA</div>
-            <div className="display-3 p-0 m-0">BARDOO??</div>
+          <div className="">
+            <div className="display-3 p-0 fw-bold m-0">COME</div>
+            <div className="display-3 p-0 fw-bold m-0">FUNZIONA</div>
+            <div className="display-3 p-0 fw-bold m-0 text-yellow">
+              BARDOO??
+            </div>
           </div>
 
           <div>
             <MainAside />
           </div>
-          <div className="text-end display-3">FACILE, NO?!</div>
+          <div className="text-end display-3 ">FACILE, NO?!</div>
         </Col>
       </Row>
     </Container>

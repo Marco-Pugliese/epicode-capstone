@@ -1,10 +1,10 @@
 @import url("https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Montserrat:wght@300;400;600;700&family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400&family=Raleway:wght@300;400;500;600;700&family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,400&family=Slabo+27px&display=swap");
 :root {
-  --primary-Yellow: #1c594f;
-  --primary-Sand: #1c594f;
-  --primary-Green: #d9c49c;
+  --primary-Yellow: rgb(246, 180, 56);
+  --primary-Sand: #d9c49c;
+  --primary-Green: #1c594f;
   --primary-Blue: #1c3659;
-  --primary-BlueLight: #0798f2;
+  --primary-BlueLight: #696bf4;
   --primary-BlueDark: #171b26;
   --primary-Light: #fff5e1;
 
@@ -20,12 +20,163 @@ body * {
   /* font-weight: 700; */
 }
 body {
-  background-color: var(--primary-BlueDark);
+  background: linear-gradient(
+    to bottom,
+
+    var(--primary-BlueDark),
+    var(--primary-BlueLight),
+    var(--primary-BlueLight),
+    var(--primary-BlueDark)
+  );
 }
 /* ------------------------------------------ANIMATION------------------------------------------ */
-.special {
-  color: var(--primary-Orange) !important;
+
+.text-flicker-in-glow {
+  animation: text-flicker-in-glow 6s linear 1s infinite alternate-reverse both;
 }
+@keyframes text-flicker-in-glow {
+  0% {
+    opacity: 0;
+  }
+  10% {
+    opacity: 0;
+    text-shadow: none;
+  }
+  10.1% {
+    opacity: 1;
+    text-shadow: none;
+  }
+  10.2% {
+    opacity: 0;
+    text-shadow: none;
+  }
+  20% {
+    opacity: 0;
+    text-shadow: none;
+  }
+  20.1% {
+    opacity: 1;
+    text-shadow: 0 0 30px rgba(255, 255, 255, 0.25);
+  }
+  20.6% {
+    opacity: 0;
+    text-shadow: none;
+  }
+  30% {
+    opacity: 0;
+    text-shadow: none;
+  }
+  30.1% {
+    opacity: 1;
+    text-shadow: 0 0 30px rgba(255, 255, 255, 0.45),
+      0 0 60px rgba(255, 255, 255, 0.25);
+  }
+  30.5% {
+    opacity: 1;
+    text-shadow: 0 0 30px rgba(255, 255, 255, 0.45),
+      0 0 60px rgba(255, 255, 255, 0.25);
+  }
+  30.6% {
+    opacity: 0;
+    text-shadow: none;
+  }
+  45% {
+    opacity: 0;
+    text-shadow: none;
+  }
+  45.1% {
+    opacity: 1;
+    text-shadow: 0 0 30px rgba(255, 255, 255, 0.45),
+      0 0 60px rgba(255, 255, 255, 0.25);
+  }
+  50% {
+    opacity: 1;
+    text-shadow: 0 0 30px rgba(255, 255, 255, 0.45),
+      0 0 60px rgba(255, 255, 255, 0.25);
+  }
+  55% {
+    opacity: 1;
+    text-shadow: 0 0 30px rgba(255, 255, 255, 0.45),
+      0 0 60px rgba(255, 255, 255, 0.25);
+  }
+  55.1% {
+    opacity: 0;
+    text-shadow: none;
+  }
+  57% {
+    opacity: 0;
+    text-shadow: none;
+  }
+  57.1% {
+    opacity: 1;
+    text-shadow: 0 0 30px rgba(255, 255, 255, 0.55),
+      0 0 60px rgba(255, 255, 255, 0.35);
+  }
+  60% {
+    opacity: 1;
+    text-shadow: 0 0 30px rgba(255, 255, 255, 0.55),
+      0 0 60px rgba(255, 255, 255, 0.35);
+  }
+  60.1% {
+    opacity: 0;
+    text-shadow: none;
+  }
+  65% {
+    opacity: 0;
+    text-shadow: none;
+  }
+  65.1% {
+    opacity: 1;
+    text-shadow: 0 0 30px rgba(255, 255, 255, 0.55),
+      0 0 60px rgba(255, 255, 255, 0.35), 0 0 100px rgba(255, 255, 255, 0.1);
+  }
+  75% {
+    opacity: 1;
+    text-shadow: 0 0 30px rgba(255, 255, 255, 0.55),
+      0 0 60px rgba(255, 255, 255, 0.35), 0 0 100px rgba(255, 255, 255, 0.1);
+  }
+  75.1% {
+    opacity: 0;
+    text-shadow: none;
+  }
+  77% {
+    opacity: 0;
+    text-shadow: none;
+  }
+  77.1% {
+    opacity: 1;
+    text-shadow: 0 0 30px rgba(255, 255, 255, 0.55),
+      0 0 60px rgba(255, 255, 255, 0.4), 0 0 110px rgba(255, 255, 255, 0.2),
+      0 0 100px rgba(255, 255, 255, 0.1);
+  }
+  85% {
+    opacity: 1;
+    text-shadow: 0 0 30px rgba(255, 255, 255, 0.55),
+      0 0 60px rgba(255, 255, 255, 0.4), 0 0 110px rgba(255, 255, 255, 0.2),
+      0 0 100px rgba(255, 255, 255, 0.1);
+  }
+  85.1% {
+    opacity: 0;
+    text-shadow: none;
+  }
+  86% {
+    opacity: 0;
+    text-shadow: none;
+  }
+  86.1% {
+    opacity: 1;
+    text-shadow: 0 0 30px rgba(255, 255, 255, 0.6),
+      0 0 60px rgba(255, 255, 255, 0.45), 0 0 110px rgba(255, 255, 255, 0.25),
+      0 0 100px rgba(255, 255, 255, 0.1);
+  }
+  100% {
+    opacity: 1;
+    text-shadow: 0 0 30px rgba(255, 255, 255, 0.6),
+      0 0 60px rgba(255, 255, 255, 0.45), 0 0 110px rgba(255, 255, 255, 0.25),
+      0 0 100px rgba(255, 255, 255, 0.1);
+  }
+}
+
 .slide-top {
   -webkit-animation: slide-top 1.25s ease-in-out infinite alternate-reverse both;
   animation: slide-top 1.25s ease-in-out infinite alternate-reverse both;
@@ -106,9 +257,7 @@ body,
 .border-yellow {
   border-color: var(--primary-Yellow);
 }
-#footer .border-yellow {
-  border-color: var(--primary-Yellow) !important;
-}
+
 /* -----------------------------------------------HEADER---------------------------------------- */
 #header {
   z-index: 2;
@@ -119,23 +268,12 @@ body,
 #basic-addon2 {
   transition: all 0.6s;
 }
-.formSearch {
-  border: 2px solid var(--primary-Sand) !important;
-}
-#formControl {
-  background-color: var(--primary-Sand) !important;
-}
-#formControl::placeholder {
-  color: var(--primary-BlueDark) !important;
-}
 
 #navBarUp {
   z-index: 3;
-  background-color: var(--primary-BlueDark) !important;
 }
 #navBarDown {
   z-index: 3;
-  background-color: var(--primary-BlueDark);
 }
 .navHover {
   color: white !important;
@@ -146,7 +284,9 @@ body,
   color: var(--primary-BlueLight) !important;
   font-weight: 600;
 }
-
+.subNavHover {
+  color: white;
+}
 .subNavHover:hover {
   transition: all 0.8s;
   font-weight: 600;
@@ -154,7 +294,6 @@ body,
 /* ------------------------------------------------------------------------------------------- */
 /* ------------------------------------------HERO--------------------------------------------- */
 #heroSection {
-  background-color: var(--primary-Blue);
   height: 66vh;
 }
 /* ----------------------------------SUBHERO_SEARCH SECTION------------------------------------ */
@@ -163,19 +302,19 @@ body,
   display: flex;
   align-items: center;
 }
-.searchInputField:focus {
+.searchInpuwhitetField:focus {
   box-shadow: none !important;
-  border: 1.5px solid white;
+  border: 1.5px solid whitesmoke;
 }
 .formSearch2 {
-  border: 2px solid var(--primary-BlueDark);
+  border: 2px solid whitesmoke;
   width: 100%;
 }
 .searchInputField::placeholder {
-  color: var(--primary-BlueDark) !important;
+  color: whitesmoke !important;
 }
 #basic-addon2 {
-  background-color: var(--primary-BlueDark) !important;
+  background-color: whitesmoke !important;
 }
 
 /* ----------------------------------------------------------------------------------------------- */
@@ -197,8 +336,21 @@ body,
   background-color: var(--primary-BlueDark);
 }
 
-#landingPage {
-  z-index: 1;
+#landingPage,
+#accountPage,
+#activityPage,
+#articlesPage,
+#artistPage,
+#loginPage {
+  background: url("/public/assets/images/details&logo/ondasingolablue.png");
+  z-index: 3;
+  background-color: linear-gradient(
+    to bottom,
+    var(--primary-BlueDark),
+    var(--primary-BlueLight),
+    var(--primary-BlueLight),
+    var(--primary-BlueDark)
+  );
 }
 
 /* --------------------------------------------CAROUSELS-------------------------------------------- */
@@ -264,4 +416,17 @@ body,
 .btn-primary:hover {
   background-color: var(--primary-BlueDark) !important;
   color: white !important;
+}
+/* -----------------------MEDIA------------------------------ */
+#freccia-dx {
+  position: absolute;
+  top: -220px;
+  left: -200px;
+  scale: 0.6;
+}
+#freccia-giu {
+  position: absolute;
+  top: -350px;
+  left: 50px;
+  scale: 0.7;
 }

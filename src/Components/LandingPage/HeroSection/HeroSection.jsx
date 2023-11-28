@@ -6,6 +6,7 @@ import { useSelector } from "react-redux";
 import LogOutHeader from "../../Header/MyHeader/LogOutHeader";
 import WelcomeMessage from "../../AccountPage/WelcomeMessage";
 import BlogSection from "./BlogSection";
+import LandingHero from "./LandingHero";
 
 const HeroSection = ({ noLogOut }) => {
   const isLogged = useSelector((state) => state.LoggedIn.isLogged);
@@ -19,6 +20,7 @@ const HeroSection = ({ noLogOut }) => {
       ) : (
         <WelcomeMessage user={user.user} />
       )}
+      <LandingHero />
       <MainHeroSection />
       <SubHeroSection />
       <SearchHeroSection />

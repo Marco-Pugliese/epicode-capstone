@@ -6,7 +6,7 @@ import { Link } from "react-router-dom";
 const LogOutHeader = () => {
   const dispatch = useDispatch();
   return (
-    <Container id="navBarDown" fluid className="px-5">
+    <Container id="navBarDown " fluid className="px-5">
       <div className="d-flex justify-content-end">
         <Link
           to="/"
@@ -15,7 +15,7 @@ const LogOutHeader = () => {
             dispatch(logOutAction());
           }}
         >
-          <div className="mx-2 subNavHover">Esegui Log-Out...</div>
+          <div className="mx-2 subNavHover text-white">Esegui Log-Out...</div>
         </Link>
       </div>
     </Container>

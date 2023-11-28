@@ -3,11 +3,11 @@ import { GearFill, Search, StarFill } from "react-bootstrap-icons";
 
 const MainAside = () => {
   return (
-    <>
-      <Container className="d-flex flex-column align-items-center justify-content-center pt-5 text-blueDark ">
-        <div className="py-2 fs-5 position-relative">
+    <div>
+      <Container className=" d-flex flex-column  align-items-center justify-content-center pt-5 text-yellow ">
+        <div className="py-2 fs-5 position-relative text-white ">
           Cercare
-          <span className=" mx-2 position-relative fw-bold text-blueLight">
+          <span className=" mx-2 position-relative fw-bold text-yellow">
             <span className="slide-top2 ms-2 position-absolute tranlate-middle">
               Musicisti
             </span>
@@ -20,36 +20,36 @@ const MainAside = () => {
       </Container>
       <Container fluid className="py-2">
         <Row className="justify-content-center">
-          <Col className="col-3 mx-1 shadow rounded-5">
+          <Col className="col-3 mx-1 shadow-lg rounded-5">
             <div className="d-flex justify-content-center my-3">
-              <Search className="display-2 text-blueDark" />
+              <Search className="display-2 text-yellow" />
             </div>
             <div className="d-flex flex-column align-items-center justify-content-center">
-              <h3 className="text-blue ">STEP 1</h3>
+              <h3>STEP 1</h3>
               <p className="px-3 text-center">
                 Usa i nostri filtri di ricerca per trovare facilmente tutto ciò
                 di cui hai bisogno
               </p>
             </div>
           </Col>
-          <Col className="col-3 mx-1 shadow rounded-5">
+          <Col className="col-3 mx-1 shadow-lg rounded-5">
             <div className="d-flex justify-content-center my-3">
-              <StarFill className="display-2 text-blueDark" />
+              <StarFill className="display-2 text-yellow" />
             </div>
             <div className="d-flex flex-column align-items-center justify-content-center">
-              <h3 className="text-blue ">STEP 2</h3>
+              <h3>STEP 2</h3>
               <p className="px-3 text-center">
                 Visualizza le recensioni degli eventi, delle strutture, e degli
                 artisti
               </p>
             </div>
           </Col>
-          <Col className="col-3 mx-1 shadow rounded-5">
+          <Col className="col-3 mx-1 shadow-lg rounded-5">
             <div className="d-flex justify-content-center my-3">
-              <GearFill className="display-2 text-blueDark" />
+              <GearFill className="display-2 text-yellow" />
             </div>
             <div className="d-flex flex-column align-items-center justify-content-center">
-              <h3 className="text-blue ">STEP 3</h3>
+              <h3>STEP 3</h3>
               <p className="px-3 text-center">
                 Usa i nostri servizi se hai bisogno di contattare artisti o
                 candidarti ad Eventi Organizzati
@@ -58,7 +58,7 @@ const MainAside = () => {
           </Col>
         </Row>
       </Container>
-    </>
+    </div>
   );
 };
 export default MainAside;

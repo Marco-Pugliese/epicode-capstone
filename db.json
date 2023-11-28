@@ -627,6 +627,7 @@
     {
       "name_event": "Capodanno2023/2024",
       "date_event": "2023-12-31T21:00",
+      "isConfirmed": true,
       "hosted_by": {
         "name_activity": "Arte in Movimento",
         "name_owner": "Alice Artista",
@@ -652,6 +653,7 @@
       "hosted_by": {
         "name_activity": "Arte in Movimento",
         "name_owner": "Alice Artista",
+        "isConfirmed": true,
         "kind_of_activity": "Galleria d'Arte",
         "address": "Corso Pittore 15, Trieste, Friuli-Venezia Giulia",
         "img": "https://www.placedog.net/300/200",
@@ -673,6 +675,32 @@
       "detail": "capodanno insieme in metal",
       "richiesta": "Cercasi Metal Band",
       "date_event": "2023-12-31T21:21",
+      "isConfirmed": true,
+      "hosted_by": {
+        "name_activity": "Arte in Movimento",
+        "name_owner": "Alice Artista",
+        "kind_of_activity": "Galleria d'Arte",
+        "address": "Corso Pittore 15, Trieste, Friuli-Venezia Giulia",
+        "img": "https://www.placedog.net/300/200",
+        "registered_mails": [
+          "mailnumero6@test.it",
+          "mailnumero16@test.it",
+          "marcorossi@example.com",
+          "mailnumero66@test.it",
+          "mailnumero6646@test.it"
+        ],
+        "logo": "url_logo_12.jpg",
+        "id": "5"
+      },
+      "img": "https://www.placedog.net/600/200",
+      "id": "2"
+    },
+    {
+      "name_event": "karaoke",
+      "detail": "karaoke",
+      "richiesta": "nessuna",
+      "date_event": "2023-10-27T22:58",
+      "isConfirmed": true,
       "hosted_by": {
         "name_activity": "Arte in Movimento",
         "name_owner": "Alice Artista",
@@ -691,6 +719,56 @@
       },
       "img": "https://www.placedog.net/600/200",
       "id": "5"
+    },
+    {
+      "name_event": "karaoke292929",
+      "detail": "karaoke",
+      "richiesta": "fajffnad",
+      "date_event": "2010-10-12T12:12",
+      "isConfirmed": true,
+      "hosted_by": {
+        "name_activity": "Arte in Movimento",
+        "name_owner": "Alice Artista",
+        "kind_of_activity": "Galleria d'Arte",
+        "address": "Corso Pittore 15, Trieste, Friuli-Venezia Giulia",
+        "img": "https://www.placedog.net/300/200",
+        "registered_mails": [
+          "mailnumero6@test.it",
+          "mailnumero16@test.it",
+          "marcorossi@example.com",
+          "mailnumero66@test.it",
+          "mailnumero6646@test.it"
+        ],
+        "logo": "url_logo_12.jpg",
+        "id": "5"
+      },
+      "img": "https://www.placedog.net/600/200",
+      "id": 6
+    },
+    {
+      "name_event": "karaoke292929",
+      "detail": "karaoke",
+      "richiesta": "fajffnaddffff",
+      "isConfirmed": true,
+      "date_event": "2010-10-12T12:12",
+      "hosted_by": {
+        "name_activity": "Arte in Movimento",
+        "name_owner": "Alice Artista",
+        "kind_of_activity": "Galleria d'Arte",
+        "address": "Corso Pittore 15, Trieste, Friuli-Venezia Giulia",
+        "img": "https://www.placedog.net/300/200",
+        "registered_mails": [
+          "mailnumero6@test.it",
+          "mailnumero16@test.it",
+          "marcorossi@example.com",
+          "mailnumero66@test.it",
+          "mailnumero6646@test.it"
+        ],
+        "logo": "url_logo_12.jpg",
+        "id": "5"
+      },
+      "img": "https://www.placedog.net/600/200",
+      "id": 7
     }
   ]
 }

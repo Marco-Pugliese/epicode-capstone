@@ -7,7 +7,7 @@ const ArticlePage = () => {
   const allArticles = useSelector((state) => state.MyFetches.articles);
 
   return (
-    <div>
+    <div id="articlesPage">
       {allArticles.length > 0 ? (
         <div>
           {allArticles.map((singleArticle) =>
