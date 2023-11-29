@@ -6,7 +6,9 @@ const ArtistPage = () => {
   const userLogged = useSelector((state) => state.LoggedIn.user[0]);
   const { id } = useParams();
   const allArtists = useSelector((state) => state.MyFetches.artists);
-  const ArtistWithIdParam = allArtists[id].registered_mails;
+  const ArtistWithIdParam = allArtists.map((singleArtist) =>
+    singleArtist.id === id ? singleArtist : null
+  );
   console.log(ArtistWithIdParam, userLogged.email);
   return (
     <Container

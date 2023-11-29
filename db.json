@@ -157,6 +157,14 @@
       "password": "marcopass",
       "id": 20,
       "birthday": "1994-03-12"
+    },
+    {
+      "name": "Marco",
+      "surname": "Johnny",
+      "email": "johnmark@yahoo.com",
+      "password": "marcopass",
+      "id": 21,
+      "birthday": "1988-02-13"
     }
   ],
   "artists": [
@@ -184,14 +192,7 @@
         "Emma Turner",
         "David Smith"
       ],
-      "registered_mails": [
-        "sarab@example.com",
-        "marcorossi@example.com",
-        "miked@example.com",
-        "chrisw@example.com",
-        "emmat@example.com",
-        "davids@example.com"
-      ],
+      "registered_mails": ["marcorossi@example.com"],
       "address": "Roma, Lazio",
       "id": "2"
     },
@@ -218,13 +219,7 @@
         "Carlos Brown",
         "Emily Turner"
       ],
-      "registered_mails": [
-        "johnd@example.com",
-        "lisas@example.com",
-        "carlosb@example.com",
-        "emilyt@example.com",
-        "marcorossi@example.com"
-      ],
+      "registered_mails": ["johnd@example.com"],
       "address": "Napoli, Campania",
       "id": "4"
     },
@@ -245,104 +240,9 @@
       "genre": "BritRock",
       "_events": [],
       "band_components": ["Noel, Liam"],
-      "registered_mails": ["marcorossi@example.com", "ciccioscala@esempio.it"],
+      "registered_mails": ["ciccioscala@esempio.it"],
       "address": "Procida, Campania, Italia",
       "id": 6
-    },
-    {
-      "name": "AGR",
-      "kind_of": "Band",
-      "genre": "NeoPop",
-      "_events": [],
-      "band_components": ["AGR, Ciccio, DellaMonica"],
-      "registered_mails": [
-        "marcorossi@example.com",
-        "germinario@esempio.it, ciccio@esempio.it, dellamonica@rock.it"
-      ],
-      "address": "Procida, Campania, Italia",
-      "id": 7
-    },
-    {
-      "name": "Ciao",
-      "kind_of": "Ciao",
-      "genre": "Ciao",
-      "_events": [],
-      "band_components": ["Ciao"],
-      "registered_mails": ["marcorossi@example.com"],
-      "address": "Ciao",
-      "id": 9
-    },
-    {
-      "name": "Nonloso",
-      "kind_of": "Nonloso",
-      "genre": "Nonloso",
-      "_events": [],
-      "band_components": ["Nonloso"],
-      "registered_mails": ["marcorossi@example.com"],
-      "address": "Nonloso",
-      "id": 10
-    },
-    {
-      "name": "ChiloSa?",
-      "kind_of": "ChiloSa?",
-      "genre": "ChiloSa?",
-      "_events": [],
-      "band_components": ["ChiloSa?"],
-      "registered_mails": ["marcorossi@example.com"],
-      "address": "ChiloSa?",
-      "id": 11
-    },
-    {
-      "name": "ChiloSa? TU?",
-      "kind_of": "ChiloSa? TU?",
-      "genre": "ChiloSa? TU?",
-      "_events": [],
-      "band_components": ["ChiloSa? TU?"],
-      "registered_mails": ["marcorossi@example.com"],
-      "address": "ChiloSa? TU?",
-      "id": 12
-    },
-    {
-      "name": "NONDIRMELO",
-      "kind_of": "NONLOSO",
-      "genre": "ANGOLOANGOLO",
-      "_events": [],
-      "band_components": ["TRAFFICO"],
-      "registered_mails": ["marcorossi@example.com"],
-      "address": "ACCELLERATO",
-      "id": 13
-    },
-    {
-      "name": "FUNZIONI QUINDI",
-      "kind_of": "SEI SANO",
-      "genre": "GRAZIE",
-      "_events": [],
-      "band_components": ["DAVVERO"],
-      "registered_mails": ["marcorossi@example.com"],
-      "address": "PANICO",
-      "id": 14
-    },
-    {
-      "name": "cover band di mina",
-      "kind_of": "Artista",
-      "genre": "Punk Death Rock",
-      "_events": [],
-      "band_components": ["ilmiomagicoamico"],
-      "registered_mails": ["michele@michele.it"],
-      "image_url": "https://placedog.net/300/300",
-      "address": "procida,campania,italia",
-      "id": 15
-    },
-    {
-      "name": "vai?",
-      "kind_of": "oppureNo=",
-      "genre": "?",
-      "_events": [],
-      "band_components": ["dhgdjkla"],
-      "registered_mails": ["marcorossi@example.com"],
-      "image_url": "https://placedog.net/300/300",
-      "address": "fdkaj,jfkal,òòò",
-      "id": 16
     }
   ],
   "articles": [

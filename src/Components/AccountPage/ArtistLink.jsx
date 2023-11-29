@@ -3,15 +3,16 @@ import { Link } from "react-router-dom";
 
 const ArtistLink = ({ artist }) => {
   return (
-    <Col className="col-6 col-xxl-4 ">
-      <Card className="shadow-lg border-0 m-1 bg-transparent">
-        <div className=" mx-auto bg-bluedark rounded-top-4 p-1">
+    <Col className="col-12">
+      <Card className="shadow-lg d-flex flex-row border-0 m-1 bg-transparent">
+        <div className=" mx-auto bg-bluedark rounded-start-4 col-3 p-1">
           <Card.Img
             src="https://www.placedog.net/400"
-            className="bg-bluedark rounded-4 w-100 "
+            className="bg-bluedark rounded-4"
+            style={{ minWidth: "100px", width: "100%" }}
           />
         </div>
-        <Card.Body className="d-flex justify-content-between align-items-center bg-bluedark w-100 rounded-bottom-4">
+        <Card.Body className="d-flex justify-content-between align-items-center bg-bluedark w-100 rounded-end-4">
           <div>
             <Card.Text className="text-yellow">
               {artist.name}

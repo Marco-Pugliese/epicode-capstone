@@ -4,13 +4,14 @@ import WelcomeMessage from "./WelcomeMessage";
 import { useState } from "react";
 import ArtistActivityContent from "./ArtistActivityContent";
 import { Link, useNavigate } from "react-router-dom";
-import MainHeroSection from "../LandingPage/HeroSection/MainHeroSection";
 import SearchHeroSection from "../LandingPage/HeroSection/SearchHeroSection";
-import SubHeroSection from "../LandingPage/HeroSection/SubHeroSection";
 import BlogSection from "../LandingPage/HeroSection/BlogSection";
+import EventiInProgramma from "./EventiInProgramma";
+import AllArtists from "./AllArtists";
 
 const AccountPage = () => {
   const user = useSelector((state) => state.LoggedIn);
+  const [isArtist, setIsArtist] = useState(true);
   const navigate = useNavigate();
   const navigateToLogIn = () => {
     navigate("/login");
@@ -28,22 +29,14 @@ const AccountPage = () => {
               <div className="text-white">
                 {user.isLogged === true ? (
                   <div className="d-flex align-items-center">
-                    <Col className="rounded-3 col-10 d-flex justify-content-around p-0 m-0">
-                      <div
-                        onClick={() => {
-                          setIsProfile(true);
-                        }}
-                        className="text-center fw-bold w-100 rounded-top-3 pointer me-1  text-white"
-                      >
-                        Home
-                      </div>
+                    <Col className="col-10">
                       <div
                         onClick={() => {
                           setIsProfile(false);
                         }}
-                        className="text-center fw-bold w-100 rounded-top-3 pointer ms-1 text-white"
+                        className="text-end fw-bold rounded-top-3 pointer ms-1 text-white"
                       >
-                        Gestisci Profili
+                        Crea/Gestisci Profili
                       </div>
                     </Col>
                     <Col>
@@ -59,9 +52,66 @@ const AccountPage = () => {
             <Col className=" col-10  d-flex justify-content-around p-0 m-0">
               {isProfile === true ? (
                 <div className="d-flex flex-column">
-                  <MainHeroSection />
+                  <Row>
+                    <Col className="text-center fw-bold w-100 rounded-top-3 me-1  text-white">
+                      <div
+                        onClick={() => {
+                          setIsArtist(true);
+                        }}
+                        className={
+                          isArtist === true
+                            ? "fw-bold fs-1 text-yellow pointer titleHover"
+                            : "fs-1 pointer titleHover"
+                        }
+                      >
+                        Navigazione Artista
+                      </div>
+                      <div
+                        onClick={() => {
+                          setIsArtist(true);
+                        }}
+                      >
+                        {isArtist === true ? (
+                          <img
+                            src="/assets/images/details&logo/freccia-giu-bianca.png"
+                            alt="freccia bianca"
+                            className="pointer"
+                          />
+                        ) : null}
+                      </div>
+                    </Col>
+                    <Col className="text-center fw-bold w-100 rounded-top-3 me-1 text-white  ">
+                      <div
+                        onClick={() => {
+                          setIsArtist(false);
+                        }}
+                        className={
+                          isArtist === false
+                            ? "fw-bold fs-1 text-yellow pointer titleHover"
+                            : "fs-1 pointer titleHover"
+                        }
+                      >
+                        Navigazione Attività
+                      </div>
+                      <div
+                        onClick={() => {
+                          setIsArtist(false);
+                        }}
+                      >
+                        {isArtist === false ? (
+                          <img
+                            src="/assets/images/details&logo/freccia-giu-bianca.png"
+                            alt="freccia bianca"
+                            className="pointer"
+                          />
+                        ) : null}
+                      </div>
+                    </Col>
+                  </Row>
+                  {isArtist === true ? <EventiInProgramma /> : <AllArtists />}
+
                   <SearchHeroSection />
-                  <SubHeroSection />
+                  {/* <SubHeroSection /> */}
                   <BlogSection />
                 </div>
               ) : (

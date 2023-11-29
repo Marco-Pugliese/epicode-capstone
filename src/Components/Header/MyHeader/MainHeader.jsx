@@ -22,22 +22,22 @@ const MainHeader = () => {
                 to="/"
                 className="nav-link fw-bold my-auto me-4 p-2 navHover"
               >
-                Home
+                HOME
               </Link>
               <Link
-                to="/"
+                to="/blog"
                 className="nav-link fw-bold my-auto  me-4 p-2 navHover"
               >
                 BLOG
               </Link>
               <Link
-                to="/"
+                to="/search"
                 className="nav-link fw-bold my-auto  me-4 p-2 navHover"
               >
-                MARKET
+                SEARCH
               </Link>
               <Link
-                to="/"
+                to="/events"
                 className="nav-link fw-bold my-auto  me-4 p-2 navHover"
               >
                 EVENTI

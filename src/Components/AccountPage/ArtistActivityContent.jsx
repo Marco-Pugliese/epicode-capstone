@@ -30,23 +30,28 @@ const ArtistActivityContent = () => {
       <Container fluid className="text-center py-2 fs-6">
         {userLogged.name !== null ? <WelcomeActivityMessage /> : null}
       </Container>
-      <div className="d-flex flex-column flex-lg-row">
-        <Container className="mx-2 py-2 shadow-sm">
+      <div className="d-flex flex-column justify-content-between flex-lg-row">
+        <Container className="mx-2 py-2 shadow-lg rounded-4">
           <h3>Artists/Bands: </h3>
-          <Row className="shadow">
+          <Row>
             {allTheArtists.map((artist) =>
               artist.registered_mails.map((singleEmail) =>
                 singleEmail === emailLogged ? (
-                  <ArtistLink key={artist.id} artist={artist} />
-                ) : null
+                  <>
+                    <ArtistLink key={artist.id} artist={artist} />
+                  </>
+                ) : (
+                  () => null
+                )
               )
             )}
+
             <AddAnArtist />
           </Row>
         </Container>
-        <Container className="mx-2 py-2 shadow-sm">
+        <Container className="mx-2 py-2 shadow-lg rounded-4">
           <h3>Activities: </h3>
-          <div className="shadow rounded-3">
+          <div className="rounded-3">
             {allTheActivities.map((activity) =>
               activity.registered_mails.map((singleEmail) =>
                 singleEmail === emailLogged ? (
