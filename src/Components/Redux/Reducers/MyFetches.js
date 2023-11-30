@@ -4,6 +4,7 @@ import {
   GET_ARTISTS_FETCH,
   GET_USERS_FETCH,
   GET_EVENTS_FETCH,
+  GET_CANDIDATURE_FETCH,
 } from "../Actions";
 const initialState = {
   users: {},
@@ -11,6 +12,7 @@ const initialState = {
   articles: {},
   activities: {},
   events: {},
+  candidature: {},
 };
 
 const myFetch = (state = initialState, action) => {
@@ -19,6 +21,11 @@ const myFetch = (state = initialState, action) => {
       return {
         ...state,
         users: action.payload,
+      };
+    case GET_CANDIDATURE_FETCH:
+      return {
+        ...state,
+        candidature: action.payload,
       };
     case GET_ARTISTS_FETCH:
       return {

@@ -174,8 +174,12 @@
       "num_of": 1,
       "genre": "Electronic",
       "_events": [],
-      "band_components": ["Harold Thompson"],
-      "registered_mails": ["djharmony@example.com"],
+      "band_components": [
+        "Harold Thompson"
+      ],
+      "registered_mails": [
+        "djharmony@example.com"
+      ],
       "address": "Milano, Lombardia",
       "id": "1"
     },
@@ -192,7 +196,9 @@
         "Emma Turner",
         "David Smith"
       ],
-      "registered_mails": ["marcorossi@example.com"],
+      "registered_mails": [
+        "marcorossi@example.com"
+      ],
       "address": "Roma, Lazio",
       "id": "2"
     },
@@ -202,8 +208,12 @@
       "num_of": 1,
       "genre": "Pop",
       "_events": [],
-      "band_components": ["George Miller"],
-      "registered_mails": ["melodym@example.com"],
+      "band_components": [
+        "George Miller"
+      ],
+      "registered_mails": [
+        "melodym@example.com"
+      ],
       "address": "Firenze, Toscana",
       "id": "3"
     },
@@ -219,7 +229,9 @@
         "Carlos Brown",
         "Emily Turner"
       ],
-      "registered_mails": ["johnd@example.com"],
+      "registered_mails": [
+        "johnd@example.com"
+      ],
       "address": "Napoli, Campania",
       "id": "4"
     },
@@ -229,8 +241,12 @@
       "num_of": 1,
       "genre": "Indie",
       "_events": [],
-      "band_components": ["Isaac Turner"],
-      "registered_mails": ["indied@example.com"],
+      "band_components": [
+        "Isaac Turner"
+      ],
+      "registered_mails": [
+        "indied@example.com"
+      ],
       "address": "Torino, Piemonte",
       "id": "5"
     },
@@ -239,10 +255,29 @@
       "kind_of": "Band",
       "genre": "BritRock",
       "_events": [],
-      "band_components": ["Noel, Liam"],
-      "registered_mails": ["ciccioscala@esempio.it"],
+      "band_components": [
+        "Noel, Liam"
+      ],
+      "registered_mails": [
+        "ciccioscala@esempio.it"
+      ],
       "address": "Procida, Campania, Italia",
       "id": 6
+    },
+    {
+      "name": "GEO POP",
+      "kind_of": "DJ",
+      "genre": "DANCE",
+      "_events": [],
+      "band_components": [
+        []
+      ],
+      "registered_mails": [
+        "marcorossi@example.com"
+      ],
+      "image_url": "https://placedog.net/300/300",
+      "address": "Milano, Campania, It",
+      "id": 7
     }
   ],
   "articles": [
@@ -461,10 +496,7 @@
       "address": "Via Milano 456, Milano, Lombardia",
       "img": "https://www.placedog.net/300/200",
       "registered_mails": [
-        "mailnumero2@test.it",
-        "mailnumero12@test.it",
-        "mailnumero22@test.it",
-        "mailnumero42@test.it"
+        "johnd@example.com"
       ],
       "logo": "url_logo_2.jpg",
       "id": "3"
@@ -476,10 +508,7 @@
       "address": "Via Venezia 202, Venezia, Veneto",
       "img": "https://www.placedog.net/300/200",
       "registered_mails": [
-        "mailnumero3@test.it",
-        "mailnumero13@test.it",
-        "mailnumero43@test.it",
-        "mailnumero83@test.it"
+        "elenaneri@example.com"
       ],
       "logo": "url_logo_5.jpg",
       "id": "4"
@@ -491,11 +520,7 @@
       "address": "Corso Pittore 15, Trieste, Friuli-Venezia Giulia",
       "img": "https://www.placedog.net/300/200",
       "registered_mails": [
-        "mailnumero6@test.it",
-        "mailnumero16@test.it",
-        "marcorossi@example.com",
-        "mailnumero66@test.it",
-        "mailnumero6646@test.it"
+        "marcorossi@example.com"
       ],
       "logo": "url_logo_12.jpg",
       "id": "5"
@@ -506,7 +531,9 @@
       "kind_of_activity": "Pub",
       "address": "Via Comunicanti 12, Roma, Liguria",
       "img": "https://www.placedog.net/300/200",
-      "registered_mails": ["marcorossi@example.com"],
+      "registered_mails": [
+        "marcorossi@example.com"
+      ],
       "logo": "url_logo_6.jpg",
       "id": 6,
       "_events": []
@@ -517,17 +544,33 @@
       "kind_of_activity": "bar",
       "address": "via turturellu, Milano, Lombardia, It",
       "img": "https://www.placedog.net/300/200",
-      "registered_mails": ["elenaneri@example.com"],
+      "registered_mails": [
+        "elenaneri@example.com"
+      ],
       "logo": "url_logo_7.jpg",
       "id": 7,
       "_events": []
+    },
+    {
+      "name_activity": "Bar Baro",
+      "name_owner": "Barco",
+      "kind_of_activity": "Bar",
+      "address": "Via alemannia 12, berlino, germania",
+      "img": "https://www.placedog.net/300/200",
+      "registered_mails": [
+        "marcorossi@example.com"
+      ],
+      "logo": "url_logo_8.jpg",
+      "id": 8
     }
   ],
   "events": [
     {
-      "name_event": "Capodanno2023/2024",
-      "date_event": "2023-12-31T21:00",
-      "isConfirmed": true,
+      "name_event": "Ancora un Capodanno Insieme",
+      "detail": "1 Minuto e Mezzo di musica Live",
+      "richiesta": "SAX",
+      "date_event": "2023-12-31T23:59",
+      "isConfirmed": false,
       "hosted_by": {
         "name_activity": "Arte in Movimento",
         "name_owner": "Alice Artista",
@@ -535,147 +578,14 @@
         "address": "Corso Pittore 15, Trieste, Friuli-Venezia Giulia",
         "img": "https://www.placedog.net/300/200",
         "registered_mails": [
-          "mailnumero6@test.it",
-          "mailnumero16@test.it",
-          "marcorossi@example.com",
-          "mailnumero66@test.it",
-          "mailnumero6646@test.it"
+          "marcorossi@example.com"
         ],
         "logo": "url_logo_12.jpg",
         "id": "5"
       },
       "img": "https://www.placedog.net/600/200",
-      "id": "0"
-    },
-    {
-      "name_event": "Capodanno2023/2024",
-      "date_event": "2023-12-31T21:00",
-      "hosted_by": {
-        "name_activity": "Arte in Movimento",
-        "name_owner": "Alice Artista",
-        "isConfirmed": true,
-        "kind_of_activity": "Galleria d'Arte",
-        "address": "Corso Pittore 15, Trieste, Friuli-Venezia Giulia",
-        "img": "https://www.placedog.net/300/200",
-        "registered_mails": [
-          "mailnumero6@test.it",
-          "mailnumero16@test.it",
-          "marcorossi@example.com",
-          "mailnumero66@test.it",
-          "mailnumero6646@test.it"
-        ],
-        "logo": "url_logo_12.jpg",
-        "id": "5"
-      },
-      "img": "https://www.placedog.net/600/200",
-      "id": "1"
-    },
-    {
-      "name_event": "un altro capodanno insieme",
-      "detail": "capodanno insieme in metal",
-      "richiesta": "Cercasi Metal Band",
-      "date_event": "2023-12-31T21:21",
-      "isConfirmed": true,
-      "hosted_by": {
-        "name_activity": "Arte in Movimento",
-        "name_owner": "Alice Artista",
-        "kind_of_activity": "Galleria d'Arte",
-        "address": "Corso Pittore 15, Trieste, Friuli-Venezia Giulia",
-        "img": "https://www.placedog.net/300/200",
-        "registered_mails": [
-          "mailnumero6@test.it",
-          "mailnumero16@test.it",
-          "marcorossi@example.com",
-          "mailnumero66@test.it",
-          "mailnumero6646@test.it"
-        ],
-        "logo": "url_logo_12.jpg",
-        "id": "5"
-      },
-      "img": "https://www.placedog.net/600/200",
-      "id": "2"
-    },
-    {
-      "name_event": "karaoke",
-      "detail": "karaoke",
-      "richiesta": "nessuna",
-      "date_event": "2023-10-27T22:58",
-      "isConfirmed": true,
-      "hosted_by": {
-        "name_activity": "Arte in Movimento",
-        "name_owner": "Alice Artista",
-        "kind_of_activity": "Galleria d'Arte",
-        "address": "Corso Pittore 15, Trieste, Friuli-Venezia Giulia",
-        "img": "https://www.placedog.net/300/200",
-        "registered_mails": [
-          "mailnumero6@test.it",
-          "mailnumero16@test.it",
-          "marcorossi@example.com",
-          "mailnumero66@test.it",
-          "mailnumero6646@test.it"
-        ],
-        "logo": "url_logo_12.jpg",
-        "id": "5"
-      },
-      "img": "https://www.placedog.net/600/200",
-      "id": "5"
-    },
-    {
-      "name_event": "karaoke292929",
-      "detail": "karaoke",
-      "richiesta": "fajffnad",
-      "date_event": "2010-10-12T12:12",
-      "isConfirmed": true,
-      "hosted_by": {
-        "name_activity": "Arte in Movimento",
-        "name_owner": "Alice Artista",
-        "kind_of_activity": "Galleria d'Arte",
-        "address": "Corso Pittore 15, Trieste, Friuli-Venezia Giulia",
-        "img": "https://www.placedog.net/300/200",
-        "registered_mails": [
-          "mailnumero6@test.it",
-          "mailnumero16@test.it",
-          "marcorossi@example.com",
-          "mailnumero66@test.it",
-          "mailnumero6646@test.it"
-        ],
-        "logo": "url_logo_12.jpg",
-        "id": "5"
-      },
-      "img": "https://www.placedog.net/600/200",
-      "id": 6
-    },
-    {
-      "name_event": "karaoke292929",
-      "detail": "karaoke",
-      "richiesta": "fajffnaddffff",
-      "isConfirmed": true,
-      "date_event": "2010-10-12T12:12",
-      "hosted_by": {
-        "name_activity": "Arte in Movimento",
-        "name_owner": "Alice Artista",
-        "kind_of_activity": "Galleria d'Arte",
-        "address": "Corso Pittore 15, Trieste, Friuli-Venezia Giulia",
-        "img": "https://www.placedog.net/300/200",
-        "registered_mails": [
-          "mailnumero6@test.it",
-          "mailnumero16@test.it",
-          "marcorossi@example.com",
-          "mailnumero66@test.it",
-          "mailnumero6646@test.it"
-        ],
-        "logo": "url_logo_12.jpg",
-        "id": "5"
-      },
-      "img": "https://www.placedog.net/600/200",
-      "id": 7
+      "id": 1
     }
   ],
-  "candidations": [
-    {
-      "band": "",
-      "event": "",
-      "details": ""
-    }
-  ]
+  "candidature": []
 }

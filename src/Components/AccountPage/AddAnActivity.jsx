@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { Form, InputGroup } from "react-bootstrap";
 import Button from "react-bootstrap/Button";
 import Modal from "react-bootstrap/Modal";
@@ -6,30 +6,16 @@ import { useDispatch, useSelector } from "react-redux";
 import { getArtistsAction } from "../Redux/Actions";
 
 const AddAnActivity = () => {
-  const [id, setId] = useState(0);
   const [show, setShow] = useState(false);
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
   const [name, setName] = useState("");
   const [owner, setOwner] = useState("");
   const [kindOf, setKindOf] = useState("");
-  // const [components, setComponents] = useState([]);
-  // const [emailComponents, setEmailComponents] = useState([]);
   const [address, setAddress] = useState([]);
-  const allActivities = useSelector((state) => state.MyFetches.activities);
+  // const allActivities = useSelector((state) => state.MyFetches.activities);
   const emailLogged = useSelector((state) => state.LoggedIn.user[0].email);
   const dispatch = useDispatch();
-  const myLog = () => {
-    if (allActivities.length > 0) {
-      allActivities.map((singleUser) => {
-        return singleUser.id > id ? setId(parseInt(singleUser.id) + 1) : null;
-      });
-    }
-  };
-  useEffect(() => {
-    myLog();
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [allActivities]);
 
   const addActivity = () => {
     fetch(`http://localhost:3000/activities`, {
@@ -40,10 +26,8 @@ const AddAnActivity = () => {
         kind_of_activity: kindOf,
         address: address,
         img: "https://www.placedog.net/300/200",
-        registered_mails: [emailLogged],
-        logo: `url_logo_${id}.jpg`,
-        id: id,
-        _events: [],
+        registered_mail: [emailLogged],
+        logo: `https://www.placedog.net/120/100`,
       }),
       headers: {
         "Content-type": "application/json",
@@ -130,9 +114,7 @@ const AddAnActivity = () => {
             variant="primary"
             onClick={() => {
               addActivity();
-              setId(id + 1);
               dispatch(getArtistsAction());
-              console.log(allActivities);
               handleClose();
             }}
           >

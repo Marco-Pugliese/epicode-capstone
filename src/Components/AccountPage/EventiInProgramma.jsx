@@ -9,9 +9,11 @@ const EventiInProgramma = () => {
   return (
     <Container className="text-white fs-2">
       Tutti gli eventi disponibili al momento:
-      {events.map((singleEvent, i) => (
-        <SingleEventHome key={i} event={singleEvent} />
-      ))}
+      {events.map((singleEvent, i) =>
+        singleEvent.isConfirmed === false ? (
+          <SingleEventHome key={i} event={singleEvent} />
+        ) : null
+      )}
     </Container>
   );
 };

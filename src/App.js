@@ -11,6 +11,7 @@ import {
   getActivitiesAction,
   getArticlesAction,
   getArtistsAction,
+  getCandidatureAction,
   getEventsAction,
   getUsersAction,
 } from "./Components/Redux/Actions";
@@ -28,6 +29,7 @@ function App() {
     dispatch(getArtistsAction());
     dispatch(getActivitiesAction());
     dispatch(getEventsAction());
+    dispatch(getCandidatureAction());
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 

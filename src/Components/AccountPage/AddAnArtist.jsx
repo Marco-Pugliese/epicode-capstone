@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { Form, InputGroup } from "react-bootstrap";
 import Button from "react-bootstrap/Button";
 import Modal from "react-bootstrap/Modal";
@@ -6,7 +6,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { getArtistsAction } from "../Redux/Actions";
 
 const AddAnArtist = () => {
-  const [id, setId] = useState(0);
+  // const [id, setId] = useState(0);
   const [show, setShow] = useState(false);
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
@@ -16,20 +16,10 @@ const AddAnArtist = () => {
   const [components, setComponents] = useState([]);
   // const [emailComponents, setEmailComponents] = useState([]);
   const [address, setAddress] = useState([]);
-  const allArtists = useSelector((state) => state.MyFetches.artists);
+  // const allArtists = useSelector((state) => state.MyFetches.artists);
   const emailLogged = useSelector((state) => state.LoggedIn.user[0].email);
   const dispatch = useDispatch();
-  const myLog = () => {
-    if (allArtists.length > 0) {
-      allArtists.map((singleUser) => {
-        return singleUser.id > id ? setId(parseInt(singleUser.id) + 1) : null;
-      });
-    }
-  };
-  useEffect(() => {
-    myLog();
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [allArtists]);
+
   const addArtist = () => {
     fetch(`http://localhost:3000/artists`, {
       method: "POST",
@@ -42,7 +32,6 @@ const AddAnArtist = () => {
         registered_mails: [emailLogged],
         image_url: "https://placedog.net/300/300",
         address: address,
-        id: id,
       }),
       headers: {
         "Content-type": "application/json",
@@ -116,19 +105,7 @@ const AddAnArtist = () => {
                 aria-describedby="basic-addon1"
               />
             </InputGroup>
-            {/* <InputGroup className="mb-3">
-              <InputGroup.Text id="basic-addon1">
-                Invita Componenti
-              </InputGroup.Text>
-              <Form.Control
-                value={emailComponents}
-                onChange={(e) => {
-                  setEmailComponents(e.target.value);
-                }}
-                placeholder="Le email dei singoli componenti"
-                aria-describedby="basic-addon1"
-              />
-            </InputGroup> */}
+
             <InputGroup className="mb-3">
               <InputGroup.Text id="basic-addon1">Address</InputGroup.Text>
               <Form.Control
@@ -150,10 +127,8 @@ const AddAnArtist = () => {
             variant="primary"
             onClick={() => {
               addArtist();
-              setId(id + 1);
-              dispatch(getArtistsAction());
-              console.log(allArtists);
               handleClose();
+              dispatch(getArtistsAction());
             }}
           >
             Save Changes

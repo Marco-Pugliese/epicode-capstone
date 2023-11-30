@@ -1,32 +1,15 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { Button, Form, InputGroup, Modal } from "react-bootstrap";
 
-import { useDispatch, useSelector } from "react-redux";
+import { useDispatch } from "react-redux";
 import { useParams } from "react-router-dom";
 import { getEventsAction } from "../Redux/Actions";
 
 const AddAnEvent = ({ activity }) => {
-  const { id } = useParams();
   const dispatch = useDispatch();
+  // eslint-disable-next-line no-unused-vars
+  const { id } = useParams();
   const [show, setShow] = useState(false);
-  const [eventId, setEventId] = useState(0);
-  const allEvents = useSelector((state) => state.MyFetches.events);
-  const myLog = () => {
-    if (allEvents.length > 0) {
-      allEvents.map((singleEvent) => {
-        return singleEvent.id > eventId
-          ? setEventId(parseInt(singleEvent.id) + 1)
-          : null;
-      });
-    }
-  };
-
-  useEffect(() => {
-    myLog();
-
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [allEvents]);
-
   const [name, setName] = useState("");
   const [date, setDate] = useState("");
   const [details, setDetails] = useState("");
@@ -45,7 +28,6 @@ const AddAnEvent = ({ activity }) => {
         isConfirmed: false,
         hosted_by: activity,
         img: "https://www.placedog.net/600/200",
-        id: eventId,
       }),
       headers: {
         "Content-type": "application/json",
@@ -122,7 +104,6 @@ const AddAnEvent = ({ activity }) => {
               />
             </InputGroup>
           </Form>
-          {console.log(eventId + 1)}
         </Modal.Body>
         <Modal.Footer>
           <Button variant="secondary" onClick={handleClose}>
@@ -131,7 +112,6 @@ const AddAnEvent = ({ activity }) => {
           <Button
             variant="primary"
             onClick={() => {
-              setEventId(eventId + 1);
               addEvent();
               dispatch(getEventsAction());
               handleClose();

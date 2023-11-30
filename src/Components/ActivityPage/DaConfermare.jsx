@@ -1,10 +1,9 @@
 import { useSelector } from "react-redux";
-import { useParams } from "react-router-dom";
 import SingleEvent from "./SingleEvent";
+import { useParams } from "react-router-dom";
 import { Container, Row } from "react-bootstrap";
-import { useEffect } from "react";
 
-const InProgramm = () => {
+const DaConfermare = () => {
   const { id } = useParams();
   const allEvents = useSelector((state) => state.MyFetches.events);
   return (
@@ -14,7 +13,7 @@ const InProgramm = () => {
           <>
             {allEvents.map((singleEvent) =>
               singleEvent.hosted_by.id === id &&
-              singleEvent.isConfirmed === true ? (
+              singleEvent.isConfirmed === false ? (
                 <>
                   {parseInt(
                     singleEvent.date_event.slice(0, 4) *
@@ -45,4 +44,4 @@ const InProgramm = () => {
   );
 };
 
-export default InProgramm;
+export default DaConfermare;
