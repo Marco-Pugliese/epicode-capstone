@@ -7,7 +7,7 @@ import { useSelector } from "react-redux";
 const SubAside = () => {
   const articles = useSelector((state) => state.MyFetches);
   return (
-    <Container fluid id="subAsideSection" class="text-white px-5">
+    <Container fluid id="subAsideSection" className="text-white px-5">
       <div className="display-5 fw-bold px-5 py-1 text-white">
         POTREBBE INTERESSARTI
       </div>

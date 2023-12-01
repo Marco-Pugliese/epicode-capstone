@@ -93,7 +93,7 @@ const ActivityPage = () => {
                 <div className="d-flex flex-column">
                   <div className="py-1">
                     <h3 className="m-0 p-0">
-                      Eventi in attesa di conferma{" "}
+                      Eventi in attesa di conferma
                       <img
                         src="/assets/images/details&logo/freccia-giu-bianca.png"
                         alt="arrow down"

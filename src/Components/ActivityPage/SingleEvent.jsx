@@ -30,6 +30,29 @@ const SingleEvent = ({ event }) => {
       })
       .catch((err) => console.error("ERRORE:", err));
   };
+
+  const acceptCandidature = () => {
+    fetch(`http://localhost:3000/events/${event.id}`, {
+      method: "PATCH",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({ isConfirmed: true }),
+    })
+      .then((res) => {
+        if (res.ok) {
+          console.log("Modificato correttamente");
+          return res.json();
+        } else {
+          throw new Error("Errore nella modifica dell'elemento");
+        }
+      })
+      .then((data) => {
+        dispatch(getEventsAction());
+        dispatch(getCandidatureAction());
+      })
+      .catch((err) => console.error("ERRORE:", err));
+  };
   const deleteElement = () => {
     fetch(`http://localhost:3000/events/${event.id}`, {
       method: "DELETE",
@@ -37,7 +60,7 @@ const SingleEvent = ({ event }) => {
       .then((res) => {
         if (res.ok) {
           console.log("Eliminato correttamente");
-          dispatch(getEventsAction);
+          dispatch(getEventsAction());
         } else {
           throw new Error("Errore nell'eliminazione dell'elemento");
         }
@@ -45,14 +68,14 @@ const SingleEvent = ({ event }) => {
       .catch((err) => console.error("ERRORE:", err));
   };
 
-  const renderBadge = () => {
+  const renderBadge = (eventId) => {
     const candidatureCount = allCandidature.filter(
-      (singleCandidatura) => singleCandidatura.event.hosted_by.id === id
+      (singleCandidatura) => singleCandidatura.event.id === eventId
     ).length;
 
     return candidatureCount > 0 ? (
       <div
-        className="border border-warning ms-2 px-1 rounded"
+        className="border border-warning ms-2 px-1 rounded pointer"
         onClick={handleShowCandidature}
       >
         Candidature: {candidatureCount}
@@ -70,7 +93,7 @@ const SingleEvent = ({ event }) => {
         <Button className="py-0" variant="primary" onClick={handleShow}>
           <Trash />
         </Button>
-        {renderBadge()}
+        {renderBadge(event.id)}
 
         <Modal
           show={show}
@@ -125,7 +148,13 @@ const SingleEvent = ({ event }) => {
                     </Col>
                     <Col className="col-2 d-flex flex-column">
                       <Button className="smaller p-0">
-                        <CheckCircle className="text-success" />
+                        <CheckCircle
+                          className="text-success"
+                          onClick={() => {
+                            acceptCandidature();
+                            deleteSingleCandidatura(singleCandidatura.id);
+                          }}
+                        />
                       </Button>
                       <Button className="smaller p-0">
                         <XCircle

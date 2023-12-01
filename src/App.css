@@ -279,6 +279,9 @@ body,
 .border-yellow {
   border-color: var(--primary-Yellow);
 }
+.bg-transparent-blue {
+  background-color: #0a1421a4 !important;
+}
 
 /* -----------------------------------------------HEADER---------------------------------------- */
 #header {
