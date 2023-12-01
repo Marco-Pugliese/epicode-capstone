@@ -87,7 +87,13 @@ const SingleEvent = ({ event }) => {
     <Col className="d-flex justify-content-between ps-5 pe-1">
       <div>
         <div className="fw-bold">{event.name_event}</div>
-        <div>{event.date_event}</div>
+        <div>
+          {event.date_event.slice(8, 10)}/{event.date_event.slice(5, 7)}/
+          {event.date_event.slice(0, 4)} -{" "}
+          <span className="smaller">
+            start: {event.date_event.slice(11, 16)}
+          </span>
+        </div>
       </div>
       <div className="d-flex align-items-center">
         <Button className="py-0" variant="primary" onClick={handleShow}>

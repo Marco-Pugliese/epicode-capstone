@@ -4,6 +4,7 @@ import SingleEvent from "./SingleEvent";
 import { Container, Row } from "react-bootstrap";
 
 const InProgramm = () => {
+  const newDate = new Date();
   const { id } = useParams();
   const allEvents = useSelector((state) => state.MyFetches.events);
   return (
@@ -15,24 +16,10 @@ const InProgramm = () => {
               singleEvent.hosted_by.id === id &&
               singleEvent.isConfirmed === true ? (
                 <>
-                  {parseInt(
-                    singleEvent.date_event.slice(0, 4) *
-                      100 *
-                      singleEvent.date_event.slice(5, 7) *
-                      10 *
-                      singleEvent.date_event.slice(8, 10) *
-                      1
-                  ) -
-                    parseInt(
-                      new Date().getFullYear() *
-                        100 *
-                        (new Date().getMonth() + 1) *
-                        10 *
-                        new Date().getDate() *
-                        1
-                    ) >
-                  0 ? (
-                    <SingleEvent key={singleEvent.id} event={singleEvent} />
+                  {parseInt(newDate - new Date(singleEvent.date_event)) < 0 ? (
+                    <div>
+                      <SingleEvent key={singleEvent.id} event={singleEvent} />
+                    </div>
                   ) : null}
                 </>
               ) : null

@@ -57,14 +57,14 @@ const ActivityPage = () => {
                 </div>
               </div>
               <div className="position-relative translate-middle-y fs-3">
-                Descrizione (da aggiungere)
+                Descrizione (da aggiungere in JSON)
               </div>
 
-              <div className="d-flex">
-                <div className="w-50">
+              <div className="d-flex pt-4 pb-2">
+                <div className="d-flex flex-column justify-content-between w-50 ">
                   <div className="py-1">
-                    <h3 className="m-0 p-0">
-                      Eventi in Programma{" "}
+                    <h3 className="m-0 p-0 text-white">
+                      Eventi in Programma
                       <img
                         src="/assets/images/details&logo/freccia-giu-bianca.png"
                         alt="arrow down"
@@ -73,10 +73,12 @@ const ActivityPage = () => {
                       />
                     </h3>
 
-                    <InProgramm />
+                    <div className="smaller pe-4">
+                      <InProgramm />
+                    </div>
                   </div>
                   <div className="py-1">
-                    <h3 className="m-0 p-0">
+                    <h3 className="m-0 p-0 text-white">
                       Attività Recenti
                       <img
                         src="/assets/images/details&logo/freccia-giu-bianca.png"
@@ -85,14 +87,14 @@ const ActivityPage = () => {
                         className="ms-4"
                       />
                     </h3>
-                    <div className="smaller">
+                    <div className="smaller pe-4">
                       <DoneEvents />
                     </div>
                   </div>
                 </div>
-                <div className="d-flex flex-column">
+                <div className="d-flex flex-column justify-content-between">
                   <div className="py-1">
-                    <h3 className="m-0 p-0">
+                    <h3 className="m-0 p-0 text-white">
                       Eventi in attesa di conferma
                       <img
                         src="/assets/images/details&logo/freccia-giu-bianca.png"
@@ -101,12 +103,11 @@ const ActivityPage = () => {
                         className="ms-4"
                       />
                     </h3>
-                    <div className="smaller">
+                    <div className="d-flex flex-column justify-content-between">
                       <DaConfermare />
                     </div>
                   </div>
-                  <div className="py-1">
-                    <h3 className="m-0 p-0">Aggiungi un Evento</h3>
+                  <div className="py-1 text-center border-top">
                     <AddAnEvent activity={activity} />
                   </div>
                 </div>
