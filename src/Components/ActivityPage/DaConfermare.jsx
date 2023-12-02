@@ -12,36 +12,16 @@ const DaConfermare = () => {
   useEffect(() => {
     dispatch(getEventsAction());
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [allEvents]);
+  }, [allEvents.length]);
   return (
     <Container>
       <Row className="d-flex flex-column">
-        {allEvents.length > 0 && allEvents !== undefined ? (
+        {allEvents !== undefined && allEvents.length > 0 ? (
           <>
-            {allEvents.map((singleEvent, i) =>
-              singleEvent.hosted_by.id === id &&
+            {allEvents.map((singleEvent) =>
+              parseInt(singleEvent.hosted_by.id) === parseInt(id) &&
               singleEvent.isConfirmed === false ? (
-                <>
-                  {parseInt(
-                    singleEvent.date_event.slice(0, 4) *
-                      20 *
-                      (singleEvent.date_event.slice(5, 7) - 1) *
-                      15 *
-                      singleEvent.date_event.slice(8, 10) *
-                      1
-                  ) -
-                    parseInt(
-                      new Date().getFullYear() *
-                        20 *
-                        new Date().getMonth() *
-                        15 *
-                        new Date().getDate() *
-                        1
-                    ) >
-                  0 ? (
-                    <SingleEvent key={i} event={singleEvent} />
-                  ) : null}
-                </>
+                <SingleEvent key={singleEvent.id} event={singleEvent} />
               ) : null
             )}
           </>

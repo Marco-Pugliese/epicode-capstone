@@ -100,6 +100,7 @@ const SingleEvent = ({ event }) => {
         <Button className="py-0" variant="primary" onClick={handleShow}>
           <Trash />
         </Button>
+
         {renderBadge(event.id)}
 
         <Modal
@@ -132,47 +133,50 @@ const SingleEvent = ({ event }) => {
               {allCandidature
                 .filter(
                   (singleCandidatura) =>
-                    singleCandidatura.event.hosted_by.id === id
+                    parseInt(singleCandidatura.event.hosted_by.id) ===
+                    parseInt(id)
                 )
                 .map((singleCandidatura) => (
-                  <>
-                    <Col key={singleCandidatura.id} className="col-10">
-                      <Link
-                        to={`/artist/${singleCandidatura.band.id}`}
-                        className="nav-link"
-                      >
-                        <div className="fs-6 fw-bold">
-                          {singleCandidatura.band.name}{" "}
-                          <span className="extrasmall ms-3 fst-italic">
-                            {singleCandidatura.band.kind_of} /{" "}
-                            {singleCandidatura.band.genre}
-                          </span>
-                        </div>
-                        <div className="smaller ">
-                          {singleCandidatura.details}
-                        </div>
-                      </Link>
-                    </Col>
-                    <Col className="col-2 d-flex flex-column">
-                      <Button className="smaller p-0">
-                        <CheckCircle
-                          className="text-success"
-                          onClick={() => {
-                            acceptCandidature();
-                            deleteSingleCandidatura(singleCandidatura.id);
-                          }}
-                        />
-                      </Button>
-                      <Button className="smaller p-0">
-                        <XCircle
-                          className="text-danger"
-                          onClick={() =>
-                            deleteSingleCandidatura(singleCandidatura.id)
-                          }
-                        />
-                      </Button>
-                    </Col>
-                  </>
+                  <Col className="col-12">
+                    <Row>
+                      <Col key={singleCandidatura.id} className="col-10">
+                        <Link
+                          to={`/artist/${singleCandidatura.band.id}`}
+                          className="nav-link"
+                        >
+                          <div className="fs-6 fw-bold">
+                            {singleCandidatura.band.name}{" "}
+                            <span className="extrasmall ms-3 fst-italic">
+                              {singleCandidatura.band.kind_of} /{" "}
+                              {singleCandidatura.band.genre}
+                            </span>
+                          </div>
+                          <div className="smaller ">
+                            {singleCandidatura.details}
+                          </div>
+                        </Link>
+                      </Col>
+                      <Col className="col-2 d-flex flex-column">
+                        <Button className="smaller p-0">
+                          <CheckCircle
+                            className="text-success"
+                            onClick={() => {
+                              acceptCandidature();
+                              deleteSingleCandidatura(singleCandidatura.id);
+                            }}
+                          />
+                        </Button>
+                        <Button className="smaller p-0">
+                          <XCircle
+                            className="text-danger"
+                            onClick={() =>
+                              deleteSingleCandidatura(singleCandidatura.id)
+                            }
+                          />
+                        </Button>
+                      </Col>
+                    </Row>
+                  </Col>
                 ))}
             </Row>
           </Modal.Body>

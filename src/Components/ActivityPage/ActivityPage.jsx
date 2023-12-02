@@ -13,13 +13,15 @@ const ActivityPage = () => {
   const dispatch = useDispatch();
   const userLogged = useSelector((state) => state.LoggedIn.user[0]);
   const { id } = useParams();
-  const allCandidature = useSelector((state) => state.MyFetches.cadidature);
+  const allCandidature = useSelector((state) => state.MyFetches.candidature);
   const allActivity = useSelector((state) => state.MyFetches.activities);
   const [activity, setActivity] = useState();
   const myActivity = () => {
     if (allActivity !== undefined && allActivity.length > 0) {
       allActivity.map((singleActivity) =>
-        singleActivity.id === id ? setActivity(singleActivity) : null
+        parseInt(singleActivity.id) === parseInt(id)
+          ? setActivity(singleActivity)
+          : null
       );
     }
   };
@@ -27,7 +29,7 @@ const ActivityPage = () => {
     myActivity();
     dispatch(getCandidatureAction());
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [allCandidature]);
+  }, [allCandidature.length]);
   // console.log(ArtistWithIdParam, userLogged.email);
   return (
     <Container id="activityPage" fluid className="h-100 py-1 text-yellow">

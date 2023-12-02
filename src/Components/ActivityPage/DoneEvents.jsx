@@ -17,7 +17,7 @@ const DoneEvents = () => {
         {allEvents.length > 0 && allEvents !== undefined ? (
           <>
             {allEvents.map((singleEvent) =>
-              singleEvent.hosted_by.id === id &&
+              parseInt(singleEvent.hosted_by.id) === parseInt(id) &&
               singleEvent.isConfirmed === true ? (
                 <>
                   {parseInt(newDate - new Date(singleEvent.date_event)) > 0 ? (
