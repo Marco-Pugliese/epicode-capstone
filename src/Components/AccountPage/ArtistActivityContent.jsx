@@ -28,18 +28,16 @@ const ArtistActivityContent = () => {
   return (
     <div className="d-flex flex-column w-100 text-blue">
       <Container fluid className="text-center py-2 fs-6">
-        {userLogged.name !== null ? <WelcomeActivityMessage /> : null}
+        {userLogged.name && <WelcomeActivityMessage />}
       </Container>
       <div className="d-flex flex-column justify-content-between flex-lg-row">
         <Container className="mx-2 py-2 shadow-lg rounded-4">
           <h3>Artists/Bands: </h3>
           <Row>
-            {allTheArtists.map((artist) =>
+            {allTheArtists.map((artist, i) =>
               artist.registered_mails.map((singleEmail) =>
                 singleEmail === emailLogged ? (
-                  <>
-                    <ArtistLink key={artist.id} artist={artist} />
-                  </>
+                  <ArtistLink key={i} artist={artist} />
                 ) : (
                   () => null
                 )
@@ -52,10 +50,10 @@ const ArtistActivityContent = () => {
         <Container className="mx-2 py-2 shadow-lg rounded-4">
           <h3>Activities: </h3>
           <div className="rounded-3">
-            {allTheActivities.map((activity) =>
-              activity.registered_mails.map((singleEmail) =>
+            {allTheActivities.map((activity, i) =>
+              activity.registered_mail.map((singleEmail) =>
                 singleEmail === emailLogged ? (
-                  <ActivityLink key={activity.id} activity={activity} />
+                  <ActivityLink key={i} activity={activity} />
                 ) : null
               )
             )}

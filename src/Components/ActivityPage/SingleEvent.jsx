@@ -69,10 +69,11 @@ const SingleEvent = ({ event }) => {
   };
 
   const renderBadge = (eventId) => {
-    const candidatureCount = allCandidature.filter(
-      (singleCandidatura) => singleCandidatura.event.id === eventId
-    ).length;
-
+    const candidatureCount =
+      allCandidature !== undefined &&
+      allCandidature.filter(
+        (singleCandidatura) => singleCandidatura.event.id === eventId
+      ).length;
     return candidatureCount > 0 ? (
       <div
         className="border border-warning ms-2 px-1 rounded pointer"

@@ -36,6 +36,7 @@ const AddAnEvent = ({ activity }) => {
       .then((res) => {
         if (res.ok) {
           console.log("Evento registrato");
+          dispatch(getEventsAction());
         } else {
           throw new Error("Error while adding new Event");
         }
@@ -113,7 +114,6 @@ const AddAnEvent = ({ activity }) => {
             variant="primary"
             onClick={() => {
               addEvent();
-              dispatch(getEventsAction());
               handleClose();
             }}
           >

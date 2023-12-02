@@ -3,7 +3,7 @@ import { Form, InputGroup } from "react-bootstrap";
 import Button from "react-bootstrap/Button";
 import Modal from "react-bootstrap/Modal";
 import { useDispatch, useSelector } from "react-redux";
-import { getArtistsAction } from "../Redux/Actions";
+import { getActivitiesAction, getArtistsAction } from "../Redux/Actions";
 
 const AddAnActivity = () => {
   const [show, setShow] = useState(false);
@@ -36,6 +36,7 @@ const AddAnActivity = () => {
       .then((res) => {
         if (res.ok) {
           console.log("Utente registrato");
+          dispatch(getActivitiesAction());
         } else {
           throw new Error("Error while registering new Artist");
         }

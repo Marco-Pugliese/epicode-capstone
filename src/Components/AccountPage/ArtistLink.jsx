@@ -14,19 +14,20 @@ const ArtistLink = ({ artist }) => {
         </div>
         <Card.Body className="d-flex justify-content-between align-items-center bg-bluedark w-100 rounded-end-4">
           <div>
-            <Card.Text className="text-yellow">
-              {artist.name}
-              <span className="extrasmall"> ({artist.kind_of})</span>
-              <div className="extrasmall fw-normal text-yellow">
+            <Card.Text className="text-yellow d-flex flex-column">
+              <span>
+                <span>{artist.name}</span>
+                <span className="extrasmall ms-2"> ({artist.kind_of})</span>
+              </span>
+              <span className="extrasmall fw-normal text-yellow">
                 {artist.address}
-              </div>
+              </span>
             </Card.Text>
           </div>
-          <div>
+
+          <div className="btn btn-success d-flex justify-content-center align-items-center">
             <Link to={`/artist/${artist.id}`} className="nav-link">
-              <div className="btn btn-success  d-flex justify-content-center align-items-center">
-                <span className="extrasmall">Vai Alla Pagina</span>
-              </div>
+              <span className="extrasmall">Vai Alla Pagina</span>
             </Link>
           </div>
         </Card.Body>

@@ -2,294 +2,60 @@
   "users": [
     {
       "name": "Marco",
-      "surname": "Rossi",
-      "age": 25,
-      "email": "marcorossi@example.com",
-      "gender": "male",
-      "password": "marcopass",
-      "id": "1"
-    },
-    {
-      "name": "Giulia",
-      "surname": "Bianchi",
-      "age": 30,
-      "email": "giuliabianchi@example.com",
-      "gender": "female",
-      "password": "giuliapass",
-      "id": "2"
-    },
-    {
-      "name": "Luca",
-      "surname": "Verdi",
-      "age": 28,
-      "email": "lucaverdi@example.com",
-      "gender": "male",
-      "password": "lucapass",
-      "id": "3"
-    },
-    {
-      "name": "Elena",
-      "surname": "Neri",
-      "age": 22,
-      "email": "elenaneri@example.com",
-      "gender": "female",
-      "password": "elenapass",
-      "id": "4"
-    },
-    {
-      "name": "Alessandro",
-      "surname": "Marroni",
-      "age": 32,
-      "email": "alessandromarroni@example.com",
-      "gender": "male",
-      "password": "alessandropass",
-      "id": "5"
-    },
-    {
-      "name": "Chiara",
-      "surname": "Gialli",
-      "age": 27,
-      "email": "chiaragialli@example.com",
-      "gender": "female",
-      "password": "chiarapass",
-      "id": "6"
-    },
-    {
-      "name": "Andrea",
       "surname": "Pugliese",
-      "email": "andrea@email.it",
-      "password": "password",
-      "id": 8,
-      "birthday": "1989-08-14"
-    },
-    {
-      "name": "salvatore",
-      "surname": "pugliese",
-      "email": "salvatore@test.it",
-      "password": "test",
-      "id": 9,
-      "birthday": "275760-02-27"
-    },
-    {
-      "name": "mamma",
-      "surname": "mamma",
-      "email": "mamma@test.it",
-      "password": "test",
-      "id": 10,
-      "birthday": "1212-12-12"
-    },
-    {
-      "name": "papa",
-      "surname": "papa",
-      "email": "papa@test.it",
-      "password": "test",
-      "id": 11,
-      "birthday": "1010-10-10"
-    },
-    {
-      "name": "mama",
-      "surname": "msms",
-      "email": "mamama@mama.ma",
-      "password": "mama",
-      "id": 12,
-      "birthday": "1212-12-12"
-    },
-    {
-      "name": "fdsassssss",
-      "surname": "fldkanfladmnfal",
-      "email": "mamaiiii@example.it",
-      "password": "examplenononono",
-      "id": 13,
-      "birthday": "1998-12-12"
-    },
-    {
-      "name": "marcomama",
-      "surname": "mamamarco",
-      "email": "esempio@test.it",
-      "password": "test",
-      "id": 14,
-      "birthday": "1212-03-12"
-    },
-    {
-      "name": "marco",
-      "surname": "marcomarco",
-      "email": "marcomarco@marco.it",
-      "password": "marco",
-      "id": 15,
-      "birthday": "1289-12-19"
-    },
-    {
-      "name": "kajdkal",
-      "surname": "kfjalfkan",
-      "email": "marcoomaoifal@ghaj.uc",
-      "password": "alfalkjf",
-      "id": 16,
-      "birthday": "2281-09-12"
-    },
-    {
-      "name": "gadòkfjdalkjfalks",
-      "surname": "KDFJLAKFJALKJFALKJ",
-      "email": "gkdldkfgfgag@fladkfjlak.com",
-      "password": "goaijflakjlsakdjlaklsdjlaksdjaks",
-      "id": 17,
-      "birthday": "1888-12-18"
-    },
-    {
-      "name": "Sara",
-      "surname": "Sara",
-      "email": "sara@esempio.it",
-      "password": "saraesempio",
-      "id": 18,
-      "birthday": "0001-01-01"
-    },
-    {
-      "name": "michele",
-      "surname": "michelemichele",
-      "email": "michele@michele.it",
-      "password": "esempiodimichele",
-      "id": 19,
-      "birthday": "1221-12-12"
-    },
-    {
-      "name": "marco",
-      "surname": "puglia",
-      "email": "marcono@esempio.com",
+      "email": "marco.pugliese92@yahoo.com",
       "password": "marcopass",
-      "id": 20,
-      "birthday": "1994-03-12"
-    },
-    {
-      "name": "Marco",
-      "surname": "Johnny",
-      "email": "johnmark@yahoo.com",
-      "password": "marcopass",
-      "id": 21,
-      "birthday": "1988-02-13"
+      "id": 1,
+      "birthday": "1992-03-12"
     }
   ],
   "artists": [
     {
-      "name": "DJ Harmony",
+      "name": "Marcone",
       "kind_of": "DJ",
-      "genre": "Electronic",
+      "genre": "Pop Dance",
       "_events": [],
-      "band_components": [
-        "Harold Thompson"
-      ],
-      "registered_mails": [
-        "djharmony@example.com"
-      ],
-      "address": "Milano, Lombardia",
-      "id": "1"
-    },
-    {
-      "name": "Funky Groovers",
-      "kind_of": "Band",
-      "genre": "Funk",
-      "_events": [],
-      "band_components": [
-        "Sara Brown",
-        "Mike Davis",
-        "Chris White",
-        "Emma Turner",
-        "David Smith"
-      ],
-      "registered_mails": [
-        "marcorossi@example.com"
-      ],
-      "address": "Roma, Lazio",
-      "id": "2"
-    },
-    {
-      "name": "Melody Maker",
-      "kind_of": "Cantautore",
-      "genre": "Pop",
-      "_events": [],
-      "band_components": [
-        "George Miller"
-      ],
-      "registered_mails": [
-        "melodym@example.com"
-      ],
-      "address": "Firenze, Toscana",
-      "id": "3"
-    },
-    {
-      "name": "Reggae Roots",
-      "kind_of": "Band",
-      "genre": "Reggae",
-      "_events": [],
-      "band_components": [
-        "John Davis",
-        "Lisa Smith",
-        "Carlos Brown",
-        "Emily Turner"
-      ],
-      "registered_mails": [
-        "johnd@example.com"
-      ],
-      "address": "Napoli, Campania",
-      "id": "4"
-    },
-    {
-      "name": "Indie Dream",
-      "kind_of": "Cantautore",
-      "genre": "Indie",
-      "_events": [],
-      "band_components": [
-        "Isaac Turner"
-      ],
-      "registered_mails": [
-        "indied@example.com"
-      ],
-      "address": "Torino, Piemonte",
-      "id": "5"
-    },
-    {
-      "name": "Oasis",
-      "kind_of": "Band",
-      "genre": "BritRock",
-      "_events": [],
-      "band_components": [
-        "Noel, Liam"
-      ],
-      "registered_mails": [
-        "ciccioscala@esempio.it"
-      ],
+      "band_components": [[]],
+      "registered_mails": ["marco.pugliese92@yahoo.com"],
+      "image_url": "https://placedog.net/300/300",
       "address": "Procida, Campania, Italia",
-      "id": 6
-    },
-    {
-      "name": "GEO POP",
-      "kind_of": "DJ",
-      "genre": "DANCE",
-      "_events": [],
-      "band_components": [
-        "Luca, Michele, Giovanni"
-      ],
-      "registered_mails": [
-        "marcorossi@example.com"
-      ],
-      "image_url": "https://placedog.net/300/300",
-      "address": "Milano, Campania, It",
-      "id": 7
-    },
-    {
-      "name": "Cover Band Cristina D'avena",
-      "kind_of": "Band",
-      "genre": "Metal",
-      "_events": [],
-      "band_components": [
-        "Marco Neri"
-      ],
-      "registered_mails": [
-        "elenaneri@example.com"
-      ],
-      "image_url": "https://placedog.net/300/300",
-      "address": "Pianura, Campania, Italia",
-      "id": 8
+      "id": 1
     }
   ],
+  "activities": [
+    {
+      "name_activity": "Bar Bagianni",
+      "name_owner": "Gianni Ba'",
+      "kind_of_activity": "Bar",
+      "address": "Via Solchiaro 17, Procida, Campania, Italia",
+      "img": "https://www.placedog.net/300/200",
+      "registered_mail": ["marco.pugliese92@yahoo.com"],
+      "logo": "https://www.placedog.net/120/100",
+      "id": 1
+    }
+  ],
+  "events": [
+    {
+      "name_event": "Capodanno al sole",
+      "detail": "Capodanno in trasferta (Argentina)",
+      "richiesta": "Folk Band",
+      "date_event": "2023-12-31T19:00",
+      "isConfirmed": false,
+      "hosted_by": {
+        "name_activity": "Bar Bagianni",
+        "name_owner": "Gianni Ba'",
+        "kind_of_activity": "Bar",
+        "address": "Via Solchiaro 17, Procida, Campania, Italia",
+        "img": "https://www.placedog.net/300/200",
+        "registered_mail": ["marco.pugliese92@yahoo.com"],
+        "logo": "https://www.placedog.net/120/100",
+        "id": 1
+      },
+      "img": "https://www.placedog.net/600/200",
+      "id": 1
+    }
+  ],
+  "candidature": [],
   "articles": [
     {
       "author": "Alice Melody",
@@ -435,177 +201,5 @@
       "article": "Le festività hanno ispirato una varietà di tracce musicali, con Halloween in cima alla lista. Questo articolo esplora le composizioni misteriose e le atmosfere spettrali della musica associata a festività come Halloween. Scopri come le melodie e i suoni incantati contribuiscano a creare l'atmosfera perfetta per celebrare le festività in modo unico.Negli ultimi anni, abbiamo assistito a una sorprendente rinascita della musica classica. Artisti contemporanei si stanno dedicando alla reinterpretazione di opere famose, portando un tocco moderno a composizioni intramontabili. Questo articolo esplora il fascino di questa tendenza e il modo in cui la musica classica continua a influenzare e ispirare le generazioni attuali. La fusione tra tradizione e innovazione crea un panorama sonoro unico, avvicinando la musica classica a un pubblico sempre più vasto e diversificato.Negli ultimi anni, abbiamo assistito a una sorprendente rinascita della musica classica. Artisti contemporanei si stanno dedicando alla reinterpretazione di opere famose, portando un tocco moderno a composizioni intramontabili. Questo articolo esplora il fascino di questa tendenza e il modo in cui la musica classica continua a influenzare e ispirare le generazioni attuali. La fusione tra tradizione e innovazione crea un panorama sonoro unico, avvicinando la musica classica a un pubblico sempre più vasto e diversificato.Negli ultimi anni, abbiamo assistito a una sorprendente rinascita della musica classica. Artisti contemporanei si stanno dedicando alla reinterpretazione di opere famose, portando un tocco moderno a composizioni intramontabili. Questo articolo esplora il fascino di questa tendenza e il modo in cui la musica classica continua a influenzare e ispirare le generazioni attuali. La fusione tra tradizione e innovazione crea un panorama sonoro unico, avvicinando la musica classica a un pubblico sempre più vasto e diversificato.Negli ultimi anni, abbiamo assistito a una sorprendente rinascita della musica classica. Artisti contemporanei si stanno dedicando alla reinterpretazione di opere famose, portando un tocco moderno a composizioni intramontabili. Questo articolo esplora il fascino di questa tendenza e il modo in cui la musica classica continua a influenzare e ispirare le generazioni attuali. La fusione tra tradizione e innovazione crea un panorama sonoro unico, avvicinando la musica classica a un pubblico sempre più vasto e diversificato.Negli ultimi anni, abbiamo assistito a una sorprendente rinascita della musica classica. Artisti contemporanei si stanno dedicando alla reinterpretazione di opere famose, portando un tocco moderno a composizioni intramontabili. Questo articolo esplora il fascino di questa tendenza e il modo in cui la musica classica continua a influenzare e ispirare le generazioni attuali. La fusione tra tradizione e innovazione crea un panorama sonoro unico, avvicinando la musica classica a un pubblico sempre più vasto e diversificato.Negli ultimi anni, abbiamo assistito a una sorprendente rinascita della musica classica. Artisti contemporanei si stanno dedicando alla reinterpretazione di opere famose, portando un tocco moderno a composizioni intramontabili. Questo articolo esplora il fascino di questa tendenza e il modo in cui la musica classica continua a influenzare e ispirare le generazioni attuali. La fusione tra tradizione e innovazione crea un panorama sonoro unico, avvicinando la musica classica a un pubblico sempre più vasto e diversificato.Negli ultimi anni, abbiamo assistito a una sorprendente rinascita della musica classica. Artisti contemporanei si stanno dedicando alla reinterpretazione di opere famose, portando un tocco moderno a composizioni intramontabili. Questo articolo esplora il fascino di questa tendenza e il modo in cui la musica classica continua a influenzare e ispirare le generazioni attuali. La fusione tra tradizione e innovazione crea un panorama sonoro unico, avvicinando la musica classica a un pubblico sempre più vasto e diversificato.Negli ultimi anni, abbiamo assistito a una sorprendente rinascita della musica classica. Artisti contemporanei si stanno dedicando alla reinterpretazione di opere famose, portando un tocco moderno a composizioni intramontabili. Questo articolo esplora il fascino di questa tendenza e il modo in cui la musica classica continua a influenzare e ispirare le generazioni attuali. La fusione tra tradizione e innovazione crea un panorama sonoro unico, avvicinando la musica classica a un pubblico sempre più vasto e diversificato.Negli ultimi anni, abbiamo assistito a una sorprendente rinascita della musica classica. Artisti contemporanei si stanno dedicando alla reinterpretazione di opere famose, portando un tocco moderno a composizioni intramontabili. Questo articolo esplora il fascino di questa tendenza e il modo in cui la musica classica continua a influenzare e ispirare le generazioni attuali. La fusione tra tradizione e innovazione crea un panorama sonoro unico, avvicinando la musica classica a un pubblico sempre più vasto e diversificato.Negli ultimi anni, abbiamo assistito a una sorprendente rinascita della musica classica. Artisti contemporanei si stanno dedicando alla reinterpretazione di opere famose, portando un tocco moderno a composizioni intramontabili. Questo articolo esplora il fascino di questa tendenza e il modo in cui la musica classica continua a influenzare e ispirare le generazioni attuali. La fusione tra tradizione e innovazione crea un panorama sonoro unico, avvicinando la musica classica a un pubblico sempre più vasto e diversificato.Negli ultimi anni, abbiamo assistito a una sorprendente rinascita della musica classica. Artisti contemporanei si stanno dedicando alla reinterpretazione di opere famose, portando un tocco moderno a composizioni intramontabili. Questo articolo esplora il fascino di questa tendenza e il modo in cui la musica classica continua a influenzare e ispirare le generazioni attuali. La fusione tra tradizione e innovazione crea un panorama sonoro unico, avvicinando la musica classica a un pubblico sempre più vasto e diversificato.Negli ultimi anni, abbiamo assistito a una sorprendente rinascita della musica classica. Artisti contemporanei si stanno dedicando alla reinterpretazione di opere famose, portando un tocco moderno a composizioni intramontabili. Questo articolo esplora il fascino di questa tendenza e il modo in cui la musica classica continua a influenzare e ispirare le generazioni attuali. La fusione tra tradizione e innovazione crea un panorama sonoro unico, avvicinando la musica classica a un pubblico sempre più vasto e diversificato.Negli ultimi anni, abbiamo assistito a una sorprendente rinascita della musica classica. Artisti contemporanei si stanno dedicando alla reinterpretazione di opere famose, portando un tocco moderno a composizioni intramontabili. Questo articolo esplora il fascino di questa tendenza e il modo in cui la musica classica continua a influenzare e ispirare le generazioni attuali. La fusione tra tradizione e innovazione crea un panorama sonoro unico, avvicinando la musica classica a un pubblico sempre più vasto e diversificato.Negli ultimi anni, abbiamo assistito a una sorprendente rinascita della musica classica. Artisti contemporanei si stanno dedicando alla reinterpretazione di opere famose, portando un tocco moderno a composizioni intramontabili. Questo articolo esplora il fascino di questa tendenza e il modo in cui la musica classica continua a influenzare e ispirare le generazioni attuali. La fusione tra tradizione e innovazione crea un panorama sonoro unico, avvicinando la musica classica a un pubblico sempre più vasto e diversificato.",
       "id": " 22"
     }
-  ],
-  "activities": [
-    {
-      "name_activity": "Luna Blu Lounge",
-      "name_owner": "Alex Rossi",
-      "kind_of_activity": "Bar",
-      "address": "Via Roma 123, Roma, Lazio",
-      "img": "https://www.placedog.net/300/200",
-      "registered_mails": [
-        "mailnumero9@test.it",
-        "mailnumero29@test.it",
-        "mailnumero39@test.it",
-        "mailnumero49@test.it"
-      ],
-      "logo": "url_logo_1.jpg",
-      "id": "1"
-    },
-    {
-      "name_activity": "Ritmo Elettrico",
-      "name_owner": "Luca Verdi",
-      "kind_of_activity": "Discoteca",
-      "address": "Corso Napoli 789, Napoli, Campania",
-      "img": "https://www.placedog.net/300/200",
-      "registered_mails": [
-        "mailnumero1@test.it",
-        "mailnumero11@test.it",
-        "mailnumero21@test.it",
-        "mailnumero31@test.it"
-      ],
-      "logo": "url_logo_3.jpg",
-      "id": "2"
-    },
-    {
-      "name_activity": "Gusto Italiano",
-      "name_owner": "Maria Bianchi",
-      "kind_of_activity": "Ristorante",
-      "address": "Via Milano 456, Milano, Lombardia",
-      "img": "https://www.placedog.net/300/200",
-      "registered_mails": [
-        "johnd@example.com"
-      ],
-      "logo": "url_logo_2.jpg",
-      "id": "3"
-    },
-    {
-      "name_activity": "Teatro Magico",
-      "name_owner": "Marco Incanto",
-      "kind_of_activity": "Teatro",
-      "address": "Via Venezia 202, Venezia, Veneto",
-      "img": "https://www.placedog.net/300/200",
-      "registered_mails": [
-        "elenaneri@example.com"
-      ],
-      "logo": "url_logo_5.jpg",
-      "id": "4"
-    },
-    {
-      "name_activity": "Arte in Movimento",
-      "name_owner": "Alice Artista",
-      "kind_of_activity": "Galleria d'Arte",
-      "address": "Corso Pittore 15, Trieste, Friuli-Venezia Giulia",
-      "img": "https://www.placedog.net/300/200",
-      "registered_mails": [
-        "marcorossi@example.com"
-      ],
-      "logo": "url_logo_12.jpg",
-      "id": "5"
-    },
-    {
-      "name_activity": "Bar Etto",
-      "name_owner": "Ettore Etto",
-      "kind_of_activity": "Pub",
-      "address": "Via Comunicanti 12, Roma, Liguria",
-      "img": "https://www.placedog.net/300/200",
-      "registered_mails": [
-        "marcorossi@example.com"
-      ],
-      "logo": "url_logo_6.jpg",
-      "id": 6,
-      "_events": []
-    },
-    {
-      "name_activity": "BAR BONE",
-      "name_owner": "Elena",
-      "kind_of_activity": "bar",
-      "address": "via turturellu, Milano, Lombardia, It",
-      "img": "https://www.placedog.net/300/200",
-      "registered_mails": [
-        "elenaneri@example.com"
-      ],
-      "logo": "url_logo_7.jpg",
-      "id": 7,
-      "_events": []
-    },
-    {
-      "name_activity": "Bar Baro",
-      "name_owner": "Barco",
-      "kind_of_activity": "Bar",
-      "address": "Via alemannia 12, berlino, germania",
-      "img": "https://www.placedog.net/300/200",
-      "registered_mails": [
-        "marcorossi@example.com"
-      ],
-      "logo": "url_logo_8.jpg",
-      "id": 8
-    }
-  ],
-  "events": [
-    {
-      "name_event": "Epifania Rock",
-      "detail": "Aperitivo Rock Befana",
-      "richiesta": "Travestitevi da befane",
-      "date_event": "2024-01-05T18:30",
-      "isConfirmed": false,
-      "hosted_by": {
-        "name_activity": "Arte in Movimento",
-        "name_owner": "Alice Artista",
-        "kind_of_activity": "Galleria d'Arte",
-        "address": "Corso Pittore 15, Trieste, Friuli-Venezia Giulia",
-        "img": "https://www.placedog.net/300/200",
-        "registered_mails": [
-          "marcorossi@example.com"
-        ],
-        "logo": "url_logo_12.jpg",
-        "id": "5"
-      },
-      "img": "https://www.placedog.net/600/200",
-      "id": 1
-    },
-    {
-      "name_event": "Capodanno Latino",
-      "detail": "Capodanno Dance",
-      "richiesta": "DJ",
-      "date_event": "2023-12-31T19:59",
-      "isConfirmed": true,
-      "hosted_by": {
-        "name_activity": "Arte in Movimento",
-        "name_owner": "Alice Artista",
-        "kind_of_activity": "Galleria d'Arte",
-        "address": "Corso Pittore 15, Trieste, Friuli-Venezia Giulia",
-        "img": "https://www.placedog.net/300/200",
-        "registered_mails": [
-          "marcorossi@example.com"
-        ],
-        "logo": "url_logo_12.jpg",
-        "id": "5"
-      },
-      "img": "https://www.placedog.net/600/200",
-      "id": 2
-    },
-    {
-      "name_event": "Gia Passato",
-      "detail": "ffjalkjdflask",
-      "richiesta": "fadlkfjalkfa",
-      "date_event": "2023-10-31T20:20",
-      "isConfirmed": true,
-      "hosted_by": {
-        "name_activity": "Arte in Movimento",
-        "name_owner": "Alice Artista",
-        "kind_of_activity": "Galleria d'Arte",
-        "address": "Corso Pittore 15, Trieste, Friuli-Venezia Giulia",
-        "img": "https://www.placedog.net/300/200",
-        "registered_mails": [
-          "marcorossi@example.com"
-        ],
-        "logo": "url_logo_12.jpg",
-        "id": "5"
-      },
-      "img": "https://www.placedog.net/600/200",
-      "id": 3
-    }
-  ],
-  "candidature": []
+  ]
 }

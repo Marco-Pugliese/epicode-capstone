@@ -12,14 +12,12 @@ const InProgramm = () => {
       <Row className="d-flex flex-column">
         {allEvents.length > 0 && allEvents !== undefined ? (
           <>
-            {allEvents.map((singleEvent, i) =>
+            {allEvents.map((singleEvent) =>
               singleEvent.hosted_by.id === id &&
               singleEvent.isConfirmed === true ? (
                 <>
                   {parseInt(newDate - new Date(singleEvent.date_event)) < 0 ? (
-                    <div>
-                      <SingleEvent key={singleEvent.id} event={singleEvent} />
-                    </div>
+                    <SingleEvent key={singleEvent.id} event={singleEvent} />
                   ) : null}
                 </>
               ) : null

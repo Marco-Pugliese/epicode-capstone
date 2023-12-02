@@ -7,26 +7,30 @@ const ActivityLink = ({ activity }) => {
       <Card className="shadow-lg border-0 m-1 bg-transparent d-flex flex-row">
         <div className=" mx-auto bg-bluedark rounded-start-4 p-1 col-3">
           <Card.Img
-            src="https://www.placedog.net/400"
+            src="https://www.placedog.net/350"
             className="bg-bluedark rounded-4"
             style={{ minWidth: "100px", width: "100%" }}
           />
         </div>
         <Card.Body className="d-flex justify-content-between align-items-center bg-bluedark w-100 rounded-end-4">
           <div>
-            <Card.Text className="text-yellow">
-              {activity.name_activity}
-              <span className="extrasmall"> ({activity.kind_of_activity})</span>
-              <div className="smaller fw-normal text-yellow">
+            <Card.Text className="text-yellow d-flex flex-column">
+              <span>
+                <span>
+                  {activity.name_activity}
+                  <span className="extrasmall ms-2">
+                    ({activity.kind_of_activity})
+                  </span>
+                </span>
+              </span>
+              <span className="smaller fw-normal text-yellow">
                 {activity.address}
-              </div>
+              </span>
             </Card.Text>
           </div>
-          <div>
+          <div className="btn btn-success  d-flex justify-content-center align-items-center">
             <Link to={`/activity/${activity.id}`} className="nav-link">
-              <div className="btn btn-success  d-flex justify-content-center align-items-center">
-                <span className="extrasmall">Vai Alla Pagina</span>
-              </div>
+              <span className="extrasmall">Vai Alla Pagina</span>
             </Link>
           </div>
         </Card.Body>
