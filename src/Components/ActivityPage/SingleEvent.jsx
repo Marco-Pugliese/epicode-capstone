@@ -137,9 +137,9 @@ const SingleEvent = ({ event }) => {
                     parseInt(id)
                 )
                 .map((singleCandidatura) => (
-                  <Col className="col-12">
+                  <Col key={singleCandidatura.id} className="col-12">
                     <Row>
-                      <Col key={singleCandidatura.id} className="col-10">
+                      <Col className="col-10">
                         <Link
                           to={`/artist/${singleCandidatura.band.id}`}
                           className="nav-link"

@@ -31,22 +31,41 @@ body {
   );
 }
 /* ------------------------------------------ANIMATION------------------------------------------ */
+.text-pop-up-top2 {
+  animation: text-pop-up-top2 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) infinite
+    alternate-reverse both;
+}
+@keyframes text-pop-up-top2 {
+  0% {
+    transform: translateY(0);
+
+    transform-origin: 50% 50%;
+    text-shadow: none;
+  }
+  100% {
+    transform: translateY(-30px);
+
+    transform-origin: 50% 50%;
+    text-shadow: 0 1px 0 #cccccc, 0 2px 0 #cccccc, 0 3px 0 #cccccc,
+      0 4px 0 #cccccc, 0 5px 0 #cccccc, 0 6px 0 #cccccc, 0 7px 0 #cccccc,
+      0 8px 0 #cccccc, 0 9px 0 #cccccc, 0 50px 30px rgba(0, 0, 0, 0.3);
+  }
+}
+
 .text-pop-up-top {
   animation: text-pop-up-top 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) infinite
     alternate-reverse both;
 }
 @keyframes text-pop-up-top {
   0% {
-    -webkit-transform: translateY(0);
     transform: translateY(0);
-    -webkit-transform-origin: 50% 50%;
+
     transform-origin: 50% 50%;
     text-shadow: none;
   }
   100% {
-    -webkit-transform: translateY(-50px);
     transform: translateY(-50px);
-    -webkit-transform-origin: 50% 50%;
+
     transform-origin: 50% 50%;
     text-shadow: 0 1px 0 #cccccc, 0 2px 0 #cccccc, 0 3px 0 #cccccc,
       0 4px 0 #cccccc, 0 5px 0 #cccccc, 0 6px 0 #cccccc, 0 7px 0 #cccccc,
@@ -185,7 +204,7 @@ body {
     opacity: 0;
     text-shadow: none;
   }
-  86.1% {
+  87.1% {
     opacity: 1;
     text-shadow: 0 0 30px rgba(255, 255, 255, 0.6),
       0 0 60px rgba(255, 255, 255, 0.45), 0 0 110px rgba(255, 255, 255, 0.25),
@@ -200,7 +219,6 @@ body {
 }
 
 .slide-top {
-  -webkit-animation: slide-top 1.25s ease-in-out infinite alternate-reverse both;
   animation: slide-top 1.25s ease-in-out infinite alternate-reverse both;
 }
 
@@ -366,7 +384,8 @@ body,
 #activityPage,
 #articlesPage,
 #artistPage,
-#loginPage {
+#loginPage,
+#blogPage {
   background: url("/public/assets/images/details&logo/ondasingolablue.png");
   z-index: 3;
   background-color: linear-gradient(
@@ -376,6 +395,9 @@ body,
     var(--primary-BlueLight),
     var(--primary-BlueDark)
   );
+}
+#blogPage h1 {
+  height: 90vh;
 }
 
 /* --------------------------------------------CAROUSELS-------------------------------------------- */
@@ -421,16 +443,6 @@ body,
 .pointer:hover {
   cursor: pointer;
 }
-/* .btn-success {
-  background-color: var(--primary-Yellow) !important;
-  transition: all 0.6s !important;
-  border: 1px solid var(--primary-BlueDark) !important;
-  color: var(--primary-BlueDark) !important;
-} */
-/* .btn-success:hover {
-  background-color: #e17878 !important;
-  color: white !important;
-} */
 
 .btn {
   background-color: var(--primary-Light) !important;
@@ -456,6 +468,17 @@ body,
 .titleHover:hover {
   scale: 1.05;
 }
+.viewMore {
+  transition: all 0.6s;
+}
+.viewMore:hover {
+  color: white;
+  font-weight: 600;
+}
+.switch {
+  transition: all 0.6s;
+}
+
 /* -----------------------MEDIA------------------------------ */
 #freccia-dx {
   position: absolute;

@@ -19,11 +19,11 @@ const DoneEvents = () => {
             {allEvents.map((singleEvent) =>
               parseInt(singleEvent.hosted_by.id) === parseInt(id) &&
               singleEvent.isConfirmed === true ? (
-                <>
+                <div key={singleEvent.id}>
                   {parseInt(newDate - new Date(singleEvent.date_event)) > 0 ? (
-                    <SingleEvent key={singleEvent.id} event={singleEvent} />
+                    <SingleEvent event={singleEvent} />
                   ) : null}
-                </>
+                </div>
               ) : null
             )}
           </>

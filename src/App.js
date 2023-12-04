@@ -20,6 +20,7 @@ import LogInPage from "./Components/LogInPage/LogInPage";
 import AccountPage from "./Components/AccountPage/AccountPage";
 import ArtistPage from "./Components/ArtistPage/ArtistPage";
 import ActivityPage from "./Components/ActivityPage/ActivityPage";
+import BlogPage from "./Components/BlogPage/BlogPage";
 
 function App() {
   const dispatch = useDispatch();
@@ -42,6 +43,7 @@ function App() {
           <Route path="/" element={<LandingPage />} />
           <Route path="/articles/:id" element={<ArticlesPage />} />
           <Route path="/login" element={<LogInPage />} />
+          <Route path="/blog" element={<BlogPage />} />
           <Route path="/account/:id" element={<AccountPage />} />
           <Route path={`/artist/:id`} element={<ArtistPage />} />
           <Route path={`/activity/:id`} element={<ActivityPage />} />
