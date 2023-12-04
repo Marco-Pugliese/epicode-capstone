@@ -1,10 +1,9 @@
 import { Col, Container, Row } from "react-bootstrap";
-import { useSelector } from "react-redux";
+
 import SingleCardInBlog from "./SingleCardInBlog";
 import { useState } from "react";
 
-const PiuLetti = () => {
-  const articles = useSelector((state) => state.MyFetches.articles);
+const PiuLetti = ({ articles }) => {
   const [viewMore, setViewMore] = useState(false);
   return articles === undefined ? (
     ""

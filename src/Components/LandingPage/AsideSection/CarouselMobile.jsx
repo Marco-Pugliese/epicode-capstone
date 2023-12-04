@@ -1,10 +1,7 @@
 import { Carousel, CarouselItem, Container } from "react-bootstrap";
 import SingleCard from "./SingleCard";
-import { useSelector } from "react-redux";
 
-const CarouselMobile = () => {
-  const articles = useSelector((state) => state.MyFetches.articles);
-
+const CarouselMobile = ({ articles }) => {
   return (
     articles !== undefined && (
       <Container className="myCarousel">

@@ -1,9 +1,7 @@
 import { Carousel, Col, Row } from "react-bootstrap";
 import SingleCard from "./SingleCard";
-import { useSelector } from "react-redux";
 
-const CarouselForLG = () => {
-  const articles = useSelector((state) => state.MyFetches.articles);
+const CarouselForLG = ({ articles }) => {
   return articles === undefined ? (
     ""
   ) : (

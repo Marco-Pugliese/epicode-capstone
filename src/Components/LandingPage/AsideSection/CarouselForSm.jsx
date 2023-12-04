@@ -1,10 +1,7 @@
 import { Carousel, CarouselItem } from "react-bootstrap";
 import SingleCard from "./SingleCard";
-import { useSelector } from "react-redux";
 
-const CarouselForSM = () => {
-  const articles = useSelector((state) => state.MyFetches.articles);
-
+const CarouselForSM = ({ articles }) => {
   return (
     articles !== undefined && (
       <div className="d-flex myCarousel">

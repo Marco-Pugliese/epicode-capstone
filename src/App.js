@@ -21,6 +21,8 @@ import AccountPage from "./Components/AccountPage/AccountPage";
 import ArtistPage from "./Components/ArtistPage/ArtistPage";
 import ActivityPage from "./Components/ActivityPage/ActivityPage";
 import BlogPage from "./Components/BlogPage/BlogPage";
+import ContactsPage from "./Components/ContactsPage/ContactsPage";
+import Page404 from "./Components/404/Page404";
 
 function App() {
   const dispatch = useDispatch();
@@ -47,6 +49,8 @@ function App() {
           <Route path="/account/:id" element={<AccountPage />} />
           <Route path={`/artist/:id`} element={<ArtistPage />} />
           <Route path={`/activity/:id`} element={<ActivityPage />} />
+          <Route path={`/contacts`} element={<ContactsPage />} />
+          <Route path={`/*`} element={<Page404 />} />
         </Routes>
       </div>
       <MyFooter />

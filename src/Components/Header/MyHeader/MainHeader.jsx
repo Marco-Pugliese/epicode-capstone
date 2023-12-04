@@ -42,8 +42,14 @@ const MainHeader = () => {
               >
                 EVENTI
               </Link>
+              <Link
+                to="/contacts"
+                className="nav-link fw-bold my-auto d-lg-none me-4 p-2 navHover"
+              >
+                CONTATTI
+              </Link>
             </Nav>
-            <Nav className="text-end">
+            <Nav className="text-end d-none d-lg-block">
               <div className="nav-link my-auto mx-2 p-2 ">
                 <Link to="/" className="nav-link my-auto  ms-4 p-2 navHover">
                   CONTATTI

@@ -1,14 +1,21 @@
 import { Col, Container, Row } from "react-bootstrap";
 import UltimiArticoli from "./UltimiArticoli";
-
+import { useSelector } from "react-redux";
 import TuttiGliArticoli from "./TuttiGliArticoli";
 import ScrivePerNoi from "./ScrivePerNoi";
+import { getArticlesAction } from "../Redux/Actions";
 import PiuLetti from "./PiuLetti";
-import { useState } from "react";
+import { useDispatch } from "react-redux";
+import { useEffect, useState } from "react";
 
 const BlogPage = () => {
+  const articles = useSelector((state) => state.MyFetches.articles);
   const [selectOne, SetSelectOne] = useState(false);
-
+  const dispatch = useDispatch();
+  useEffect(() => {
+    dispatch(getArticlesAction());
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
   return (
     <Container fluid id="blogPage">
       <section className=" d-flex align-items-center justify-content-center">
@@ -76,10 +83,14 @@ const BlogPage = () => {
           </Col>
         </Row>
       </Container>
-      {selectOne === true ? <PiuLetti /> : <UltimiArticoli />}
+      {selectOne === true ? (
+        <PiuLetti articles={articles} />
+      ) : (
+        <UltimiArticoli articles={articles} />
+      )}
 
-      <TuttiGliArticoli />
-      <ScrivePerNoi />
+      <TuttiGliArticoli articles={articles} />
+      <ScrivePerNoi articles={articles} />
     </Container>
   );
 };

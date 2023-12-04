@@ -124,6 +124,46 @@
       },
       "details": "2milioni ciao",
       "id": 1
+    },
+    {
+      "band": {
+        "name": "Marcone",
+        "kind_of": "DJ",
+        "genre": "Pop Dance",
+        "_events": [],
+        "band_components": [
+          []
+        ],
+        "registered_mails": [
+          "marco.pugliese92@yahoo.com"
+        ],
+        "image_url": "https://placedog.net/300/300",
+        "address": "Procida, Campania, Italia",
+        "id": 1
+      },
+      "event": {
+        "name_event": "Il nuovo evento dell'anno",
+        "detail": "Nessunno",
+        "richiesta": "Niente",
+        "date_event": "2022-01-02T00:59",
+        "isConfirmed": false,
+        "hosted_by": {
+          "name_activity": "Bar Bagianni",
+          "name_owner": "Gianni Ba'",
+          "kind_of_activity": "Bar",
+          "address": "Via Solchiaro 17, Procida, Campania, Italia",
+          "img": "https://www.placedog.net/300/200",
+          "registered_mail": [
+            "marco.pugliese92@yahoo.com"
+          ],
+          "logo": "https://www.placedog.net/120/100",
+          "id": 1
+        },
+        "img": "https://www.placedog.net/600/200",
+        "id": 2
+      },
+      "details": "suca",
+      "id": 2
     }
   ],
   "articles": [
