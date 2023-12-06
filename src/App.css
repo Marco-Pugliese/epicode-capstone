@@ -7,7 +7,6 @@
   --primary-BlueLight: #696bf4;
   --primary-BlueDark: #171b26;
   --primary-Light: #fff5e1;
-
   --primary-Gray: #383838c8;
 }
 body * {
@@ -297,9 +296,6 @@ body,
 .border-yellow {
   border-color: var(--primary-Yellow);
 }
-.bg-transparent-blue {
-  background-color: #0a1421a4 !important;
-}
 
 /* -----------------------------------------------HEADER---------------------------------------- */
 #header {
@@ -387,7 +383,8 @@ body,
 #loginPage,
 #blogPage,
 #contactsPage,
-#page404 {
+#page404,
+#EventsPage {
   background: url("/public/assets/images/details&logo/ondasingolablue.png");
   z-index: 3;
   background-color: linear-gradient(
@@ -398,10 +395,13 @@ body,
     var(--primary-BlueDark)
   );
 }
-#blogPage h1 {
+#blogPage h1,
+#EventsPage .title {
   height: 90vh;
 }
+
 #page404,
+#EventsPage,
 #contactsPage {
   height: 100%;
 }

@@ -31,13 +31,13 @@ const SingleEvent = ({ event }) => {
       .catch((err) => console.error("ERRORE:", err));
   };
 
-  const acceptCandidature = () => {
+  const acceptCandidature = (band) => {
     fetch(`http://localhost:3000/events/${event.id}`, {
       method: "PATCH",
       headers: {
         "Content-Type": "application/json",
       },
-      body: JSON.stringify({ isConfirmed: true }),
+      body: JSON.stringify({ isConfirmed: true, band: band }),
     })
       .then((res) => {
         if (res.ok) {
@@ -161,7 +161,7 @@ const SingleEvent = ({ event }) => {
                           <CheckCircle
                             className="text-success"
                             onClick={() => {
-                              acceptCandidature();
+                              acceptCandidature(singleCandidatura.band);
                               deleteSingleCandidatura(singleCandidatura.id);
                             }}
                           />
