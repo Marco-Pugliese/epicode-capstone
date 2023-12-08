@@ -4,7 +4,7 @@ import MainAside from "../AsideSection/MainAside";
 
 const SubHeroSection = () => {
   return (
-    <Container className="text-white pt-5 my-5">
+    <Container className="text-white pt-5 my-5 sepied">
       <Row className="pt-5 my-5">
         <Col className="col-6 col-xl-4">
           <img

@@ -1,5 +1,10 @@
 import { Route, Routes } from "react-router-dom";
 import "./App.css";
+import "../src/Components/CSS/Animations.css";
+import "../src/Components/CSS/Carousels.css";
+import "../src/Components/CSS/Header.css";
+import "../src/Components/CSS/Hero.css";
+import "../src/Components/CSS/Media.css";
 import LandingPage from "./Components/LandingPage/LandingPage";
 
 import MyFooter from "./Components/Footer/MyFooter";
@@ -24,9 +29,11 @@ import BlogPage from "./Components/BlogPage/BlogPage";
 import ContactsPage from "./Components/ContactsPage/ContactsPage";
 import Page404 from "./Components/404/Page404";
 import EventsPage from "./Components/EventsPage/EventsPage";
+import "@geoapify/geocoder-autocomplete/styles/minimal.css";
 
 function App() {
   const dispatch = useDispatch();
+
   useEffect(() => {
     dispatch(getArticlesAction());
     dispatch(getUsersAction());

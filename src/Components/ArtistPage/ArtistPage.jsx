@@ -56,21 +56,28 @@ const ArtistPage = () => {
                 )}
                 {theArtist && (
                   <div className="position-relative translate-middle-y fs-3">
-                    {theArtist.band_components.map((singleComponent, i) => (
-                      <span key={i} className="me-2">
-                        {singleComponent}
-                      </span>
-                    ))}
+                    {theArtist.band_components.length > 1
+                      ? theArtist.band_components.map((singleComponent, i) => (
+                          <span key={i} className="me-2">
+                            {singleComponent}
+                          </span>
+                        ))
+                      : null}
+                  </div>
+                )}
+                {theArtist && (
+                  <div className="position-relative small fst-italic pb-4 pe-4">
+                    {theArtist.description}
                   </div>
                 )}
 
                 <div className="position-relative fs-5">
-                  Link YouTube + iFrame video
+                  Condividi i tuoi video YouTube
                 </div>
               </div>
               <div
                 id="contacts"
-                className="d-block text-end position-relative translate-middle-y fs-6 "
+                className="d-block text-end position-relative small bg-bluedark "
               >
                 {theArtist && (
                   <>
@@ -78,7 +85,7 @@ const ArtistPage = () => {
                       <Envelope /> : {theArtist.registered_mails}
                     </div>
                     <div>
-                      <Telephone /> : 918347918 (da aggiungere nel JSON)
+                      <Telephone /> : {theArtist.phone}
                     </div>
                   </>
                 )}

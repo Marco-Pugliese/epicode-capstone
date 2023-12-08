@@ -4,18 +4,32 @@ import Button from "react-bootstrap/Button";
 import Modal from "react-bootstrap/Modal";
 import { useDispatch, useSelector } from "react-redux";
 import { getActivitiesAction, getArtistsAction } from "../Redux/Actions";
+import {
+  GeoapifyGeocoderAutocomplete,
+  GeoapifyContext,
+} from "@geoapify/react-geocoder-autocomplete";
 
 const AddAnActivity = () => {
   const [show, setShow] = useState(false);
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
   const [name, setName] = useState("");
+  const [phone, setPhone] = useState("");
+  const [email, setEmail] = useState("");
+  const [description, setDescription] = useState("");
   const [owner, setOwner] = useState("");
   const [kindOf, setKindOf] = useState("");
   const [address, setAddress] = useState([]);
-  // const allActivities = useSelector((state) => state.MyFetches.activities);
   const emailLogged = useSelector((state) => state.LoggedIn.user[0].email);
   const dispatch = useDispatch();
+  const onPlaceSelect = (value) => {
+    setAddress(value.properties);
+    console.log(address);
+  };
+
+  const onSuggectionChange = (value) => {
+    console.log(value);
+  };
 
   const addActivity = () => {
     fetch(`http://localhost:3000/activities`, {
@@ -25,6 +39,9 @@ const AddAnActivity = () => {
         name_owner: owner,
         kind_of_activity: kindOf,
         address: address,
+        description: description,
+        phone: phone,
+        email: email,
         img: "https://www.placedog.net/300/200",
         registered_mail: [emailLogged],
         logo: `https://www.placedog.net/120/100`,
@@ -59,7 +76,7 @@ const AddAnActivity = () => {
         <Modal.Body>
           <Form>
             <InputGroup className="mb-3">
-              <InputGroup.Text id="basic-addon1">Name</InputGroup.Text>
+              <InputGroup.Text id="basic-addon1">Nome</InputGroup.Text>
               <Form.Control
                 value={name}
                 onChange={(e) => {
@@ -69,6 +86,18 @@ const AddAnActivity = () => {
                 aria-describedby="basic-addon1"
               />
             </InputGroup>
+            <InputGroup className="mb-3">
+              <InputGroup.Text id="basic-addon1">Descrizione</InputGroup.Text>
+              <Form.Control
+                value={description}
+                onChange={(e) => {
+                  setDescription(e.target.value);
+                }}
+                placeholder="Breve descrizione da visualizzare nella tua pagina..."
+                aria-describedby="basic-addon1"
+              />
+            </InputGroup>
+
             <InputGroup className="mb-3">
               <InputGroup.Text id="basic-addon1">
                 Tipo di attività
@@ -83,7 +112,9 @@ const AddAnActivity = () => {
               />
             </InputGroup>
             <InputGroup className="mb-3">
-              <InputGroup.Text id="basic-addon1">Owner's Name</InputGroup.Text>
+              <InputGroup.Text id="basic-addon1">
+                Nome Proprietario
+              </InputGroup.Text>
               <Form.Control
                 value={owner}
                 onChange={(e) => {
@@ -94,14 +125,46 @@ const AddAnActivity = () => {
               />
             </InputGroup>
 
+            <InputGroup>
+              <InputGroup.Text id="basic-addon1">Indirizzo</InputGroup.Text>
+              <GeoapifyContext apiKey="72ecfab76b604947a1887e342eca4698">
+                <GeoapifyGeocoderAutocomplete
+                  type={"locality"}
+                  lang={"it"}
+                  className="form-control"
+                  position={"it"}
+                  filterByCountryCode={["it"]}
+                  placeSelect={onPlaceSelect}
+                  suggestionsChange={onSuggectionChange}
+                  onChange={(e) => {
+                    setAddress(e.target.value);
+                  }}
+                  placeholder="Es: Città,Regione..."
+                  aria-describedby="basic-addon1"
+                />
+              </GeoapifyContext>
+            </InputGroup>
             <InputGroup className="mb-3">
-              <InputGroup.Text id="basic-addon1">Address</InputGroup.Text>
+              <InputGroup.Text id="basic-addon1">
+                Numero Telefonico
+              </InputGroup.Text>
               <Form.Control
-                value={address}
+                value={phone}
                 onChange={(e) => {
-                  setAddress(e.target.value);
+                  setPhone(e.target.value);
                 }}
-                placeholder="Es: Via Firenze 1, Firenze, Toscana, Italia..."
+                placeholder="Es: +0123 45678910"
+                aria-describedby="basic-addon1"
+              />
+            </InputGroup>
+            <InputGroup className="mb-3">
+              <InputGroup.Text id="basic-addon1">Email</InputGroup.Text>
+              <Form.Control
+                value={email}
+                onChange={(e) => {
+                  setEmail(e.target.value);
+                }}
+                placeholder="Es: Bar, Pub, Disco..."
                 aria-describedby="basic-addon1"
               />
             </InputGroup>

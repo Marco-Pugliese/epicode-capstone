@@ -1,26 +1,31 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { Button, Col, Form, InputGroup } from "react-bootstrap";
-import { useDispatch, useSelector } from "react-redux";
+import { useDispatch } from "react-redux";
 import { getUsersAction, logInAction } from "../Redux/Actions";
 import { useNavigate } from "react-router-dom";
+import {
+  GeoapifyGeocoderAutocomplete,
+  GeoapifyContext,
+} from "@geoapify/react-geocoder-autocomplete";
 
 const SignUp = () => {
   const navigate = useNavigate();
-  const [id, setId] = useState(0);
   const [newUserName, setNewUserName] = useState("");
   const [newUserSurname, setNewUserSurname] = useState("");
   const [newUserEmail, setNewUserEmail] = useState("");
+  const [address, setAddress] = useState("");
   const [newUserPassword, setNewUserPassword] = useState("");
   const [newUserBirthDay, setNewUserBirthDay] = useState("");
-  const allUsers = useSelector((state) => state.MyFetches.users);
-  const dispatch = useDispatch();
-  const myLog = () => {
-    if (allUsers.length > 0) {
-      allUsers.map((singleUser) => {
-        return singleUser.id > id ? setId(parseInt(singleUser.id) + 1) : null;
-      });
-    }
+  const onPlaceSelect = (value) => {
+    setAddress(value.properties);
+    console.log(address);
   };
+
+  const onSuggectionChange = (value) => {
+    setAddress(value);
+  };
+  const dispatch = useDispatch();
+
   const fetchPost = () => {
     fetch(`http://localhost:3000/users`, {
       method: "POST",
@@ -29,7 +34,7 @@ const SignUp = () => {
         surname: newUserSurname,
         email: newUserEmail,
         password: newUserPassword,
-        id: id,
+        address: address,
         birthday: newUserBirthDay,
       }),
       headers: {
@@ -44,7 +49,7 @@ const SignUp = () => {
             surname: newUserSurname,
             email: newUserEmail,
             password: newUserPassword,
-            id: id,
+            address: address,
             birthday: newUserBirthDay,
           };
           dispatch(logInAction(user));
@@ -56,10 +61,6 @@ const SignUp = () => {
       .catch((err) => console.log("Error: ", err));
   };
 
-  useEffect(() => {
-    myLog();
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [allUsers]);
   return (
     <Col className="col-10 col-md-8 col-xl-5 bg-sand rounded-4 shadow-lg py-3 ">
       <Form
@@ -67,18 +68,16 @@ const SignUp = () => {
           e.preventDefault();
           fetchPost();
           dispatch(getUsersAction());
-          setId(id + 1);
-          //   dispatch(logInAction(user));
-          // navigate(`../account/${user.id}`);
         }}
       >
         <InputGroup className="mb-3">
-          <InputGroup.Text id="inputGroup-sizing-default">Name</InputGroup.Text>
+          <InputGroup.Text id="inputGroup-sizing-default">Nome</InputGroup.Text>
           <Form.Control
             value={newUserName}
             onChange={(e) => {
               setNewUserName(e.target.value);
             }}
+            required
             type="text"
             placeholder="Enter your name"
             aria-label="Default"
@@ -87,28 +86,52 @@ const SignUp = () => {
         </InputGroup>
         <InputGroup className="mb-3">
           <InputGroup.Text id="inputGroup-sizing-default">
-            Surname
+            Cognome
           </InputGroup.Text>
           <Form.Control
             value={newUserSurname}
             onChange={(e) => {
               setNewUserSurname(e.target.value);
             }}
+            required
             type="text"
-            placeholder="Enter your surname"
+            placeholder="Il tuo Cognome"
             aria-label="Default"
             aria-describedby="inputGroup-sizing-default"
           />
         </InputGroup>
         <InputGroup className="mb-3">
           <InputGroup.Text id="inputGroup-sizing-default">
-            Birthday
+            Indirizzo
+          </InputGroup.Text>
+          <GeoapifyContext apiKey="72ecfab76b604947a1887e342eca4698">
+            <GeoapifyGeocoderAutocomplete
+              required
+              type={"locality"}
+              lang={"it"}
+              className="form-control"
+              position={"it"}
+              filterByCountryCode={["it"]}
+              placeSelect={onPlaceSelect}
+              suggestionsChange={onSuggectionChange}
+              onChange={(e) => {
+                setAddress(e.target.value);
+              }}
+              placeholder="Es: Città,Regione..."
+              aria-describedby="basic-addon1"
+            />
+          </GeoapifyContext>
+        </InputGroup>
+        <InputGroup className="mb-3">
+          <InputGroup.Text id="inputGroup-sizing-default">
+            Data di Nascita
           </InputGroup.Text>
           <Form.Control
             value={newUserBirthDay}
             onChange={(e) => {
               setNewUserBirthDay(e.target.value);
             }}
+            required
             type="date"
             placeholder="Enter your birthday"
             aria-label="Default"
@@ -116,11 +139,12 @@ const SignUp = () => {
           />
         </InputGroup>
         <Form.Group className="mb-3" controlId="formBasicEmail">
-          <Form.Label>Email address</Form.Label>
+          <Form.Label>Email</Form.Label>
           <Form.Control
             type="email"
             placeholder="Enter email"
             value={newUserEmail}
+            required
             onChange={(e) => {
               setNewUserEmail(e.target.value);
             }}
@@ -130,6 +154,7 @@ const SignUp = () => {
         <Form.Group className="mb-3" controlId="formBasicPassword">
           <Form.Label>Password</Form.Label>
           <Form.Control
+            required
             type="password"
             placeholder="Password"
             value={newUserPassword}
@@ -141,8 +166,14 @@ const SignUp = () => {
         <Form.Group className="mb-3" controlId="formBasicCheckbox">
           <Form.Check
             type="checkbox"
-            label="I accept the terms of use"
+            label="Ho preso visione ed accetto i termini di utilizzo"
             required
+          />
+        </Form.Group>
+        <Form.Group className="mb-3" controlId="formBasicCheckbox">
+          <Form.Check
+            type="checkbox"
+            label="Desidero ricevere aggiornamenti, offerte e sconti di Badoo"
           />
         </Form.Group>
         <Button variant="primary" type="submit">

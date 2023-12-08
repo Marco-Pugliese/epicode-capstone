@@ -51,7 +51,10 @@ const MainHeader = () => {
             </Nav>
             <Nav className="text-end d-none d-lg-block">
               <div className="nav-link my-auto mx-2 p-2 ">
-                <Link to="/" className="nav-link my-auto  ms-4 p-2 navHover">
+                <Link
+                  to="/contacts"
+                  className="nav-link my-auto  ms-4 p-2 navHover"
+                >
                   CONTATTI
                 </Link>
               </div>

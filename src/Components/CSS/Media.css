@@ -1,0 +1,25 @@
+#freccia-dx {
+  position: absolute;
+  bottom: 30px;
+  right: 90px;
+  scale: 0.6;
+}
+
+#landing {
+  height: 90vh;
+}
+#showMoreArrow {
+  position: absolute;
+  top: -3px;
+}
+.switch {
+  transition: all 0.6s;
+}
+.double-o {
+  position: absolute;
+  left: 0;
+  top: 20px;
+}
+.o2 {
+  top: 13px;
+}

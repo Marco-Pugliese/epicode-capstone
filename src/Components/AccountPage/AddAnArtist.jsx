@@ -4,22 +4,33 @@ import Button from "react-bootstrap/Button";
 import Modal from "react-bootstrap/Modal";
 import { useDispatch, useSelector } from "react-redux";
 import { getArtistsAction } from "../Redux/Actions";
+import {
+  GeoapifyGeocoderAutocomplete,
+  GeoapifyContext,
+} from "@geoapify/react-geocoder-autocomplete";
 
 const AddAnArtist = () => {
-  // const [id, setId] = useState(0);
   const [show, setShow] = useState(false);
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
   const [name, setName] = useState("");
+  const [phone, setPhone] = useState("");
   const [genre, setGenre] = useState("");
   const [kindOf, setKindOf] = useState("");
+  const [description, setDescription] = useState("");
   const [components, setComponents] = useState([]);
-  // const [emailComponents, setEmailComponents] = useState([]);
   const [address, setAddress] = useState([]);
-  // const allArtists = useSelector((state) => state.MyFetches.artists);
   const emailLogged = useSelector((state) => state.LoggedIn.user[0].email);
-  const dispatch = useDispatch();
+  const onPlaceSelect = (value) => {
+    setAddress(value.properties);
+    console.log(address);
+  };
 
+  const onSuggectionChange = (value) => {
+    console.log(value);
+  };
+
+  const dispatch = useDispatch();
   const addArtist = () => {
     fetch(`http://localhost:3000/artists`, {
       method: "POST",
@@ -27,7 +38,7 @@ const AddAnArtist = () => {
         name: name,
         kind_of: kindOf,
         genre: genre,
-        _events: [],
+        phone: phone,
         band_components: [components],
         registered_mails: [emailLogged],
         image_url: "https://placedog.net/300/300",
@@ -62,7 +73,7 @@ const AddAnArtist = () => {
         <Modal.Body>
           <Form>
             <InputGroup className="mb-3">
-              <InputGroup.Text id="basic-addon1">Name</InputGroup.Text>
+              <InputGroup.Text id="basic-addon1">Nome</InputGroup.Text>
               <Form.Control
                 value={name}
                 onChange={(e) => {
@@ -73,7 +84,9 @@ const AddAnArtist = () => {
               />
             </InputGroup>
             <InputGroup className="mb-3">
-              <InputGroup.Text id="basic-addon1">Kind of</InputGroup.Text>
+              <InputGroup.Text id="basic-addon1">
+                Tipo di Artista
+              </InputGroup.Text>
               <Form.Control
                 value={kindOf}
                 onChange={(e) => {
@@ -84,7 +97,9 @@ const AddAnArtist = () => {
               />
             </InputGroup>
             <InputGroup className="mb-3">
-              <InputGroup.Text id="basic-addon1">Genre</InputGroup.Text>
+              <InputGroup.Text id="basic-addon1">
+                Genere Musicale
+              </InputGroup.Text>
               <Form.Control
                 value={genre}
                 onChange={(e) => {
@@ -95,33 +110,66 @@ const AddAnArtist = () => {
               />
             </InputGroup>
             <InputGroup className="mb-3">
-              <InputGroup.Text id="basic-addon1">Components</InputGroup.Text>
+              <InputGroup.Text id="basic-addon1">Descrizione</InputGroup.Text>
+              <Form.Control
+                value={description}
+                onChange={(e) => {
+                  setDescription(e.target.value);
+                }}
+                placeholder="Una breve descrizione da inserire nella pagina..."
+                aria-describedby="basic-addon1"
+              />
+            </InputGroup>
+            <InputGroup className="mb-3">
+              <InputGroup.Text id="basic-addon1">Componenti</InputGroup.Text>
               <Form.Control
                 value={components}
                 onChange={(e) => {
                   setComponents(e.target.value);
                 }}
-                placeholder="Il nome dei singoli componenti"
+                placeholder="Es: Marco Rossi, Luca Bianchi, Michela Verdi"
+                aria-describedby="basic-addon1"
+              />
+            </InputGroup>
+            <InputGroup className="mb-3">
+              <InputGroup.Text id="basic-addon1">
+                Numero Telefonico
+              </InputGroup.Text>
+              <Form.Control
+                value={phone}
+                onChange={(e) => {
+                  setPhone(e.target.value);
+                }}
+                type="number"
+                placeholder="Es: +0123 456789"
                 aria-describedby="basic-addon1"
               />
             </InputGroup>
 
             <InputGroup className="mb-3">
-              <InputGroup.Text id="basic-addon1">Address</InputGroup.Text>
-              <Form.Control
-                value={address}
-                onChange={(e) => {
-                  setAddress(e.target.value);
-                }}
-                placeholder="Un indirizzo di riferimento (es: 'Città,Regione,Stato')"
-                aria-describedby="basic-addon1"
-              />
+              <InputGroup.Text id="basic-addon1">Indirizzo</InputGroup.Text>
+              <GeoapifyContext apiKey="72ecfab76b604947a1887e342eca4698">
+                <GeoapifyGeocoderAutocomplete
+                  type={"locality"}
+                  lang={"it"}
+                  className="form-control"
+                  position={"it"}
+                  filterByCountryCode={["it"]}
+                  placeSelect={onPlaceSelect}
+                  suggestionsChange={onSuggectionChange}
+                  onChange={(e) => {
+                    setAddress(e.target.value);
+                  }}
+                  placeholder="Es: Città,Regione..."
+                  aria-describedby="basic-addon1"
+                />
+              </GeoapifyContext>
             </InputGroup>
           </Form>
         </Modal.Body>
         <Modal.Footer>
           <Button variant="secondary" onClick={handleClose}>
-            Close
+            Chiudi
           </Button>
           <Button
             variant="primary"
@@ -131,7 +179,7 @@ const AddAnArtist = () => {
               dispatch(getArtistsAction());
             }}
           >
-            Save Changes
+            Salva
           </Button>
         </Modal.Footer>
       </Modal>

@@ -6,14 +6,18 @@ const SingleArticle = ({ article }) => {
       <div className="py-5">
         <Container className="">
           <Row className="justify-content-center">
-            <Col className="col-8 col-xl-5 ">
-              <Card id="article" className="bg-blue shadow-lg rounded-4">
-                <Card.Img
-                  variant="top"
-                  src="https://picsum.photos/1000/800"
-                  className="rounded-top-4"
-                />
-                <Card.Body className="bg-sand rounded-bottom-4">
+            <Col className="col-10 col-xl-8 ">
+              <Card
+                id="article"
+                className="shadow-lg bg-transparent rounded-4 "
+              >
+                <Card.Body className="bg-sand rounded-4 m-0 px-2 py-0">
+                  <div className="mx-auto w-50 mb-3 m-2">
+                    <Card.Img
+                      src="https://picsum.photos/1000/800"
+                      className="rounded-top-4 w-100 d-flex justify-content-center "
+                    />
+                  </div>
                   <Card.Title>
                     <div className="display-6 fw-bold">{article.title} </div>
                     <div className="text-end extrasmall text-gray">

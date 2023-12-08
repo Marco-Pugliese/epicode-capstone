@@ -1,0 +1,32 @@
+#header {
+  z-index: 2;
+}
+
+.searchInputField,
+.searchIcon,
+#basic-addon2 {
+  transition: all 0.6s;
+}
+
+#navBarUp {
+  z-index: 3;
+}
+#navBarDown {
+  z-index: 3;
+}
+.navHover {
+  color: white !important;
+}
+.navHover:hover {
+  scale: 1.1;
+  transition: all 0.8s;
+  color: var(--primary-BlueLight) !important;
+  font-weight: 600;
+}
+.subNavHover {
+  color: white;
+}
+.subNavHover:hover {
+  transition: all 0.8s;
+  font-weight: 600;
+}
