@@ -33,7 +33,7 @@ const ActivityPage = () => {
   }, [allCandidature.length]);
   // console.log(ArtistWithIdParam, userLogged.email);
   return (
-    <Container id="activityPage" fluid className="h-100 py-1 text-yellow">
+    <Container id="activityPage" fluid className="h-100 py-1 text-white">
       <Row className="justify-content-center  ">
         <Col className="col-7  bg-bluedark  rounded-2">
           <Row>
@@ -52,14 +52,21 @@ const ActivityPage = () => {
                   className="translate-middle-y rounded-circle"
                 />
               </div>
-              <div className="position-relative translate-middle-y fw-bold display-6 d-flex justify-content-between">
-                {activity !== undefined && activity.name_activity}
+              {activity !== undefined && (
+                <Row className=" text-yellow fw-bold  d-flex justify-content-between">
+                  <Col className="col-9 d-flex flex-column">
+                    <span className="display-6 fw-bold">
+                      {activity.name_activity}
+                    </span>
+                    <span className="fw-normal smaller text-white fst-italic">
+                      {activity.description}
+                    </span>
+                  </Col>
 
-                <div className="fs-6 my-auto fw-normal ">
-                  <div className="d-flex ">
-                    <PinMapFill /> :
-                    {activity !== undefined && (
-                      <div className="d-flex flex-column ms-2 smaller">
+                  <Col className="fs-6 my-auto fw-normal ">
+                    <div className="d-flex ">
+                      <PinMapFill className="text-yellow small" />
+                      <div className="d-flex flex-column ms-2 smaller text-white">
                         <span>
                           {activity.city} <span>({activity.region})</span>
                         </span>
@@ -67,76 +74,81 @@ const ActivityPage = () => {
                           {activity.strada}, {activity.civico}
                         </span>
                       </div>
-                    )}
-                  </div>
-                  <div>
-                    <EnvelopeFill /> :
-                    <span className="smaller ms-2">
-                      {activity !== undefined && activity.email}
-                    </span>
-                  </div>
-                  <div>
-                    <TelephoneFill /> :
-                    <span className="smaller ms-2">
-                      {activity !== undefined && activity.phone}
-                    </span>
-                  </div>
-                </div>
-              </div>
-              <div>{activity !== undefined && activity.description}</div>
+                    </div>
+                    <div>
+                      <EnvelopeFill className="text-yellow small" />
+                      <span className="smaller ms-2 text-white">
+                        {activity.email}
+                      </span>
+                    </div>
+                    <div>
+                      <TelephoneFill className="text-yellow small" />
+                      <span className="smaller ms-2 text-white">
+                        {activity.phone}
+                      </span>
+                    </div>
+                  </Col>
+                </Row>
+              )}
 
-              <div className="d-flex pt-4 pb-2">
-                <div className="d-flex flex-column justify-content-between w-50 ">
-                  <div className="py-1">
-                    <h3 className="m-0 p-0 text-white">
-                      Eventi in Programma
-                      <img
-                        src="/assets/images/details&logo/freccia-giu-bianca.png"
-                        alt="arrow down"
-                        style={{ width: "15px" }}
-                        className="ms-4"
-                      />
-                    </h3>
-
-                    <div className="smaller pe-4">
+              <Row className="pt-4 pb-2">
+                <Col className="col-12 col-xxl-6">
+                  <Row className="py-1">
+                    <Col className="col-12">
+                      <h3 className="m-0 p-0 text-yellow">
+                        Eventi in Programma
+                        <img
+                          src="/assets/images/details&logo/freccia-giu-bianca.png"
+                          alt="arrow down"
+                          style={{ width: "15px" }}
+                          className="ms-4"
+                        />
+                      </h3>
+                    </Col>
+                    <Col className="smaller pe-4">
                       <InProgramm />
-                    </div>
-                  </div>
-                  <div className="py-1">
-                    <h3 className="m-0 p-0 text-white">
-                      Attività Recenti
-                      <img
-                        src="/assets/images/details&logo/freccia-giu-bianca.png"
-                        alt="arrow down"
-                        style={{ width: "15px" }}
-                        className="ms-4"
-                      />
-                    </h3>
-                    <div className="smaller pe-4">
+                    </Col>
+                  </Row>
+                  <Row>
+                    <Col className="py-1 col-12">
+                      <h3 className="m-0 p-0 text-yellow">
+                        Attività Recenti
+                        <img
+                          src="/assets/images/details&logo/freccia-giu-bianca.png"
+                          alt="arrow down"
+                          style={{ width: "15px" }}
+                          className="ms-4"
+                        />
+                      </h3>
+                    </Col>
+                    <Col className="smaller pe-4">
                       <DoneEvents />
-                    </div>
-                  </div>
-                </div>
-                <div className="d-flex flex-column justify-content-between">
-                  <div className="py-1">
-                    <h3 className="m-0 p-0 text-white">
-                      Eventi in attesa di conferma
-                      <img
-                        src="/assets/images/details&logo/freccia-giu-bianca.png"
-                        alt="arrow down"
-                        style={{ width: "15px" }}
-                        className="ms-4"
-                      />
-                    </h3>
-                    <div className="d-flex flex-column justify-content-between">
+                    </Col>
+                  </Row>
+                </Col>
+                <Col className="col-12 col-xxl-6">
+                  <Row className="mb-2">
+                    <Col className="col-12">
+                      <h3 className="m-0 p-0 text-yellow">
+                        In attesa di conferma
+                        <img
+                          src="/assets/images/details&logo/freccia-giu-bianca.png"
+                          alt="arrow down"
+                          style={{ width: "15px" }}
+                          className="ms-4"
+                        />
+                      </h3>
+                    </Col>
+                    <Col>
                       <DaConfermare />
-                    </div>
-                  </div>
+                    </Col>
+                  </Row>
+
                   <div className="py-1 text-center border-top">
                     <AddAnEvent activity={activity} />
                   </div>
-                </div>
-              </div>
+                </Col>
+              </Row>
             </Col>
           </Row>
         </Col>

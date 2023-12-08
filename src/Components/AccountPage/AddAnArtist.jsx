@@ -46,12 +46,12 @@ const AddAnArtist = () => {
         genre: genre,
         phone: phone,
         city: city,
+        description: description,
         region: region,
         country: country,
         band_components: [components],
         registered_mails: [emailLogged],
         image_url: "https://placedog.net/300/300",
-        address: address,
       }),
       headers: {
         "Content-type": "application/json",

@@ -1,6 +1,15 @@
 import { useEffect } from "react";
 import { Col, Container, Row } from "react-bootstrap";
-import { Envelope, Telephone } from "react-bootstrap-icons";
+import {
+  Envelope,
+  EnvelopeFill,
+  MusicNoteBeamed,
+  MusicNoteList,
+  MusicPlayerFill,
+  PeopleFill,
+  Telephone,
+  TelephoneFill,
+} from "react-bootstrap-icons";
 import { useDispatch, useSelector } from "react-redux";
 import { useParams } from "react-router-dom";
 import { getArtistsAction, getEventsAction } from "../Redux/Actions";
@@ -25,12 +34,12 @@ const ArtistPage = () => {
   }, []);
 
   return (
-    <Container id="artistPage" fluid className="h-100 py-1 text-yellow">
+    <Container id="artistPage" fluid className="h-100 py-1 text-white">
       <Row className="justify-content-center">
-        <Col className="col-9 rounded">
-          <Row>
-            <Col className="col-9 me-1 bg-transparent-blue rounded">
-              <div id="general">
+        <Col className="col-9 rounded ">
+          <Row className="gx-5">
+            <Col className="col-9 rounded">
+              <div id="general" className="bg-bluedark rounded-2">
                 <div className="w-100">
                   <img
                     src="https://placedog.net/1400/250"
@@ -46,16 +55,65 @@ const ArtistPage = () => {
                   />
                 </div>
                 {theArtist && (
-                  <div className="position-relative translate-middle-y fw-bold display-6 d-flex">
-                    {theArtist.name}
-                    <div className="fw-normal px-3"> | </div>
-                    <div className="fs-6 my-auto">
-                      {theArtist.kind_of} / {theArtist.genre}
-                    </div>
-                  </div>
+                  <Row className=" fw-bold mt-2 ps-2">
+                    <Col className="col-8 ">
+                      <span className="display-6 fw-bold text-yellow">
+                        {theArtist.name}
+                      </span>
+                      <div className="position-relative small fst-italic pb-4 pe-4 fw-normal">
+                        {theArtist.description}
+                      </div>
+                    </Col>
+                    <Col>
+                      {theArtist && (
+                        <Row className="fs-6 my-auto flex-column text-start">
+                          <Col className="smaller">
+                            <Row>
+                              <Col className="col-1">
+                                <MusicNoteList className="text-yellow" />
+                              </Col>
+                              <Col> {theArtist.kind_of}</Col>
+                            </Row>
+                          </Col>
+                          <Col className="smaller">
+                            <Row>
+                              <Col className="col-1">
+                                <MusicNoteBeamed className="text-yellow" />
+                              </Col>
+                              <Col> {theArtist.genre}</Col>
+                            </Row>
+                          </Col>
+                          <Col className="smaller">
+                            <Row>
+                              <Col className="col-1">
+                                <PeopleFill className="text-yellow" />
+                              </Col>
+                              <Col> {theArtist.band_components}</Col>
+                            </Row>
+                          </Col>
+                          <Col className="smaller">
+                            <Row>
+                              <Col className="col-1">
+                                <EnvelopeFill className="text-yellow" />
+                              </Col>
+                              <Col> {theArtist.registered_mails}</Col>
+                            </Row>
+                          </Col>
+                          <Col className="smaller">
+                            <Row>
+                              <Col className="col-1">
+                                <TelephoneFill className="text-yellow" />
+                              </Col>
+                              <Col> {theArtist.phone}</Col>
+                            </Row>
+                          </Col>
+                        </Row>
+                      )}
+                    </Col>
+                  </Row>
                 )}
                 {theArtist && (
-                  <div className="position-relative translate-middle-y fs-3">
+                  <div className="fs-3">
                     {theArtist.band_components.length > 1
                       ? theArtist.band_components.map((singleComponent, i) => (
                           <span key={i} className="me-2">
@@ -65,41 +123,20 @@ const ArtistPage = () => {
                       : null}
                   </div>
                 )}
-                {theArtist && (
-                  <div className="position-relative small fst-italic pb-4 pe-4">
-                    {theArtist.description}
-                  </div>
-                )}
 
-                <div className="position-relative fs-5">
-                  Condividi i tuoi video YouTube
+                <div className="py-1 h-50">
+                  <h3 className="m-0 p-0 mt-5 text-yellow ps-2">
+                    Eventi in Programma
+                  </h3>
+                  <div className="smaller ">
+                    <InProgrammArtist artist={theArtist} events={events} />
+                  </div>
                 </div>
-              </div>
-              <div
-                id="contacts"
-                className="d-block text-end position-relative small bg-bluedark "
-              >
-                {theArtist && (
-                  <>
-                    <div>
-                      <Envelope /> : {theArtist.registered_mails}
-                    </div>
-                    <div>
-                      <Telephone /> : {theArtist.phone}
-                    </div>
-                  </>
-                )}
               </div>
             </Col>
-            <Col className="ms-1 col-2 shadow d-flex bg-transparent-blue rounded flex-column">
+            <Col className=" col-3 bg-bluedark d-flex bg-transparent-blue rounded flex-column">
               <div className="py-1 h-50">
-                <h3 className="m-0 p-0">Eventi in Programma</h3>
-                <div className="smaller">
-                  <InProgrammArtist artist={theArtist} events={events} />
-                </div>
-              </div>
-              <div className="py-1 h-50">
-                <h3 className="m-0 p-0">Attività Recenti</h3>
+                <h3 className="m-0 p-0 text-yellow">Attività Recenti</h3>
                 <div className="smaller">
                   <DoneEventsArtist artist={theArtist} events={events} />
                 </div>

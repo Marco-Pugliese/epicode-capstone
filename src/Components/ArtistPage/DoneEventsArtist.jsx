@@ -1,15 +1,16 @@
+import { Container } from "react-bootstrap";
 import { useParams } from "react-router-dom";
 
 const DoneEventsArtist = ({ artist, events }) => {
   const newDate = new Date();
   const { id } = useParams();
   return (
-    <div>
+    <Container>
       {events &&
         events.map((singleEvent) =>
           singleEvent.band && parseInt(singleEvent.band.id) === parseInt(id) ? (
             <div>
-              <span>
+              <>
                 {parseInt(newDate - new Date(singleEvent.date_event)) > 0 ? (
                   <div className="fw-bold">
                     {singleEvent.name_event} -{" "}
@@ -20,11 +21,11 @@ const DoneEventsArtist = ({ artist, events }) => {
                     </span>
                   </div>
                 ) : null}
-              </span>
+              </>
             </div>
           ) : null
         )}
-    </div>
+    </Container>
   );
 };
 export default DoneEventsArtist;
