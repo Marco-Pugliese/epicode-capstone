@@ -1,8 +1,144 @@
 {
-  "users": [],
-  "artists": [],
-  "activities": [],
-  "events": [],
+  "users": [
+    {
+      "name": "Marco",
+      "surname": "Campana",
+      "email": "marco.pugliese92@yahoo.com",
+      "password": "marcopass",
+      "city": "Procida",
+      "region": "Campania",
+      "country": "Italia",
+      "birthday": "1992-03-12",
+      "id": 1
+    }
+  ],
+  "artists": [
+    {
+      "name": "Marc-00",
+      "kind_of": "Band",
+      "genre": "Rock",
+      "phone": "+01 23456789",
+      "city": "Procida",
+      "region": "Campania",
+      "country": "Italia",
+      "band_components": [
+        "Marco Pugliese, Vincenzo Scala, Francesco Lauro, Franco Della Monica"
+      ],
+      "registered_mails": [
+        "marco.pugliese92@yahoo.com"
+      ],
+      "image_url": "https://placedog.net/300/300",
+      "address": {
+        "type": "Feature",
+        "properties": {
+          "datasource": {
+            "sourcename": "openstreetmap",
+            "attribution": "© OpenStreetMap contributors",
+            "license": "Open Database License",
+            "url": "https://www.openstreetmap.org/copyright"
+          },
+          "country": "Italia",
+          "country_code": "it",
+          "state": "Campania",
+          "county": "Napoli",
+          "city": "Procida",
+          "postcode": "80079",
+          "lon": 14.0239063,
+          "lat": 40.7649991,
+          "state_code": "CAM",
+          "formatted": "80079 Procida NA, Italia",
+          "address_line1": "80079 Procida NA",
+          "address_line2": "Italia",
+          "county_code": "NA",
+          "category": "administrative",
+          "timezone": {
+            "name": "Europe/Rome",
+            "offset_STD": "+01:00",
+            "offset_STD_seconds": 3600,
+            "offset_DST": "+02:00",
+            "offset_DST_seconds": 7200,
+            "abbreviation_STD": "CET",
+            "abbreviation_DST": "CEST"
+          },
+          "plus_code": "8FGPQ27F+XH",
+          "plus_code_short": "7F+XH Procida, Napoli, Italia",
+          "result_type": "postcode",
+          "rank": {
+            "importance": 0.48631553405750094,
+            "confidence": 1,
+            "confidence_city_level": 1,
+            "match_type": "full_match"
+          },
+          "place_id": "51345651723d0c2c405916fc917deb614440f00101f901369f000000000000c00207"
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            14.0239063,
+            40.7649991
+          ]
+        },
+        "bbox": [
+          13.9904183,
+          40.7391361,
+          14.037696,
+          40.7708285
+        ]
+      },
+      "id": 1
+    }
+  ],
+  "activities": [
+    {
+      "name_activity": "Bar Etto",
+      "name_owner": "Marco Campana",
+      "kind_of_activity": "Bar",
+      "city": "Procida",
+      "region": "Campania",
+      "country": "Italia",
+      "strada": "Via Roma",
+      "civico": "87",
+      "description": "Il Bar Etto incanta con la sua atmosfera accogliente e moderna. Le pareti in mattoni esposti e l'illuminazione soffusa creano un ambiente intimo. Il personale cordiale offre caffè artigianali, cocktail creativi e deliziosi stuzzichini. Un luogo ideale per socializzare e assaporare momenti rilassanti in città.",
+      "phone": "+012 3456789",
+      "email": "baretto@info.com",
+      "img": "https://www.placedog.net/300/200",
+      "registered_mail": [
+        "marco.pugliese92@yahoo.com"
+      ],
+      "logo": "https://www.placedog.net/120/100",
+      "id": 1
+    }
+  ],
+  "events": [
+    {
+      "name_event": "Capodanno 2023",
+      "detail": "Capodanno In Rosso",
+      "richiesta": "DJ",
+      "date_event": "2023-12-31T23:30",
+      "isConfirmed": false,
+      "hosted_by": {
+        "name_activity": "Bar Etto",
+        "name_owner": "Marco Campana",
+        "kind_of_activity": "Bar",
+        "city": "Procida",
+        "region": "Campania",
+        "country": "Italia",
+        "strada": "Via Roma",
+        "civico": "87",
+        "description": "Il Bar Etto incanta con la sua atmosfera accogliente e moderna. Le pareti in mattoni esposti e l'illuminazione soffusa creano un ambiente intimo. Il personale cordiale offre caffè artigianali, cocktail creativi e deliziosi stuzzichini. Un luogo ideale per socializzare e assaporare momenti rilassanti in città.",
+        "phone": "+012 3456789",
+        "email": "baretto@info.com",
+        "img": "https://www.placedog.net/300/200",
+        "registered_mail": [
+          "marco.pugliese92@yahoo.com"
+        ],
+        "logo": "https://www.placedog.net/120/100",
+        "id": 1
+      },
+      "img": "https://www.placedog.net/600/200",
+      "id": 1
+    }
+  ],
   "candidature": [],
   "articles": [
     {

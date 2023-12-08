@@ -13,16 +13,22 @@ const SignUp = () => {
   const [newUserName, setNewUserName] = useState("");
   const [newUserSurname, setNewUserSurname] = useState("");
   const [newUserEmail, setNewUserEmail] = useState("");
-  const [address, setAddress] = useState("");
+  const [city, setCity] = useState("");
+  const [region, setRegion] = useState("");
+  const [country, setCountry] = useState("");
+  const [address, setAddress] = useState();
   const [newUserPassword, setNewUserPassword] = useState("");
   const [newUserBirthDay, setNewUserBirthDay] = useState("");
   const onPlaceSelect = (value) => {
-    setAddress(value.properties);
-    console.log(address);
+    setAddress(value);
+    value && console.log(address);
+    value && setCity(value.properties.city);
+    value && setRegion(value.properties.state);
+    value && setCountry(value.properties.country);
   };
 
   const onSuggectionChange = (value) => {
-    setAddress(value);
+    // console.log(value);
   };
   const dispatch = useDispatch();
 
@@ -34,7 +40,9 @@ const SignUp = () => {
         surname: newUserSurname,
         email: newUserEmail,
         password: newUserPassword,
-        address: address,
+        city: city,
+        region: region,
+        country: country,
         birthday: newUserBirthDay,
       }),
       headers: {
@@ -49,7 +57,9 @@ const SignUp = () => {
             surname: newUserSurname,
             email: newUserEmail,
             password: newUserPassword,
-            address: address,
+            city: city,
+            region: region,
+            country: country,
             birthday: newUserBirthDay,
           };
           dispatch(logInAction(user));
@@ -114,9 +124,9 @@ const SignUp = () => {
               filterByCountryCode={["it"]}
               placeSelect={onPlaceSelect}
               suggestionsChange={onSuggectionChange}
-              onChange={(e) => {
-                setAddress(e.target.value);
-              }}
+              // onChange={(e) => {
+              //   setAddress(e.target.value);
+              // }}
               placeholder="Es: Città,Regione..."
               aria-describedby="basic-addon1"
             />
@@ -173,7 +183,7 @@ const SignUp = () => {
         <Form.Group className="mb-3" controlId="formBasicCheckbox">
           <Form.Check
             type="checkbox"
-            label="Desidero ricevere aggiornamenti, offerte e sconti di Badoo"
+            label="Desidero ricevere aggiornamenti, offerte e sconti di Bardoo"
           />
         </Form.Group>
         <Button variant="primary" type="submit">

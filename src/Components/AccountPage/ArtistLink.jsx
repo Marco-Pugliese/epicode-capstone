@@ -19,9 +19,6 @@ const ArtistLink = ({ artist }) => {
                 <span>{artist.name}</span>
                 <span className="extrasmall ms-2"> ({artist.kind_of})</span>
               </span>
-              <span className="extrasmall fw-normal text-yellow">
-                {artist.address}
-              </span>
             </Card.Text>
           </div>
 

@@ -17,7 +17,7 @@ const LogInPage = () => {
                 setRegistered(!registered);
               }}
             >
-              Dont have an accounut?
+              Non hai un account? Registrati ora!
             </div>
           ) : (
             <div
@@ -26,7 +26,7 @@ const LogInPage = () => {
                 setRegistered(!registered);
               }}
             >
-              Already have an account?
+              Hai già un account? Accedi ora!
             </div>
           )}
         </div>

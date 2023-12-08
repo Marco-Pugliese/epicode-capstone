@@ -19,11 +19,17 @@ const AddAnArtist = () => {
   const [kindOf, setKindOf] = useState("");
   const [description, setDescription] = useState("");
   const [components, setComponents] = useState([]);
-  const [address, setAddress] = useState([]);
+  const [address, setAddress] = useState("");
+  const [city, setCity] = useState("");
+  const [region, setRegion] = useState("");
+  const [country, setCountry] = useState("");
   const emailLogged = useSelector((state) => state.LoggedIn.user[0].email);
   const onPlaceSelect = (value) => {
     setAddress(value.properties);
-    console.log(address);
+    value && console.log(address);
+    value && setCity(value.properties.city);
+    value && setRegion(value.properties.state);
+    value && setCountry(value.properties.country);
   };
 
   const onSuggectionChange = (value) => {
@@ -39,6 +45,9 @@ const AddAnArtist = () => {
         kind_of: kindOf,
         genre: genre,
         phone: phone,
+        city: city,
+        region: region,
+        country: country,
         band_components: [components],
         registered_mails: [emailLogged],
         image_url: "https://placedog.net/300/300",
@@ -140,7 +149,7 @@ const AddAnArtist = () => {
                 onChange={(e) => {
                   setPhone(e.target.value);
                 }}
-                type="number"
+                type="tel"
                 placeholder="Es: +0123 456789"
                 aria-describedby="basic-addon1"
               />

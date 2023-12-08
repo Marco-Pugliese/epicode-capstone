@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Form, InputGroup } from "react-bootstrap";
+import { Col, Form, InputGroup, Row } from "react-bootstrap";
 import Button from "react-bootstrap/Button";
 import Modal from "react-bootstrap/Modal";
 import { useDispatch, useSelector } from "react-redux";
@@ -20,11 +20,19 @@ const AddAnActivity = () => {
   const [owner, setOwner] = useState("");
   const [kindOf, setKindOf] = useState("");
   const [address, setAddress] = useState([]);
+  const [city, setCity] = useState("");
+  const [region, setRegion] = useState("");
+  const [country, setCountry] = useState("");
+  const [strada, setStrada] = useState("");
+  const [civico, setCivico] = useState("");
   const emailLogged = useSelector((state) => state.LoggedIn.user[0].email);
   const dispatch = useDispatch();
   const onPlaceSelect = (value) => {
-    setAddress(value.properties);
-    console.log(address);
+    setAddress(value);
+    value && console.log(address);
+    value && setCity(value.properties.city);
+    value && setRegion(value.properties.state);
+    value && setCountry(value.properties.country);
   };
 
   const onSuggectionChange = (value) => {
@@ -38,7 +46,11 @@ const AddAnActivity = () => {
         name_activity: name,
         name_owner: owner,
         kind_of_activity: kindOf,
-        address: address,
+        city: city,
+        region: region,
+        country: country,
+        strada: strada,
+        civico: civico,
         description: description,
         phone: phone,
         email: email,
@@ -125,8 +137,8 @@ const AddAnActivity = () => {
               />
             </InputGroup>
 
-            <InputGroup>
-              <InputGroup.Text id="basic-addon1">Indirizzo</InputGroup.Text>
+            <InputGroup className="mb-3 ">
+              <InputGroup.Text id="basic-addon1">Città</InputGroup.Text>
               <GeoapifyContext apiKey="72ecfab76b604947a1887e342eca4698">
                 <GeoapifyGeocoderAutocomplete
                   type={"locality"}
@@ -139,11 +151,39 @@ const AddAnActivity = () => {
                   onChange={(e) => {
                     setAddress(e.target.value);
                   }}
-                  placeholder="Es: Città,Regione..."
+                  placeholder="Seleziona la tua città"
                   aria-describedby="basic-addon1"
                 />
               </GeoapifyContext>
             </InputGroup>
+            <Row className="d-flex">
+              <Col className="col-12 col-xl-8">
+                <InputGroup className="mb-3">
+                  <InputGroup.Text id="basic-addon1">Strada</InputGroup.Text>
+                  <Form.Control
+                    value={strada}
+                    onChange={(e) => {
+                      setStrada(e.target.value);
+                    }}
+                    placeholder=""
+                    aria-describedby="basic-addon1"
+                  />
+                </InputGroup>
+              </Col>
+              <Col>
+                <InputGroup className="mb-3">
+                  <InputGroup.Text id="basic-addon1">Civico</InputGroup.Text>
+                  <Form.Control
+                    value={civico}
+                    onChange={(e) => {
+                      setCivico(e.target.value);
+                    }}
+                    placeholder=""
+                    aria-describedby="basic-addon1"
+                  />
+                </InputGroup>
+              </Col>
+            </Row>
             <InputGroup className="mb-3">
               <InputGroup.Text id="basic-addon1">
                 Numero Telefonico
@@ -164,7 +204,7 @@ const AddAnActivity = () => {
                 onChange={(e) => {
                   setEmail(e.target.value);
                 }}
-                placeholder="Es: Bar, Pub, Disco..."
+                placeholder="Inserisci l'email di riferimento per l'attività..."
                 aria-describedby="basic-addon1"
               />
             </InputGroup>

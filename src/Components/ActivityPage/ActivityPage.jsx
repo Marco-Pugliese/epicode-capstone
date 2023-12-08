@@ -8,10 +8,11 @@ import { useEffect, useState } from "react";
 import DoneEvents from "./DoneEvents";
 import DaConfermare from "./DaConfermare";
 import { getCandidatureAction } from "../Redux/Actions";
+import { EnvelopeFill, PinMapFill, TelephoneFill } from "react-bootstrap-icons";
 
 const ActivityPage = () => {
   const dispatch = useDispatch();
-  const userLogged = useSelector((state) => state.LoggedIn.user[0]);
+  // const userLogged = useSelector((state) => state.LoggedIn.user[0]);
   const { id } = useParams();
   const allCandidature = useSelector((state) => state.MyFetches.candidature);
   const allActivity = useSelector((state) => state.MyFetches.activities);
@@ -34,10 +35,10 @@ const ActivityPage = () => {
   return (
     <Container id="activityPage" fluid className="h-100 py-1 text-yellow">
       <Row className="justify-content-center  ">
-        <Col className="col-7  bg-bluedark">
-          <Row className="gx-5">
-            <Col className="">
-              <div className=" w-100">
+        <Col className="col-7  bg-bluedark  rounded-2">
+          <Row>
+            <Col>
+              <div className="w-100">
                 <img
                   src="https://placedog.net/1200/290"
                   alt=""
@@ -51,16 +52,38 @@ const ActivityPage = () => {
                   className="translate-middle-y rounded-circle"
                 />
               </div>
-              <div className="position-relative translate-middle-y fw-bold display-6 d-flex">
+              <div className="position-relative translate-middle-y fw-bold display-6 d-flex justify-content-between">
                 {activity !== undefined && activity.name_activity}
-                <div className="fw-normal px-3"> | </div>
-                <div className="fs-6 my-auto">
-                  ({activity !== undefined && activity.kind_of_activity})
+
+                <div className="fs-6 my-auto fw-normal ">
+                  <div className="d-flex ">
+                    <PinMapFill /> :
+                    {activity !== undefined && (
+                      <div className="d-flex flex-column ms-2 smaller">
+                        <span>
+                          {activity.city} <span>({activity.region})</span>
+                        </span>
+                        <span>
+                          {activity.strada}, {activity.civico}
+                        </span>
+                      </div>
+                    )}
+                  </div>
+                  <div>
+                    <EnvelopeFill /> :
+                    <span className="smaller ms-2">
+                      {activity !== undefined && activity.email}
+                    </span>
+                  </div>
+                  <div>
+                    <TelephoneFill /> :
+                    <span className="smaller ms-2">
+                      {activity !== undefined && activity.phone}
+                    </span>
+                  </div>
                 </div>
               </div>
-              <div className="position-relative translate-middle-y fs-3">
-                Descrizione (da aggiungere in JSON)
-              </div>
+              <div>{activity !== undefined && activity.description}</div>
 
               <div className="d-flex pt-4 pb-2">
                 <div className="d-flex flex-column justify-content-between w-50 ">
