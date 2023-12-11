@@ -99,6 +99,52 @@
         "image_url": "https://placedog.net/300/300",
         "id": 1
       }
+    },
+    {
+      "name_event": "Epifania in Rock",
+      "detail": "Epifania in Rock: 3h di musica rock Live",
+      "richiesta": "Rock Band",
+      "date_event": "2024-01-06T21:00",
+      "isConfirmed": true,
+      "hosted_by": {
+        "name_activity": "Bar Etto",
+        "name_owner": "Marco Campana",
+        "kind_of_activity": "Bar",
+        "city": "Procida",
+        "region": "Campania",
+        "country": "Italia",
+        "strada": "Via Roma",
+        "civico": "87",
+        "description": "Il Bar Etto incanta con la sua atmosfera accogliente e moderna. Le pareti in mattoni esposti e l'illuminazione soffusa creano un ambiente intimo. Il personale cordiale offre caffè artigianali, cocktail creativi e deliziosi stuzzichini. Un luogo ideale per socializzare e assaporare momenti rilassanti in città.",
+        "phone": "+012 3456789",
+        "email": "baretto@info.com",
+        "img": "https://www.placedog.net/300/200",
+        "registered_mail": [
+          "marco.pugliese92@yahoo.com"
+        ],
+        "logo": "https://www.placedog.net/120/100",
+        "id": 1
+      },
+      "img": "https://www.placedog.net/600/200",
+      "id": 2,
+      "band": {
+        "name": "Marc-00",
+        "kind_of": "Band",
+        "genre": "Rock",
+        "phone": "+01 23456789",
+        "city": "Procida",
+        "region": "Campania",
+        "country": "Italia",
+        "description": "Progetto iniziato nel 1990 sotto la guida di Giorgio Gaber",
+        "band_components": [
+          "Marco Pugliese, Vincenzo Scala, Francesco Lauro, Franco Della Monica"
+        ],
+        "registered_mails": [
+          "marco.pugliese92@yahoo.com"
+        ],
+        "image_url": "https://placedog.net/300/300",
+        "id": 1
+      }
     }
   ],
   "candidature": [],

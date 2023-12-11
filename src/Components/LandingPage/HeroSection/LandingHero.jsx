@@ -4,7 +4,7 @@ const LandingHero = () => {
       id="landing"
       className="home d-flex flex-column justify-content-center align-items-center display-1 text-white fw-bold py-5"
     >
-      <div id="bardoo " className="d-flex ">
+      <div id="bardoo " className="d-flex  ">
         <div>BARD</div>
         <div className="position-relative">
           OO

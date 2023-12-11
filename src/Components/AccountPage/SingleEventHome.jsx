@@ -91,19 +91,26 @@ const SingleEventHome = ({ event }) => {
             <Modal.Body>
               <Form>
                 <InputGroup className="mb-3">
-                  <InputGroup.Text id="basic-addon1">Dettagli</InputGroup.Text>
+                  <InputGroup.Text id="basic-addon1">Evento</InputGroup.Text>
                   <Form.Control
-                    value={details}
-                    onChange={(e) => {
-                      setDetails(e.target.value);
-                    }}
-                    placeholder="Es: Cachet, Necessità"
-                    aria-describedby="basic-addon1"
+                    value={`${
+                      event.name_event + " - " + event.hosted_by.name_activity
+                    }`}
+                    disabled
                   />
                 </InputGroup>
                 <InputGroup className="mb-3">
+                  <InputGroup.Text id="basic-addon1">
+                    Richieste Evento
+                  </InputGroup.Text>
+                  {console.log(event)}
+                  <Form.Control value={`${event.richiesta}`} disabled />
+                </InputGroup>
+
+                <InputGroup className="mb-3">
                   <Form.Select
                     aria-label="Default select example"
+                    required
                     onChange={(e) => setBandName(e.target.value)}
                   >
                     <option>
@@ -126,12 +133,17 @@ const SingleEventHome = ({ event }) => {
                   </Form.Select>
                 </InputGroup>
                 <InputGroup className="mb-3">
-                  <InputGroup.Text id="basic-addon1">Evento</InputGroup.Text>
+                  <InputGroup.Text id="basic-addon1">
+                    Le Tue Richieste
+                  </InputGroup.Text>
                   <Form.Control
-                    value={`${
-                      event.name_event + " - " + event.hosted_by.name_activity
-                    }`}
-                    disabled
+                    value={details}
+                    onChange={(e) => {
+                      setDetails(e.target.value);
+                    }}
+                    placeholder="Es: Cachet, Necessità"
+                    aria-describedby="basic-addon1"
+                    required
                   />
                 </InputGroup>
               </Form>

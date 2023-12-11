@@ -1,5 +1,6 @@
 import { Container } from "react-bootstrap";
 import { useParams } from "react-router-dom";
+import ModalEvent from "../EventsPage/ModalEvent";
 
 const InProgrammArtist = ({ artist, events }) => {
   const newDate = new Date();
@@ -14,14 +15,7 @@ const InProgrammArtist = ({ artist, events }) => {
               <>
                 <span>
                   {parseInt(newDate - new Date(singleEvent.date_event)) < 0 ? (
-                    <div className="fw-bold">
-                      {singleEvent.name_event} -{" "}
-                      <span className="extrasmall fw-normal">
-                        {singleEvent.date_event.slice(8, 10)}/
-                        {singleEvent.date_event.slice(5, 7)}/
-                        {singleEvent.date_event.slice(0, 4)}
-                      </span>
-                    </div>
+                    <ModalEvent singleEvent={singleEvent} />
                   ) : null}
                 </span>
               </>

@@ -1,13 +1,10 @@
 import { useEffect } from "react";
 import { Col, Container, Row } from "react-bootstrap";
 import {
-  Envelope,
   EnvelopeFill,
   MusicNoteBeamed,
   MusicNoteList,
-  MusicPlayerFill,
   PeopleFill,
-  Telephone,
   TelephoneFill,
 } from "react-bootstrap-icons";
 import { useDispatch, useSelector } from "react-redux";

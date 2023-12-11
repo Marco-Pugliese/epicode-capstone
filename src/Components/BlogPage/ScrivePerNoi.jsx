@@ -35,9 +35,7 @@ const ScrivePerNoi = ({ articles }) => {
                       />
                       {articles[1].author}
                     </div>
-                    {console.log(
-                      articles.map((singleArticle) => singleArticle.author)
-                    )}
+
                     <div style={{ width: "150px", height: "150px" }}>
                       <img
                         className="w-100 h-100 rounded border border-warning"

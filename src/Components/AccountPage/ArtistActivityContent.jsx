@@ -38,9 +38,7 @@ const ArtistActivityContent = () => {
               artist.registered_mails.map((singleEmail) =>
                 singleEmail === emailLogged ? (
                   <ArtistLink key={i} artist={artist} />
-                ) : (
-                  () => null
-                )
+                ) : null
               )
             )}
 

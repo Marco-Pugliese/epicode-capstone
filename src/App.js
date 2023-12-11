@@ -28,6 +28,7 @@ import ActivityPage from "./Components/ActivityPage/ActivityPage";
 import BlogPage from "./Components/BlogPage/BlogPage";
 import ContactsPage from "./Components/ContactsPage/ContactsPage";
 import Page404 from "./Components/404/Page404";
+import SearchPage from "./Components/SearchPage/SearchPage";
 import EventsPage from "./Components/EventsPage/EventsPage";
 import "@geoapify/geocoder-autocomplete/styles/minimal.css";
 
@@ -60,6 +61,8 @@ function App() {
           <Route path={`/contacts`} element={<ContactsPage />} />
           <Route path={`/*`} element={<Page404 />} />
           <Route path={`/events`} element={<EventsPage />} />
+          <Route path={`/search/:id`} element={<SearchPage />} />
+          <Route path={`/search`} element={<SearchPage />} />
         </Routes>
       </div>
       <MyFooter />

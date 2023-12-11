@@ -47,20 +47,30 @@ body {
 #contactsPage,
 #page404,
 #EventsPage {
-  background: url("/public/assets/images/details&logo/ondasingolablue.png");
   z-index: 3;
-  background-color: linear-gradient(
+  background: url("/public/assets/images/details&logo/ondasingolablue.png");
+  background-color: rgba(0, 0, 0, 0.45);
+}
+.darker {
+  background: linear-gradient(
     to bottom,
-    var(--primary-BlueDark),
-    var(--primary-BlueLight),
-    var(--primary-BlueLight),
-    var(--primary-BlueDark)
+
+    transparent,
+    rgba(14, 5, 47, 0.45),
+    rgba(0, 0, 0, 0.45),
+    transparent
   );
 }
 
 #blogPage h1,
 #EventsPage .title {
   height: 90vh;
+}
+.searchInputField {
+  color: white !important;
+}
+input {
+  box-shadow: none !important;
 }
 
 #page404,
@@ -147,7 +157,10 @@ body {
   background-color: var(--primary-Blue) !important;
   color: white !important;
 }
-
+.btn.selectedBtn {
+  background-color: var(--primary-Blue) !important;
+  color: white !important;
+}
 .titleHover {
   transition: all 0.6s;
 }

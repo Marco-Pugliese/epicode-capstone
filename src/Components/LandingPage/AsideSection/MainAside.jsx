@@ -4,7 +4,7 @@ import { GearFill, Search, StarFill } from "react-bootstrap-icons";
 const MainAside = () => {
   return (
     <div>
-      <Container className=" d-flex flex-column  align-items-center justify-content-center pt-5 text-yellow ">
+      <Container className=" d-flex flex-column align-items-center justify-content-center pt-5 text-yellow">
         <div className="py-2 fs-4 position-relative text-white ">
           Cercare
           <span className=" mx-2 position-relative fw-bold text-yellow">
@@ -39,8 +39,8 @@ const MainAside = () => {
             <div className="d-flex flex-column align-items-center justify-content-center">
               <h3>STEP 2</h3>
               <p className="px-2 text-center smaller fw-bold">
-                Visualizza le recensioni degli eventi, delle strutture, e degli
-                artisti
+                Visualizza tutte le informazioni riguardanti degli eventi, delle
+                strutture, e degli artisti
               </p>
             </div>
           </Col>
