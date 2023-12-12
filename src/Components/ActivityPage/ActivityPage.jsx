@@ -158,10 +158,10 @@ const ActivityPage = () => {
               </Col>
             </Row>
           </Container>
-        ) : (
-          <ActivityForGuest />
-        )
-      ) : null}
+        ) : null
+      ) : (
+        <ActivityForGuest />
+      )}
     </>
   );
 };

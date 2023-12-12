@@ -44,12 +44,14 @@ body {
 #artistPage,
 #loginPage,
 #blogPage,
-#contactsPage,
 #page404,
-#EventsPage {
+#EventsPage,
+#searchPage,
+#resultsPage {
   z-index: 3;
   background: url("/public/assets/images/details&logo/ondasingolablue.png");
   background-color: rgba(0, 0, 0, 0.45);
+  height: 100%;
 }
 .darker {
   background: linear-gradient(
@@ -61,6 +63,9 @@ body {
     transparent
   );
 }
+#contactsPage {
+  background: url("/public/assets/images/backgrounds/asidebackground.png");
+}
 
 #blogPage h1,
 #EventsPage .title {
@@ -69,7 +74,8 @@ body {
 .searchInputField {
   color: white !important;
 }
-input {
+input,
+textarea {
   box-shadow: none !important;
 }
 

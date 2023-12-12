@@ -2,24 +2,37 @@
   height: 66vh;
 }
 
-
 /* ----------------------------------SUBHERO_SEARCH SECTION------------------------------------ */
 #searchHeroSection {
-    height: 80vh;
-    display: flex;
-    align-items: center;
-  }
-  .searchInpuwhitetField:focus {
-    box-shadow: none !important;
-    border: 1.5px solid whitesmoke;
-  }
-  .formSearch2 {
-    border: 2px solid whitesmoke;
-    width: 100%;
-  }
-  .searchInputField::placeholder {
-    color: whitesmoke !important;
-  }
-  #basic-addon2 {
-    background-color: whitesmoke !important;
-  }
+  height: 80vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+#compact {
+  background-color: #171b26;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.searchInpuwhitetField:focus {
+  box-shadow: none !important;
+  border: 1.5px solid whitesmoke;
+}
+.formSearch2 {
+  border: 2px solid whitesmoke;
+  width: 100%;
+}
+.searchInputField::placeholder {
+  color: whitesmoke !important;
+}
+#basic-addon2 {
+  background-color: whitesmoke !important;
+}
+.findyourbard {
+  font-weight: 300 !important;
+  font-style: italic;
+  letter-spacing: 0.3em;
+}

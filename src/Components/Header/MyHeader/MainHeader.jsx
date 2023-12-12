@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Container, Nav, Navbar } from "react-bootstrap";
 
-import { Link, useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 const MainHeader = () => {
   // eslint-disable-next-line no-unused-vars
   const [query, setQuery] = useState("");
@@ -31,7 +31,7 @@ const MainHeader = () => {
                 BLOG
               </Link>
               <Link
-                to="/search"
+                to="/searchpage"
                 className="nav-link fw-bold my-auto  me-4 p-2 navHover"
               >
                 SEARCH

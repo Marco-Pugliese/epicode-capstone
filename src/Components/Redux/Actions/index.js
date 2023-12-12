@@ -6,7 +6,14 @@ export const GET_EVENTS_FETCH = "GET_EVENTS_FETCH";
 export const GET_CANDIDATURE_FETCH = "GET_CANDIDATURE_FETCH";
 export const LOG_IN = "LOG_IN";
 export const LOG_OUT = "LOG_OUT";
+export const SET_FILTER = "SET_FILTER";
 
+export const setFilterAction = (payload) => {
+  return {
+    type: SET_FILTER,
+    payload: payload,
+  };
+};
 export const logInAction = (payload) => {
   return {
     type: LOG_IN,

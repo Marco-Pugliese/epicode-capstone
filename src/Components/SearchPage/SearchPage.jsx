@@ -1,8 +1,8 @@
 import SearchHeroSection from "../LandingPage/HeroSection/SearchHeroSection";
 
-const SearchPage = () => {
+const SearchPage = ({ id }) => {
   return (
-    <div>
+    <div id="searchPage">
       <SearchHeroSection />
     </div>
   );

@@ -8,7 +8,7 @@ import {
 } from "react-bootstrap-icons";
 import { Link } from "react-router-dom";
 
-const ModalEvent = ({ singleEvent }) => {
+const ModalEvent = ({ singleEvent, eventsPage }) => {
   const [show, setShow] = useState(false);
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
@@ -20,7 +20,12 @@ const ModalEvent = ({ singleEvent }) => {
           {singleEvent.date_event.slice(8, 10)}/
           {singleEvent.date_event.slice(5, 7)}/
           {singleEvent.date_event.slice(0, 4)}
-        </span>
+        </span>{" "}
+        {eventsPage && (
+          <span className="extrasmall fw-normal">
+            - {singleEvent.hosted_by.city}
+          </span>
+        )}
       </div>
       <Modal show={show} onHide={handleClose}>
         <Modal.Header closeButton>

@@ -19,7 +19,7 @@ const MyFooter = () => {
           <Link className="nav-link navHover" to="/">
             Home
           </Link>
-          <Link className="nav-link navHover" to="/Info">
+          <Link className="nav-link navHover" to="/contacts">
             Info & Contacts
           </Link>
           <Link className="nav-link navHover" to="/FAQs">

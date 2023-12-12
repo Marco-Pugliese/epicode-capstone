@@ -4,7 +4,6 @@ import WelcomeMessage from "./WelcomeMessage";
 import { useState } from "react";
 import ArtistActivityContent from "./ArtistActivityContent";
 import { Link, useNavigate } from "react-router-dom";
-import SearchHeroSection from "../LandingPage/HeroSection/SearchHeroSection";
 import BlogSection from "../LandingPage/HeroSection/BlogSection";
 import EventiInProgramma from "./EventiInProgramma";
 import AllArtists from "./AllArtists";
@@ -51,7 +50,7 @@ const AccountPage = () => {
           <Row className="h-100 justify-content-center pt-5 py-5">
             <Col className=" col-10  d-flex justify-content-around p-0 m-0">
               {isProfile === true ? (
-                <div className="d-flex flex-column">
+                <div className="d-flex flex-column w-100">
                   <Row>
                     <Col className="text-center fw-bold w-100 rounded-top-3 me-1  text-white">
                       <div
@@ -110,9 +109,7 @@ const AccountPage = () => {
                   </Row>
                   {isArtist === true ? <EventiInProgramma /> : <AllArtists />}
 
-                  <SearchHeroSection />
-                  {/* <SubHeroSection /> */}
-                  <BlogSection />
+                  {/* <BlogSection /> */}
                 </div>
               ) : (
                 <ArtistActivityContent />

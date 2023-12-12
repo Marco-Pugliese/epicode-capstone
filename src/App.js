@@ -31,6 +31,7 @@ import Page404 from "./Components/404/Page404";
 import SearchPage from "./Components/SearchPage/SearchPage";
 import EventsPage from "./Components/EventsPage/EventsPage";
 import "@geoapify/geocoder-autocomplete/styles/minimal.css";
+import ResultsPage from "./Components/SearchPage/ResultsPage";
 
 function App() {
   const dispatch = useDispatch();
@@ -61,8 +62,8 @@ function App() {
           <Route path={`/contacts`} element={<ContactsPage />} />
           <Route path={`/*`} element={<Page404 />} />
           <Route path={`/events`} element={<EventsPage />} />
-          <Route path={`/search/:id`} element={<SearchPage />} />
-          <Route path={`/search`} element={<SearchPage />} />
+          <Route path={`/searchpage`} element={<SearchPage />} />
+          <Route path={`/search/:id`} element={<ResultsPage />} />
         </Routes>
       </div>
       <MyFooter />

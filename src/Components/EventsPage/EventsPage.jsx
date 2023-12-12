@@ -1,16 +1,11 @@
 import { useState } from "react";
-import { Col, Container, Row } from "react-bootstrap";
+import { Col, Collapse, Container, Row } from "react-bootstrap";
 import { useSelector } from "react-redux";
 import WelcomeMessage from "../AccountPage/WelcomeMessage";
 import LogOutHeader from "../Header/MyHeader/LogOutHeader";
 import SubHeader from "../Header/MyHeader/SubHeader";
 import ModalEvent from "./ModalEvent";
-import {
-  DashCircle,
-  FileMinus,
-  Moisture,
-  PlusCircleFill,
-} from "react-bootstrap-icons";
+import { DashCircle, PlusCircleFill } from "react-bootstrap-icons";
 
 const EventsPage = ({ noLogOut }) => {
   const allEvents = useSelector((state) => state.MyFetches.events);
@@ -50,7 +45,10 @@ const EventsPage = ({ noLogOut }) => {
                     >
                       {parseInt(newDate - new Date(singleEvent.date_event)) >
                       0 ? null : (
-                        <ModalEvent singleEvent={singleEvent} />
+                        <ModalEvent
+                          singleEvent={singleEvent}
+                          eventsPage={true}
+                        />
                       )}
                     </Col>
                   );
@@ -81,7 +79,12 @@ const EventsPage = ({ noLogOut }) => {
                       {user.user[0].city === singleEvent.hosted_by.city ? (
                         parseInt(newDate - new Date(singleEvent.date_event)) >
                         0 ? null : (
-                          <ModalEvent singleEvent={singleEvent} />
+                          <Collapse in={viewMore}>
+                            <ModalEvent
+                              singleEvent={singleEvent}
+                              eventsPage={true}
+                            />
+                          </Collapse>
                         )
                       ) : null}
                     </Col>

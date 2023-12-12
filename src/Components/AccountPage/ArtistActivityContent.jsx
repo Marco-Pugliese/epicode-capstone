@@ -30,9 +30,10 @@ const ArtistActivityContent = () => {
       <Container fluid className="text-center py-2 fs-6">
         {userLogged.name && <WelcomeActivityMessage />}
       </Container>
+
       <div className="d-flex flex-column justify-content-between flex-lg-row">
         <Container className="mx-2 py-2 shadow-lg rounded-4">
-          <h3>Artists/Bands: </h3>
+          <h3 className="text-yellow">Artisti / Band: </h3>
           <Row>
             {allTheArtists.map((artist, i) =>
               artist.registered_mails.map((singleEmail) =>
@@ -46,7 +47,7 @@ const ArtistActivityContent = () => {
           </Row>
         </Container>
         <Container className="mx-2 py-2 shadow-lg rounded-4">
-          <h3>Activities: </h3>
+          <h3 className="text-yellow">Attività: </h3>
           <div className="rounded-3">
             {allTheActivities.map((activity, i) =>
               activity.registered_mail.map((singleEmail) =>
