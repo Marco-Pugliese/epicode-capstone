@@ -4,7 +4,7 @@ import WelcomeMessage from "./WelcomeMessage";
 import { useState } from "react";
 import ArtistActivityContent from "./ArtistActivityContent";
 import { Link, useNavigate } from "react-router-dom";
-import BlogSection from "../LandingPage/HeroSection/BlogSection";
+// import BlogSection from "../LandingPage/HeroSection/BlogSection";
 import EventiInProgramma from "./EventiInProgramma";
 import AllArtists from "./AllArtists";
 

@@ -13,7 +13,6 @@ import {
   ArrowUpCircleFill,
   Envelope,
   Telephone,
-  TelephoneFill,
 } from "react-bootstrap-icons";
 
 const ContactsPage = () => {
@@ -30,6 +29,7 @@ const ContactsPage = () => {
   };
   const sendEmail = () => {
     console.log("email inviata");
+    clearInput();
   };
   return (
     <Container
@@ -46,13 +46,18 @@ const ContactsPage = () => {
               style={{ width: "100px" }}
             />
           </Col>
-          <Col>
+          <Col className="text-yellow fw-bolder blur">
             Qualsiasi cosa tu abbia da dire il nostro Team Bardoo ti ascolterà
           </Col>
         </Row>
         <Row>
           <Col className="offset-2">
-            <Form>
+            <Form
+              onSubmit={(e) => {
+                e.preventDefault();
+                sendEmail();
+              }}
+            >
               <InputGroup className="mb-3">
                 <InputGroup.Text id="basic-addon1">Nome</InputGroup.Text>
                 <Form.Control
@@ -109,14 +114,7 @@ const ContactsPage = () => {
               <Button type="button" onClick={clearInput}>
                 Cancella
               </Button>
-              <Button
-                onClick={(e) => {
-                  e.preventDefault();
-                  sendEmail();
-                }}
-              >
-                Invia
-              </Button>
+              <Button type="submit">Invia</Button>
             </Form>
           </Col>
         </Row>

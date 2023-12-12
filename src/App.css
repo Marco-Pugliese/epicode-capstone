@@ -53,6 +53,19 @@ body {
   background-color: rgba(0, 0, 0, 0.45);
   height: 100%;
 }
+#landingPage > *,
+#accountPage > *,
+#activityPage > *,
+#articlesPage > *,
+#artistPage > *,
+#loginPage > *,
+#blogPage > *,
+#page404 > *,
+#EventsPage > *,
+#searchPage > *,
+#resultsPage > * {
+  backdrop-filter: blur(5px) !important;
+}
 .darker {
   background: linear-gradient(
     to bottom,
@@ -62,6 +75,9 @@ body {
     rgba(0, 0, 0, 0.45),
     transparent
   );
+}
+.blur {
+  padding: 50px;
 }
 #contactsPage {
   background: url("/public/assets/images/backgrounds/asidebackground.png");
