@@ -28,12 +28,12 @@ const ModalEvent = ({ singleEvent, eventsPage }) => {
         )}
       </div>
       <Modal show={show} onHide={handleClose}>
-        <Modal.Header closeButton>
-          <Modal.Title className="fw-bold">
+        <Modal.Header closeButton className="bg-blueLight border-black">
+          <Modal.Title className="fw-bold ">
             {singleEvent.name_event}
           </Modal.Title>
         </Modal.Header>
-        <Modal.Body>
+        <Modal.Body className="bg-blueLight">
           <Container fluid>
             <Row>
               <Col className="d-flex justify-content-center">
@@ -106,11 +106,13 @@ const ModalEvent = ({ singleEvent, eventsPage }) => {
             </Row>
           </Container>
         </Modal.Body>
-        <Modal.Footer>
-          <Button variant="secondary" onClick={handleClose}>
-            Chiudi
-          </Button>
-        </Modal.Footer>
+        <div className="bg-blueLight rounded-bottom-2">
+          <Modal.Footer className="border-black">
+            <Button variant="secondary" onClick={handleClose}>
+              Chiudi
+            </Button>
+          </Modal.Footer>
+        </div>
       </Modal>
     </>
   );

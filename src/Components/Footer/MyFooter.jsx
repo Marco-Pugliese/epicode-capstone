@@ -9,13 +9,14 @@ import {
 import { Link } from "react-router-dom";
 
 const MyFooter = () => {
+  const today = new Date();
   return (
     <div id="footer" className="pt-5 pb-4 text-white">
       <Container className="text-center  mt-2 pb-2">
-        ©LOREM_MUSIC all rights reserved -{" "}
+        ©Bardoo all rights reserved - {today.getFullYear()}
       </Container>
       <Container className="d-flex border-top pt-2">
-        <ListGroup className="d-flex flex-row justify-content-around w-50">
+        <ListGroup className="d-flex flex-column flex-md-row justify-content-around w-50">
           <Link className="nav-link navHover" to="/">
             Home
           </Link>

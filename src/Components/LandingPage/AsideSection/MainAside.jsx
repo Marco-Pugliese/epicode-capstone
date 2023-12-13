@@ -39,8 +39,8 @@ const MainAside = () => {
             <div className="d-flex flex-column align-items-center justify-content-center">
               <h3>STEP 2</h3>
               <p className="px-2 text-center smaller fw-bold">
-                Visualizza tutte le informazioni riguardanti degli eventi, delle
-                strutture, e degli artisti
+                Visualizza tutte le informazioni riguardanti gli eventi, le
+                strutture e gli artisti
               </p>
             </div>
           </Col>

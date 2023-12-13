@@ -39,7 +39,7 @@ const ActivityPage = () => {
         userLogged.email === activity.registered_mail[0] ? (
           <Container id="activityPage" fluid className="h-100 py-1 text-white">
             <Row className="justify-content-center  ">
-              <Col className="col-7  bg-bluedark  rounded-2">
+              <Col className="col-7 rounded-2">
                 <Row>
                   <Col>
                     <div className="w-100">
@@ -101,12 +101,6 @@ const ActivityPage = () => {
                           <Col className="col-12">
                             <h3 className="m-0 p-0 text-yellow">
                               Eventi in Programma
-                              <img
-                                src="/assets/images/details&logo/freccia-giu-bianca.png"
-                                alt="arrow down"
-                                style={{ width: "15px" }}
-                                className="ms-4"
-                              />
                             </h3>
                           </Col>
                           <Col className="smaller pe-4">
@@ -117,15 +111,9 @@ const ActivityPage = () => {
                           <Col className="py-1 col-12">
                             <h3 className="m-0 p-0 text-yellow">
                               Attività Recenti
-                              <img
-                                src="/assets/images/details&logo/freccia-giu-bianca.png"
-                                alt="arrow down"
-                                style={{ width: "15px" }}
-                                className="ms-4"
-                              />
                             </h3>
                           </Col>
-                          <Col className="smaller pe-4">
+                          <Col className="smaller">
                             <DoneEvents />
                           </Col>
                         </Row>

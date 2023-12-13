@@ -72,7 +72,7 @@ const SignUp = () => {
   };
 
   return (
-    <Col className="col-10 col-md-8 col-xl-5 bg-sand rounded-4 shadow-lg py-3 ">
+    <Col className="col-10 col-md-8 col-xl-5 bg-yellow rounded-4 shadow-lg py-3 px-2 ">
       <Form
         onSubmit={(e) => {
           e.preventDefault();
@@ -111,7 +111,7 @@ const SignUp = () => {
           />
         </InputGroup>
         <InputGroup className="mb-3">
-          <InputGroup.Text id="inputGroup-sizing-default">
+          <InputGroup.Text id="inputGroup-sizing-default" className="indirizzo">
             Indirizzo
           </InputGroup.Text>
           <GeoapifyContext apiKey="72ecfab76b604947a1887e342eca4698">
@@ -119,14 +119,11 @@ const SignUp = () => {
               required
               type={"locality"}
               lang={"it"}
-              className="form-control"
+              className="form-control geoinput"
               position={"it"}
               filterByCountryCode={["it"]}
               placeSelect={onPlaceSelect}
               suggestionsChange={onSuggectionChange}
-              // onChange={(e) => {
-              //   setAddress(e.target.value);
-              // }}
               placeholder="Es: Città,Regione..."
               aria-describedby="basic-addon1"
             />

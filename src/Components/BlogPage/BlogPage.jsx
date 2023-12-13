@@ -38,9 +38,15 @@ const BlogPage = ({ noLogOut }) => {
             </h1>
             <span>
               <img
-                src="/assets/images/details&logo/oo.png"
-                alt="doppia-o"
-                style={{ width: "55px" }}
+                src="/assets/images/details&logo/obianca.png"
+                alt="o-singola"
+                style={{ width: "30px" }}
+                className="ms-1 text-pop-up-top2"
+              />
+              <img
+                src="/assets/images/details&logo/obianca.png"
+                alt="o-singola"
+                style={{ width: "30px" }}
                 className="ms-1 text-pop-up-top2"
               />
             </span>

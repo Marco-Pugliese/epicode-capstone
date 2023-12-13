@@ -16,7 +16,7 @@ const EventsPage = ({ noLogOut }) => {
   const newDate = new Date();
   return (
     allEvents && (
-      <div id="EventsPage">
+      <div id="EventsPage" className="text-white">
         <Container fluid>
           {logged === false ? (
             <SubHeader />
@@ -28,13 +28,27 @@ const EventsPage = ({ noLogOut }) => {
 
           <Container>
             <Row>
-              <Col className="col-12 text-center display-4 d-flex align-items-center justify-content-center fw-bold text-yellow title">
-                Gli Eventi di Bardoo
+              <Col className="col-12 text-center display-5 d-flex align-items-center justify-content-center fw-bold title">
+                Gli<span className="mx-2 text-yellow"> Eventi </span>di Bard
+                <span>
+                  <img
+                    src="/assets/images/details&logo/obianca.png"
+                    alt="o-singola"
+                    style={{ width: "30px" }}
+                    className="ms-1 text-pop-up-top2"
+                  />
+                  <img
+                    src="/assets/images/details&logo/obianca.png"
+                    alt="o-singola"
+                    style={{ width: "30px" }}
+                    className="ms-1 text-pop-up-top2"
+                  />
+                </span>
               </Col>
             </Row>
-            <Row className="bg-bluedark rounded-4">
-              <Col className="col-12 text-center d-flex align-items-center justify-content-center fw-bold text-yellow fs-4">
-                Gli Ultimi Eventi Creati
+            <Row className="rounded-4">
+              <Col className="col-12 text-center mb-3 d-flex align-items-center justify-content-center fw-bold text-yellow fs-4">
+                Gli ultimi eventi creati
               </Col>
               <Col>
                 {allEvents
@@ -44,7 +58,7 @@ const EventsPage = ({ noLogOut }) => {
                   .map((singleEvent) => {
                     return (
                       <Col
-                        className="col-12 mb-1 text-white "
+                        className="col-12 mb-1 text-white bg-blueLight shadow-lg rounded-4 p-2 "
                         key={singleEvent.id}
                       >
                         {parseInt(newDate - new Date(singleEvent.date_event)) >

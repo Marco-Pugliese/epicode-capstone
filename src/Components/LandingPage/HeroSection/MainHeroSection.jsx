@@ -24,14 +24,20 @@ const MainHeroSection = () => {
             </div>
 
             <div className="pt-5 d-none d-lg-block">
-              <div>
-                <MusicNote /> BENE
+              <div className="d-flex justify-content-between fs-3 mb-3">
+                <MusicNote /> <MusicNote />
               </div>
               <div>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod
-                omnis voluptatibus ut perferendis praesentium? Reprehenderit,
-                fugit necessitatibus, voluptatum earum ut expedita quasi error
-                dolores repellendus porro mollitia possimus a ipsam.{" "}
+                Connettiamo passioni e talenti per creare esperienze
+                indimenticabili! Iscriviti al nostro sito e fai parte di una
+                vibrante comunità dove artisti e attività si incontrano,
+                collaborano e creano insieme magia musicale. Rendiamo ogni
+                evento un'opportunità unica: unisciti a noi per plasmare il
+                futuro della musica e delle esperienze straordinarie. Iscriviti
+                ora e inizia a dare vita alla tua passione!
+              </div>
+              <div className="d-flex justify-content-between fs-3 mb-3">
+                <MusicNote /> <MusicNote />
               </div>
             </div>
           </Col>
@@ -44,8 +50,16 @@ const MainHeroSection = () => {
                   className="w-100 rounded-4"
                 />
 
-                <div className="text-center fs-2 fw-bold text-yellow">
-                  ARTISTA
+                <div className="text-center fs-2 text-yellow">
+                  <span className="position-relative display-4 fw-bold text-white">
+                    ARTISTA
+                    <img
+                      src="/assets/images/details&logo/ondeblutriple.png"
+                      alt="cercatore"
+                      style={{ width: "230px" }}
+                      className="position-absolute top-100 start-50 translate-middle"
+                    />
+                  </span>
                 </div>
               </Col>
               <Col className="ps-4">
@@ -54,8 +68,16 @@ const MainHeroSection = () => {
                   alt="cercatore"
                   className="w-100 rounded-4"
                 />
-                <div className="text-center text-yellow fs-2 fw-bold ">
-                  ATTIVITA'
+                <div className="text-center text-yellow fs-2">
+                  <span className="position-relative display-4 fw-bold text-white">
+                    ATTIVITA'
+                    <img
+                      src="/assets/images/details&logo/ondeblutriple.png"
+                      alt="cercatore"
+                      style={{ width: "230px" }}
+                      className="position-absolute top-100 start-50 translate-middle"
+                    />
+                  </span>
                 </div>
               </Col>
             </Row>

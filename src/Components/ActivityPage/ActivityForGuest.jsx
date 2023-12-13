@@ -31,9 +31,9 @@ const ActivityForGuest = () => {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [allCandidature.length]);
   return (
-    <Container id="activityPage" fluid className="h-100 py-1 text-white">
-      <Row className="justify-content-center  ">
-        <Col className="col-7  bg-bluedark  rounded-2">
+    <Container id="activityPage" fluid className="h-100 text-white">
+      <Row className="justify-content-center h-100">
+        <Col className="col-7 rounded-2">
           <Row>
             <Col>
               <div className="w-100">
@@ -91,30 +91,14 @@ const ActivityForGuest = () => {
 
               <Row className="pt-4 pb-2">
                 <Col className="col-12 col-xxl-6">
-                  <h3 className="m-0 p-0 text-yellow">
-                    Eventi in Programma
-                    <img
-                      src="/assets/images/details&logo/freccia-giu-bianca.png"
-                      alt="arrow down"
-                      style={{ width: "15px" }}
-                      className="ms-4"
-                    />
-                  </h3>
+                  <h3 className="m-0 p-0 text-yellow">Eventi in Programma</h3>
                   <div className="smaller">
                     <InProgrammForGuest />
                   </div>
                 </Col>
 
                 <Col className="col-12 col-xxl-6">
-                  <h3 className="m-0 p-0 text-yellow">
-                    Attività Recenti
-                    <img
-                      src="/assets/images/details&logo/freccia-giu-bianca.png"
-                      alt="arrow down"
-                      style={{ width: "15px" }}
-                      className="ms-4"
-                    />
-                  </h3>
+                  <h3 className="m-0 p-0 text-yellow">Attività Recenti</h3>
                   <div className="smaller">
                     <DoneEventsForGuest />
                   </div>

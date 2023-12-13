@@ -31,12 +31,12 @@ const ArtistPage = () => {
   }, []);
 
   return (
-    <Container id="artistPage" fluid className="h-100 py-1 text-white">
-      <Row className="justify-content-center">
-        <Col className="col-9 rounded ">
+    <Container id="artistPage" fluid className="h-100 text-white">
+      <Row className="justify-content-center h-100">
+        <Col className="col-7 rounded">
           <Row className="gx-5">
-            <Col className="col-9 rounded">
-              <div id="general" className="bg-bluedark rounded-2">
+            <Col className="col-12 rounded pt-2">
+              <div id="general" className="rounded-2">
                 <div className="w-100">
                   <img
                     src="https://placedog.net/1400/250"
@@ -121,22 +121,24 @@ const ArtistPage = () => {
                   </div>
                 )}
 
-                <div className="py-1 h-50">
-                  <h3 className="m-0 p-0 mt-5 text-yellow ps-2">
-                    Eventi in Programma
-                  </h3>
-                  <div className="smaller ">
-                    <InProgrammArtist artist={theArtist} events={events} />
-                  </div>
-                </div>
-              </div>
-            </Col>
-            <Col className=" col-3 bg-bluedark d-flex bg-transparent-blue rounded flex-column">
-              <div className="py-1 h-50">
-                <h3 className="m-0 p-0 text-yellow">Attività Recenti</h3>
-                <div className="smaller">
-                  <DoneEventsArtist artist={theArtist} events={events} />
-                </div>
+                <Row className="d-flex flex-column mt-5 flex-md-row">
+                  <Col className="py-1 h-50">
+                    <h3 className="m-0 p-0 text-yellow ps-2">
+                      Eventi in Programma
+                    </h3>
+                    <div className="smaller ps-2">
+                      <InProgrammArtist artist={theArtist} events={events} />
+                    </div>
+                  </Col>
+                  <Col className="py-1 h-50 ">
+                    <h3 className="m-0 p-0 ps-2 text-yellow">
+                      Attività Recenti
+                    </h3>
+                    <div className="smaller ps-2">
+                      <DoneEventsArtist artist={theArtist} events={events} />
+                    </div>
+                  </Col>
+                </Row>
               </div>
             </Col>
           </Row>

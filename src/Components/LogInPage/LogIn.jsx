@@ -30,7 +30,7 @@ const LogIn = () => {
   }, [email, password]);
 
   return (
-    <Col className="col-10 col-md-8 col-xl-5 bg-yellow rounded-4 shadow-lg py-3">
+    <Col className="col-10 col-md-8 col-xl-5 bg-yellow rounded-4 shadow-lg py-3 px-2">
       <Form
         onSubmit={(e) => {
           e.preventDefault();
@@ -47,7 +47,7 @@ const LogIn = () => {
         }}
       >
         <Form.Group className="mb-3" controlId="formBasicEmail">
-          <Form.Label>Email address</Form.Label>
+          <Form.Label>Email</Form.Label>
           <Form.Control
             className="shadow-sm"
             type="email"
@@ -72,10 +72,10 @@ const LogIn = () => {
           />
         </Form.Group>
         <Form.Group className="mb-3" controlId="formBasicCheckbox">
-          <Form.Check type="checkbox" label="Remember Me" />
+          <Form.Check type="checkbox" label="Ricordami" />
         </Form.Group>
         <Button variant="light" className="text-dark shadow-sm" type="submit">
-          Log-In
+          Login
         </Button>
       </Form>
       {isPasswordWrong && (
