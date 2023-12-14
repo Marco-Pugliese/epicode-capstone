@@ -38,21 +38,13 @@ const EventsPage = ({ noLogOut }) => {
             <Container>
               <Row>
                 <Col className="col-12 text-center display-5 d-flex align-items-center justify-content-center fw-bold title">
-                  Gli<span className="mx-2 text-yellow"> Eventi </span>di Bard
-                  <span>
-                    <img
-                      src="/assets/images/details&logo/obianca.png"
-                      alt="o-singola"
-                      style={{ width: "30px" }}
-                      className="ms-1 text-pop-up-top2"
-                    />
-                    <img
-                      src="/assets/images/details&logo/obianca.png"
-                      alt="o-singola"
-                      style={{ width: "30px" }}
-                      className="ms-1 text-pop-up-top2"
-                    />
-                  </span>
+                  Gli<span className="mx-2 text-yellow"> Eventi </span>di{" "}
+                  <img
+                    src="/assets/images/details&logo/Bardoo_Logo-02 copia.png"
+                    alt="logo"
+                    style={{ width: "175px" }}
+                    className="mb-1 ms-3"
+                  />
                 </Col>
               </Row>
               <Row className="rounded-4">

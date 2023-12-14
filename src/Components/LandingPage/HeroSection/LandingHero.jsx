@@ -6,32 +6,12 @@ const LandingHero = () => {
     >
       <div className=" rounded-5">
         <div id="bardoo" className="d-flex justify-content-center ">
-          <div className="fw-bold">BARD</div>
-          <div className="position-relative">
-            OO
+          <div className="fw-bold">
             <img
-              src="/assets/images/details&logo/oo.png"
-              alt="oo"
-              className="mb-3 double-o d-none d-xl-block"
-              style={{ width: "120px" }}
-            />
-            <img
-              src="/assets/images/details&logo/oo.png"
-              alt="oo"
-              className=" double-o o2  d-md-none "
-              style={{ width: "75px" }}
-            />
-            <img
-              src="/assets/images/details&logo/oo.png"
-              alt="oo"
-              className=" double-o d-none d-md-block d-lg-none "
-              style={{ width: "90px" }}
-            />
-            <img
-              src="/assets/images/details&logo/oo.png"
-              alt="oo"
-              className=" double-o d-none d-lg-block d-xl-none "
-              style={{ width: "105px" }}
+              src="/assets/images/details&logo/Bardoo_Logo-02 copia.png"
+              alt="logo"
+              style={{ width: "400px" }}
+              className="mb-2"
             />
           </div>
         </div>

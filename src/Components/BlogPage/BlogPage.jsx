@@ -43,22 +43,14 @@ const BlogPage = ({ noLogOut }) => {
           <Container fluid>
             <section className=" d-flex align-items-center justify-content-center">
               <h1 className="text-white fw-bold d-flex align-items-center p-0 m-0 display-5">
-                Il <span className="text-yellow mx-2">Blog</span> di Bard
+                Il <span className="text-yellow mx-2">Blog</span> di
               </h1>
-              <span>
-                <img
-                  src="/assets/images/details&logo/obianca.png"
-                  alt="o-singola"
-                  style={{ width: "30px" }}
-                  className="ms-1 text-pop-up-top2"
-                />
-                <img
-                  src="/assets/images/details&logo/obianca.png"
-                  alt="o-singola"
-                  style={{ width: "30px" }}
-                  className="ms-1 text-pop-up-top2"
-                />
-              </span>
+              <img
+                src="/assets/images/details&logo/Bardoo_Logo-02 copia.png"
+                alt="logo"
+                style={{ width: "175px" }}
+                className="mb-1 ms-3"
+              />
             </section>
             <Container fluid>
               <Row className="text-center pb-2 px-5 mx-5">

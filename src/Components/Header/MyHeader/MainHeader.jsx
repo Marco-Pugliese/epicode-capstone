@@ -12,7 +12,13 @@ const MainHeader = () => {
         <Container fluid className="mx-5 ">
           <Link to="/" className="nav-link fs-5 p-2 pe-5">
             <div>
-              <span className="mx-2 text-blueLight fw-bold">BARDOO</span>
+              <span className="mx-2 text-blueLight fw-bold">
+                <img
+                  src="/assets/images/details&logo/Bardoo_Logo-01 copia.png"
+                  alt="logo"
+                  style={{ width: "150px" }}
+                />
+              </span>
             </div>
           </Link>
           <Navbar.Toggle aria-controls="basic-navbar-nav" />

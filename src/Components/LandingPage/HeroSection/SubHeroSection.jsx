@@ -17,13 +17,22 @@ const SubHeroSection = () => {
           <div>
             <div className="display-3 p-0 fw-bold m-0">COME</div>
             <div className="display-3 p-0 fw-bold m-0">FUNZIONA</div>
-            <div className="display-3 p-0 fw-bold m-0 text-yellow">
-              BARDOO??
+            <div className="display-3 p-0 fw-bold m-0">
+              <img
+                src="/assets/images/details&logo/Bardoo_Logo-01 copia.png"
+                alt="logo"
+                style={{ width: "300px" }}
+                className="mb-4"
+              />
+              <span className="ms-1">?</span>
             </div>
+
             <div className="d-flex justify-content-center">
               <img
                 src="/assets/images/details&logo/freccia-giu-bianca.png"
                 alt="frecciabianca"
+                style={{ width: "80px" }}
+                className="mt-2"
               />
             </div>
           </div>
@@ -31,13 +40,12 @@ const SubHeroSection = () => {
             <MainAside />
             <div className="text-end display-3 fw-bold">
               FACILE, N
-              <span>
-                <img
-                  src="/assets/images/details&logo/ocerchiata.png"
-                  style={{ width: "55px" }}
-                  alt="`o` cerchiata"
-                />
-              </span>
+              <img
+                src="/assets/images/details&logo/obianca.png"
+                alt="spinner"
+                style={{ width: "65px" }}
+                className="rotate-scale-down"
+              />
               ?!
             </div>
           </div>
@@ -48,10 +56,10 @@ const SubHeroSection = () => {
             <div className="text-end display-3 fw-bold">
               FACILE, N
               <img
-                src="/assets/images/details&logo/ocerchiata.png"
-                alt="`o` cerchiata"
-                style={{ width: "55px" }}
-                className="mb-2"
+                src="/assets/images/details&logo/obianca.png"
+                alt="spinner"
+                style={{ width: "65px" }}
+                className="rotate-scale-down"
               />
               ?!
             </div>
