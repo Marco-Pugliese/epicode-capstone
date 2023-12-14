@@ -12,7 +12,6 @@ const SubHeroSection = () => {
             alt="peopledrinking"
             className="w-100 rounded-4"
           />
-          x
         </Col>
         <Col className=" col-6 col-xl-8 d-flex flex-column justify-content-center align-items-center">
           <div>
@@ -35,6 +34,7 @@ const SubHeroSection = () => {
               <span>
                 <img
                   src="/assets/images/details&logo/ocerchiata.png"
+                  style={{ width: "55px" }}
                   alt="`o` cerchiata"
                 />
               </span>
@@ -47,14 +47,12 @@ const SubHeroSection = () => {
             <MainAside />
             <div className="text-end display-3 fw-bold">
               FACILE, N
-              <span>
-                <img
-                  src="/assets/images/details&logo/ocerchiata.png"
-                  alt="`o` cerchiata"
-                  style={{ width: "50px" }}
-                  className="me-2"
-                />
-              </span>
+              <img
+                src="/assets/images/details&logo/ocerchiata.png"
+                alt="`o` cerchiata"
+                style={{ width: "55px" }}
+                className="mb-2"
+              />
               ?!
             </div>
           </div>

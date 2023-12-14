@@ -1,7 +1,15 @@
 import { Container } from "react-bootstrap";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 const Page404 = () => {
+  const navigate = useNavigate();
+  const navigateToHome = () => {
+    navigate("/");
+  };
+  const goToHome = () => {
+    setTimeout(navigateToHome, 3500);
+  };
+
   return (
     <div
       id="page404"
@@ -24,6 +32,7 @@ const Page404 = () => {
           </Link>{" "}
           se non vieni reindirizzato in automatico
         </div>
+        {goToHome()}
       </Container>
     </div>
   );

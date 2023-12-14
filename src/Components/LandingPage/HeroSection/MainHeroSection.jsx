@@ -8,7 +8,8 @@ const MainHeroSection = () => {
         <Row className="justify-content-center">
           <Col className="col-10 col-lg-5 ">
             <div className="display-4 pe-5 pb-5 position-relative fw-bold">
-              ISCRIVITI GRATIS E REGISTRATI COME
+              ISCRIVITI <span className="text-yellow">GRATIS</span> E REGISTRATI
+              COME
               <img
                 src="/assets/images/details&logo/freccia-dx-bianca.png"
                 alt="freccia destra"
@@ -51,7 +52,7 @@ const MainHeroSection = () => {
                 />
 
                 <div className="text-center fs-2 text-yellow">
-                  <span className="position-relative display-4 fw-bold text-white">
+                  <span className="position-relative display-4 fw-bold text-yellow">
                     ARTISTA
                     <img
                       src="/assets/images/details&logo/ondeblutriple.png"
@@ -69,7 +70,7 @@ const MainHeroSection = () => {
                   className="w-100 rounded-4"
                 />
                 <div className="text-center text-yellow fs-2">
-                  <span className="position-relative display-4 fw-bold text-white">
+                  <span className="position-relative display-4 fw-bold text-yellow">
                     ATTIVITA'
                     <img
                       src="/assets/images/details&logo/ondeblutriple.png"

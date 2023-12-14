@@ -46,7 +46,7 @@ const SearchHeroSection = ({ compact }) => {
                 onChange={(e) => {
                   setInput2(e.target.value);
                 }}
-                placeholder="Cerca nella tua zona..."
+                placeholder="Cerca..."
                 aria-describedby="basic-addon2"
               />
               <InputGroup.Text
