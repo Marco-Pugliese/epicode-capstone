@@ -67,18 +67,6 @@ const SearchHeroSection = ({ compact }) => {
             <Row className="justify-content-evenly">
               <Col
                 onClick={() => {
-                  dispatch(setFilterAction("genere"));
-                }}
-                className={
-                  filter === "genere"
-                    ? "col-5 btn border bg-white mt-2 rounded-4 selectedBtn"
-                    : "col-5 btn border bg-white mt-2 rounded-4"
-                }
-              >
-                GENERE
-              </Col>
-              <Col
-                onClick={() => {
                   dispatch(setFilterAction("artista"));
                 }}
                 className={
@@ -100,6 +88,18 @@ const SearchHeroSection = ({ compact }) => {
                 }
               >
                 ATTIVITA'
+              </Col>
+              <Col
+                onClick={() => {
+                  dispatch(setFilterAction("zona"));
+                }}
+                className={
+                  filter === "zona"
+                    ? "col-5 btn border bg-white mt-2 rounded-4 selectedBtn"
+                    : "col-5 btn border bg-white mt-2 rounded-4"
+                }
+              >
+                ZONA
               </Col>
               <Col
                 onClick={() => {
@@ -152,7 +152,7 @@ const SearchHeroSection = ({ compact }) => {
                       onChange={(e) => {
                         setInput2(e.target.value);
                       }}
-                      placeholder="Cerca nella tua zona..."
+                      placeholder="Cerca..."
                       aria-describedby="basic-addon2"
                     />
                     <InputGroup.Text
@@ -169,18 +169,6 @@ const SearchHeroSection = ({ compact }) => {
                 </Form>
                 <section className="py-1 mb-1">
                   <Row className="justify-content-evenly">
-                    <Col
-                      onClick={() => {
-                        dispatch(setFilterAction("genere"));
-                      }}
-                      className={
-                        filter === "genere"
-                          ? "btn border bg-white mt-2 mx-1 rounded-4 selectedBtn"
-                          : "btn border bg-white mt-2 mx-1 rounded-4"
-                      }
-                    >
-                      GENERE
-                    </Col>
                     <Col
                       onClick={() => {
                         dispatch(setFilterAction("artista"));
@@ -204,6 +192,18 @@ const SearchHeroSection = ({ compact }) => {
                       }
                     >
                       ATTIVITA'
+                    </Col>
+                    <Col
+                      onClick={() => {
+                        dispatch(setFilterAction("zona"));
+                      }}
+                      className={
+                        filter === "zona"
+                          ? "btn border bg-white mt-2 mx-1 rounded-4 selectedBtn"
+                          : "btn border bg-white mt-2 mx-1 rounded-4"
+                      }
+                    >
+                      ZONA
                     </Col>
                     <Col
                       onClick={() => {

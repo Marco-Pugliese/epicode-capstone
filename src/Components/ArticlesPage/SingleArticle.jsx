@@ -4,7 +4,7 @@ const SingleArticle = ({ article }) => {
   return (
     <>
       <div className="py-5">
-        <Container className="">
+        <Container className=" text-black">
           <Row className="justify-content-center">
             <Col className="col-10 col-xl-8 ">
               <Card

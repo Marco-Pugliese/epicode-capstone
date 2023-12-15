@@ -44,7 +44,7 @@ const SubHeroSection = () => {
                 src="/assets/images/details&logo/obianca.png"
                 alt="spinner"
                 style={{ width: "65px" }}
-                className="rotate-scale-down"
+                className="rotate-scale-down mb-2"
               />
               ?!
             </div>
@@ -59,7 +59,7 @@ const SubHeroSection = () => {
                 src="/assets/images/details&logo/obianca.png"
                 alt="spinner"
                 style={{ width: "65px" }}
-                className="rotate-scale-down"
+                className="rotate-scale-down mb-2"
               />
               ?!
             </div>

@@ -42,14 +42,14 @@ const BlogPage = ({ noLogOut }) => {
           )}
           <Container fluid>
             <section className=" d-flex align-items-center justify-content-center">
-              <h1 className="text-white fw-bold d-flex align-items-center p-0 m-0 display-5">
+              <h1 className="text-white fw-bold d-flex align-items-center p-0 m-0 display-5 nexa me-1">
                 Il <span className="text-yellow mx-2">Blog</span> di
               </h1>
               <img
                 src="/assets/images/details&logo/Bardoo_Logo-02 copia.png"
                 alt="logo"
                 style={{ width: "175px" }}
-                className="mb-1 ms-3"
+                className="ms-2 minibottom"
               />
             </section>
             <Container fluid>

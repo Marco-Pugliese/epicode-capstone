@@ -37,21 +37,21 @@ const AccountPage = () => {
                 <Col className="col-12 bg-bluedark">
                   <div className="text-white">
                     {user.isLogged === true ? (
-                      <div className="d-flex align-items-center">
-                        <Col className="col-10">
+                      <Row className="align-items-center">
+                        <Col className="col-6 offset-1 pe-5">
                           <div
                             onClick={() => {
                               setIsProfile(false);
                             }}
-                            className="text-end fw-bold rounded-top-3 pointer ms-1 text-white"
+                            className="text-end fw-bold pe-4 rounded-top-3 pointer ms-1 text-white"
                           >
                             Crea/Gestisci Profili
                           </div>
                         </Col>
-                        <Col>
+                        <Col className="text-end">
                           <WelcomeMessage user={user.user} />
                         </Col>
-                      </div>
+                      </Row>
                     ) : null}
                   </div>
                 </Col>

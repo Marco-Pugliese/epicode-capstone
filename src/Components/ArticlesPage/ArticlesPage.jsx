@@ -12,7 +12,7 @@ const ArticlePage = () => {
         <div>
           {allArticles.map((singleArticle) =>
             singleArticle.id === id ? (
-              <SingleArticle article={singleArticle} />
+              <SingleArticle key={singleArticle.id} article={singleArticle} />
             ) : null
           )}
         </div>

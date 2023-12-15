@@ -26,17 +26,19 @@ const ResultsPage = () => {
           <SearchHeroSection compact={true} />
           <Container>
             <div className="text-center display-6 pt-2">
-              Tutti i Risultati per: "
-              <span className="fw-bolder text-yellow">{id}</span>"
+              {filter === "zona"
+                ? "Tutti i risultati in : "
+                : "Tutti i risultati per: "}{" "}
+              "<span className="fw-bolder text-yellow">{id}</span>"
             </div>
           </Container>
 
           <Container>
-            {filter !== "genere" &&
+            {filter !== "zona" &&
               filter !== "attività" &&
               filter !== "artista" && (
                 <Row className="justify-content-center">
-                  <Col className="col-12 col-lg-3 m-1 shadow-lg rounded">
+                  <Col className="col-12 col-lg-4 m-1 shadow-lg rounded">
                     <div className="fs-2 fw-bold pt-2 text-yellow">
                       Attività:
                     </div>
@@ -57,7 +59,7 @@ const ResultsPage = () => {
                       )}
                     </div>
                   </Col>
-                  <Col className="col-12 col-lg-3 m-1 shadow-lg rounded">
+                  <Col className="col-12 col-lg-4 m-1 shadow-lg rounded">
                     <div className="fs-2 fw-bold pt-2 text-yellow">
                       Artisti:
                     </div>
@@ -79,15 +81,25 @@ const ResultsPage = () => {
                         )}
                     </div>
                   </Col>
-                  <Col className="col-12 col-lg-3 m-1 shadow-lg rounded">
+                </Row>
+              )}
+            <>
+              {filter === "zona" && (
+                <Row>
+                  <Col>
                     <div className="fs-2 fw-bold pt-2 text-yellow">
-                      Genere :{" "}
-                      <span className="fst-italic fw-normal">{id}</span>
+                      Artisti:
                     </div>
                     <div>
                       {allArtist &&
                         allArtist.map((singleArtist) =>
-                          singleArtist.genre
+                          singleArtist.city
+                            .toLowerCase()
+                            .includes(`${id}`.toLowerCase()) ||
+                          singleArtist.region
+                            .toLowerCase()
+                            .includes(`${id}`.toLowerCase()) ||
+                          singleArtist.country
                             .toLowerCase()
                             .includes(`${id}`.toLowerCase()) ? (
                             <ArtistResult
@@ -102,28 +114,34 @@ const ResultsPage = () => {
                         )}
                     </div>
                   </Col>
-                </Row>
-              )}
-            <>
-              {filter === "genere" && (
-                <>
-                  <div className="fs-2 fw-bold pt-2 text-yellow">
-                    Genere : <span className="fst-italic fw-normal">{id}</span>
-                  </div>
-                  <div>
-                    {allArtist &&
-                      allArtist.map((singleArtist) =>
-                        singleArtist.genre
+                  <Col>
+                    <div className="fs-2 fw-bold pt-2 text-yellow">
+                      Attività:
+                    </div>
+                    <div>
+                      {allActivities.map((singleActivity) =>
+                        singleActivity.city
+                          .toLowerCase()
+                          .includes(`${id}`.toLowerCase()) ||
+                        singleActivity.region
+                          .toLowerCase()
+                          .includes(`${id}`.toLowerCase()) ||
+                        singleActivity.country
                           .toLowerCase()
                           .includes(`${id}`.toLowerCase()) ? (
-                          <ArtistResult
-                            key={singleArtist.id}
-                            singleArtist={singleArtist}
+                          <ActivityResult
+                            key={singleActivity.id}
+                            singleActivity={singleActivity}
                           />
-                        ) : null
+                        ) : (
+                          <span className="smaller">
+                            Nessun risultato trovato
+                          </span>
+                        )
                       )}
-                  </div>
-                </>
+                    </div>
+                  </Col>
+                </Row>
               )}
             </>
             <>
@@ -140,7 +158,11 @@ const ResultsPage = () => {
                             key={singleArtist.id}
                             singleArtist={singleArtist}
                           />
-                        ) : null
+                        ) : (
+                          <span className="smaller">
+                            Nessun risultato trovato
+                          </span>
+                        )
                       )}
                   </div>
                 </>
@@ -159,7 +181,11 @@ const ResultsPage = () => {
                           key={singleActivity.id}
                           singleActivity={singleActivity}
                         />
-                      ) : null
+                      ) : (
+                        <span className="smaller">
+                          Nessun risultato trovato
+                        </span>
+                      )
                     )}
                   </div>
                 </>

@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 const SingleCard = ({ article }) => {
   return (
     <Link to={`/articles/${article.id}`} className="nav-link">
-      <Card className="mx-2 h-100 shadow bg-sand border-0 rounded-4 ">
+      <Card className="mx-2 h-100 shadow bg-sand text-black border-0 rounded-4 ">
         <Card.Img
           variant="top"
           src="https://picsum.photos/1000/800"

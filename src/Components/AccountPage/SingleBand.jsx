@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 const SingleBand = ({ band }) => {
   return (
-    <Container className="py-1 fs-6 border">
+    <Container className="py-1 fs-6 border rounded shadow">
       <Row className="d-flex">
         <Col className="col-9 d-flex align-items-center">
           {band.name} - <span className="smaller">{band.kind_of}</span>

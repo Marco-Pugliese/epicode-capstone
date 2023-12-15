@@ -62,7 +62,7 @@ const SingleEventHome = ({ event }) => {
   return (
     <Container className="py-1 fs-6 border rounded shadow">
       <Row className="d-flex ">
-        <Col className="col-9 ">
+        <Col className="col-9 d-flex align-items-center">
           <div className="fw-bold">
             {event.name_event} -{" "}
             <span className="smaller fw-normal">
@@ -73,15 +73,18 @@ const SingleEventHome = ({ event }) => {
                 event.date_event.slice(0, 4)}
             </span>
           </div>
-          <div>
+          <div className="ms-3">
+            <span className="me-3 text-yellow">X</span>
             {event.hosted_by.name_activity} -{" "}
-            <span className="smaller">{event.hosted_by.address}</span>
+            <span className="smaller">
+              {event.hosted_by.city} ({event.hosted_by.region})
+            </span>
           </div>
         </Col>
         <Col className="col d-flex justify-content-end align-items-center ">
           {candidatura === true ? (
             <Button onClick={handleShow}>
-              (<span className="smaller">Candidati Ora</span>)
+              <span className="smaller">Candidati Ora</span>
             </Button>
           ) : null}
           <Modal show={show} onHide={handleClose}>
@@ -103,7 +106,6 @@ const SingleEventHome = ({ event }) => {
                   <InputGroup.Text id="basic-addon1">
                     Richieste Evento
                   </InputGroup.Text>
-                  {console.log(event)}
                   <Form.Control value={`${event.richiesta}`} disabled />
                 </InputGroup>
 
@@ -120,10 +122,7 @@ const SingleEventHome = ({ event }) => {
                       ? allTheArtists.map((artist) =>
                           artist.registered_mails.map((singleEmail) =>
                             singleEmail === emailLogged ? (
-                              <option key={artist}>
-                                {artist.name}
-                                {console.log(band)}
-                              </option>
+                              <option key={artist}>{artist.name}</option>
                             ) : (
                               () => null
                             )

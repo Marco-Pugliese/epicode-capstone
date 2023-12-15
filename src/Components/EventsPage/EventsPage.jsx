@@ -38,12 +38,14 @@ const EventsPage = ({ noLogOut }) => {
             <Container>
               <Row>
                 <Col className="col-12 text-center display-5 d-flex align-items-center justify-content-center fw-bold title">
-                  Gli<span className="mx-2 text-yellow"> Eventi </span>di{" "}
+                  <h1 className="text-white fw-bold d-flex align-items-center p-0 m-0 display-5 nexa me-1">
+                    Gli<span className="mx-2 text-yellow"> Eventi </span>di
+                  </h1>
                   <img
                     src="/assets/images/details&logo/Bardoo_Logo-02 copia.png"
                     alt="logo"
                     style={{ width: "175px" }}
-                    className="mb-1 ms-3"
+                    className="minibottom ms-2"
                   />
                 </Col>
               </Row>

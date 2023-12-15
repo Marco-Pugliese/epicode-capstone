@@ -1,3 +1,11 @@
+@font-face {
+  font-family: "nexa2";
+  src: url("../public/assets/nexa/Nexa-ExtraLight.ttf");
+}
+@font-face {
+  font-family: "nexa";
+  src: url("../public/assets/nexa/Nexa-Heavy.ttf");
+}
 @import url("https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Montserrat:wght@300;400;600;700&family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400&family=Raleway:wght@300;400;500;600;700&family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,400&family=Slabo+27px&display=swap");
 :root {
   --primary-Yellow: rgb(246, 180, 56);
@@ -20,10 +28,14 @@ body * {
   /* font-family: "Lato", sans-serif; */
   /* font-family: "Montserrat", sans-serif; */
   /* font-family: "Open Sans", sans-serif; */
-  font-family: "Raleway", sans-serif;
+  /* font-family: "Raleway", sans-serif; */
   /* font-family: "Roboto", sans-serif; */
   /* font-family: "Slabo 27px", serif; */
   /* font-weight: 700; */
+  font-family: "nexa2", sans-serif;
+}
+.nexa {
+  font-family: "nexa", sans-serif !important;
 }
 body {
   background: linear-gradient(
@@ -174,11 +186,13 @@ textarea {
   background-color: var(--primary-Light) !important;
   transition: all 0.6s !important;
   border: 1px solid var(--primary-BlueDark) !important;
-  color: var(--primary-Yellow) !important;
+  color: var(--primary-BlueDark) !important;
+  font-weight: 600 !important;
 }
 .btn:hover {
   background-color: var(--primary-Blue) !important;
   color: white !important;
+  font-weight: 600 !important;
 }
 .btn.selectedBtn {
   background-color: var(--primary-Blue) !important;
@@ -253,4 +267,7 @@ textarea {
 .navbar-toggler {
   border: 2px solid var(--primary-BlueLight) !important;
   background-color: var(--primary-BlueLight) !important;
+}
+.minibottom {
+  margin-bottom: 1.6px !important;
 }
