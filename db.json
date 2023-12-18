@@ -10,6 +10,17 @@
       "country": "Italia",
       "birthday": "1992-03-12",
       "id": 1
+    },
+    {
+      "name": "Michela",
+      "surname": "Corcione",
+      "email": "michela@grottino.it",
+      "password": "michelapass",
+      "city": "Monte di Procida",
+      "region": "Campania",
+      "country": "Italia",
+      "birthday": "1993-05-26",
+      "id": 2
     }
   ],
   "artists": [
@@ -51,6 +62,25 @@
       ],
       "logo": "https://www.placedog.net/120/100",
       "id": 1
+    },
+    {
+      "name_activity": "Bar Grottino",
+      "name_owner": "imaimaimaimaimaim",
+      "kind_of_activity": "batr",
+      "city": "Procida",
+      "region": "Campania",
+      "country": "Italia",
+      "strada": "via roma",
+      "civico": "29",
+      "description": "uìkdjbfakjdb",
+      "phone": "0123456789",
+      "email": "michela",
+      "img": "https://www.placedog.net/300/200",
+      "registered_mail": [
+        "michela@grottino.it"
+      ],
+      "logo": "https://www.placedog.net/120/100",
+      "id": 2
     }
   ],
   "events": [
@@ -173,6 +203,52 @@
       },
       "img": "https://www.placedog.net/600/200",
       "id": 3
+    },
+    {
+      "name_event": "capodanno a tgesta in giu",
+      "detail": "a rwar UB FUY",
+      "richiesta": "FJ",
+      "date_event": "121212-12-12T12:12",
+      "isConfirmed": true,
+      "hosted_by": {
+        "name_activity": "Bar Grottino",
+        "name_owner": "imaimaimaimaimaim",
+        "kind_of_activity": "batr",
+        "city": "Procida",
+        "region": "Campania",
+        "country": "Italia",
+        "strada": "via roma",
+        "civico": "29",
+        "description": "uìkdjbfakjdb",
+        "phone": "0123456789",
+        "email": "michela",
+        "img": "https://www.placedog.net/300/200",
+        "registered_mail": [
+          "michela@grottino.it"
+        ],
+        "logo": "https://www.placedog.net/120/100",
+        "id": 2
+      },
+      "img": "https://www.placedog.net/600/200",
+      "id": 4,
+      "band": {
+        "name": "Marc-00",
+        "kind_of": "Band",
+        "genre": "Rock",
+        "phone": "+01 23456789",
+        "city": "Procida",
+        "region": "Campania",
+        "country": "Italia",
+        "description": "Progetto iniziato nel 1990 sotto la guida di Giorgio Gaber",
+        "band_components": [
+          "Marco Pugliese, Vincenzo Scala, Francesco Lauro, Franco Della Monica"
+        ],
+        "registered_mails": [
+          "marco.pugliese92@yahoo.com"
+        ],
+        "image_url": "https://placedog.net/300/300",
+        "id": 1
+      }
     }
   ],
   "candidature": [],

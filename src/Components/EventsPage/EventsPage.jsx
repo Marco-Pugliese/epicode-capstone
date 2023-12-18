@@ -60,19 +60,20 @@ const EventsPage = ({ noLogOut }) => {
                     )
                     .map((singleEvent) => {
                       return (
-                        <Col
-                          className="col-12 mb-1 text-white bg-blueLight shadow-lg rounded-4 p-2 "
-                          key={singleEvent.id}
-                        >
-                          {parseInt(
-                            newDate - new Date(singleEvent.date_event)
-                          ) > 0 ? null : (
-                            <ModalEvent
-                              singleEvent={singleEvent}
-                              eventsPage={true}
-                            />
+                        <div key={singleEvent.id}>
+                          {singleEvent.isConfirmed && (
+                            <Col className="col-12 mb-1 text-white bg-blueLight shadow-lg rounded-4 p-2 ">
+                              {parseInt(
+                                newDate - new Date(singleEvent.date_event)
+                              ) > 0 ? null : (
+                                <ModalEvent
+                                  singleEvent={singleEvent}
+                                  eventsPage={true}
+                                />
+                              )}
+                            </Col>
                           )}
-                        </Col>
+                        </div>
                       );
                     })}
                   <div
@@ -96,23 +97,25 @@ const EventsPage = ({ noLogOut }) => {
                     )
                     .map((singleEvent) => {
                       return (
-                        <Col
-                          className="col-12 mb-1 text-white"
-                          key={singleEvent.id}
-                        >
-                          {user.user[0].city === singleEvent.hosted_by.city ? (
-                            parseInt(
-                              newDate - new Date(singleEvent.date_event)
-                            ) > 0 ? null : (
-                              <Collapse in={viewMore}>
-                                <ModalEvent
-                                  singleEvent={singleEvent}
-                                  eventsPage={true}
-                                />
-                              </Collapse>
-                            )
-                          ) : null}
-                        </Col>
+                        <div key={singleEvent.id}>
+                          {singleEvent.isConfirmed && (
+                            <Col className="col-12 mb-1 text-white">
+                              {user.user[0].city ===
+                              singleEvent.hosted_by.city ? (
+                                parseInt(
+                                  newDate - new Date(singleEvent.date_event)
+                                ) > 0 ? null : (
+                                  <Collapse in={viewMore}>
+                                    <ModalEvent
+                                      singleEvent={singleEvent}
+                                      eventsPage={true}
+                                    />
+                                  </Collapse>
+                                )
+                              ) : null}
+                            </Col>
+                          )}
+                        </div>
                       );
                     })}
                   <div
