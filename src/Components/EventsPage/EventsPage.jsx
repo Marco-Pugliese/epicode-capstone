@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Col, Collapse, Container, Row } from "react-bootstrap";
+import { Col, Container, Row } from "react-bootstrap";
 import { useSelector } from "react-redux";
 import WelcomeMessage from "../AccountPage/WelcomeMessage";
 import LogOutHeader from "../Header/MyHeader/LogOutHeader";
@@ -26,7 +26,7 @@ const EventsPage = ({ noLogOut }) => {
         {show === true ? (
           <Spinner />
         ) : (
-          <Container fluid>
+          <div className="w-100">
             {logged === false ? (
               <SubHeader />
             ) : noLogOut === false ? (
@@ -59,22 +59,20 @@ const EventsPage = ({ noLogOut }) => {
                       viewMore === false ? i < 4 : i < 8
                     )
                     .map((singleEvent) => {
-                      return (
-                        <div key={singleEvent.id}>
-                          {singleEvent.isConfirmed && (
-                            <Col className="col-12 mb-1 text-white bg-blueLight shadow-lg rounded-4 p-2 ">
-                              {parseInt(
-                                newDate - new Date(singleEvent.date_event)
-                              ) > 0 ? null : (
-                                <ModalEvent
-                                  singleEvent={singleEvent}
-                                  eventsPage={true}
-                                />
-                              )}
-                            </Col>
-                          )}
-                        </div>
-                      );
+                      return singleEvent.isConfirmed ? (
+                        parseInt(newDate - new Date(singleEvent.date_event)) >
+                        0 ? null : (
+                          <Col
+                            key={singleEvent.id}
+                            className="col-12 mb-1 text-white bg-blueLight shadow-lg rounded-4 p-2 "
+                          >
+                            <ModalEvent
+                              singleEvent={singleEvent}
+                              eventsPage={true}
+                            />
+                          </Col>
+                        )
+                      ) : null;
                     })}
                   <div
                     className="text-end pe-4 pointer viewMore text-yellow"
@@ -87,7 +85,7 @@ const EventsPage = ({ noLogOut }) => {
                 </Col>
               </Row>
               {logged && (
-                <Row className="bg-bluedark rounded-4 my-4">
+                <Row className="rounded-4 my-4">
                   <Col className="col-12 text-center d-flex align-items-center justify-content-center fw-bold text-yellow fs-4">
                     Tutto nei dintorni di {user.user[0].city}
                   </Col>
@@ -96,27 +94,20 @@ const EventsPage = ({ noLogOut }) => {
                       viewMore === false ? i < 4 : i < 8
                     )
                     .map((singleEvent) => {
-                      return (
-                        <div key={singleEvent.id}>
-                          {singleEvent.isConfirmed && (
-                            <Col className="col-12 mb-1 text-white">
-                              {user.user[0].city ===
-                              singleEvent.hosted_by.city ? (
-                                parseInt(
-                                  newDate - new Date(singleEvent.date_event)
-                                ) > 0 ? null : (
-                                  <Collapse in={viewMore}>
-                                    <ModalEvent
-                                      singleEvent={singleEvent}
-                                      eventsPage={true}
-                                    />
-                                  </Collapse>
-                                )
-                              ) : null}
-                            </Col>
-                          )}
-                        </div>
-                      );
+                      return singleEvent.isConfirmed ? (
+                        parseInt(newDate - new Date(singleEvent.date_event)) >
+                        0 ? null : (
+                          <Col
+                            key={singleEvent.id}
+                            className="col-12 mb-1 text-white bg-blueLight shadow-lg rounded-4 p-2 "
+                          >
+                            <ModalEvent
+                              singleEvent={singleEvent}
+                              eventsPage={true}
+                            />
+                          </Col>
+                        )
+                      ) : null;
                     })}
                   <div
                     className="text-end pe-4 pointer viewMore text-yellow"
@@ -129,7 +120,7 @@ const EventsPage = ({ noLogOut }) => {
                 </Row>
               )}
             </Container>
-          </Container>
+          </div>
         )}
       </div>
     )

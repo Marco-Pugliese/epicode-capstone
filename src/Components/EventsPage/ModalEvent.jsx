@@ -37,7 +37,6 @@ const ModalEvent = ({ singleEvent, eventsPage }) => {
           <Container fluid>
             <Row>
               <Col className="d-flex justify-content-center">
-                {console.log(singleEvent)}
                 <Link
                   to={`/artist/${singleEvent.band.id}`}
                   className="nav-link"

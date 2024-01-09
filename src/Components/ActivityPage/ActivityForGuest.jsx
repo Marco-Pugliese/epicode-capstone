@@ -36,7 +36,7 @@ const ActivityForGuest = () => {
     setTimeout(() => setShow(false), 1000);
   };
   return (
-    <Container id="activityPage" fluid className="h-100 text-white">
+    <Container fluid className="h-100 text-white">
       {hideSpinner()}
       {show === true ? (
         <Spinner />

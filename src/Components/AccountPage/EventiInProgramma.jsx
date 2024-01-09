@@ -7,7 +7,7 @@ const EventiInProgramma = () => {
 
   return (
     <div className="text-white fw-bold fs-2">
-      Tutti gli attuali eventi aperti alle candidature:
+      Tutti gli eventi aperti a candidature:
       {events.map((singleEvent, i) =>
         singleEvent.isConfirmed === false ? (
           <SingleEventHome key={i} event={singleEvent} />

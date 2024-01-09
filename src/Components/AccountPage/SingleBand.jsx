@@ -6,7 +6,7 @@ const SingleBand = ({ band }) => {
     <Container className="py-1 fs-6 border rounded shadow">
       <Row className="d-flex">
         <Col className="col-9 d-flex align-items-center">
-          {band.name} - <span className="smaller">{band.kind_of}</span>
+          {band.name} - <span className="smaller ms-1">{band.kind_of}</span>
         </Col>
         <Col className="col d-flex justify-content-end align-items-center">
           <Button>

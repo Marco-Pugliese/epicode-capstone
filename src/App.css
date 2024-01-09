@@ -97,7 +97,7 @@ body {
 }
 
 #blogPage h1,
-#EventsPage .title {
+.title {
   height: 90vh;
 }
 .searchInputField {
