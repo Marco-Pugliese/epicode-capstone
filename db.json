@@ -36,9 +36,7 @@
       "band_components": [
         "Marco Pugliese, Vincenzo Scala, Francesco Lauro, Franco Della Monica"
       ],
-      "registered_mails": [
-        "marco.pugliese92@yahoo.com"
-      ],
+      "registered_mails": ["marco.pugliese92@yahoo.com"],
       "image_url": "https://placedog.net/300/300",
       "id": 1
     }
@@ -57,9 +55,7 @@
       "phone": "+012 3456789",
       "email": "baretto@info.com",
       "img": "https://www.placedog.net/300/200",
-      "registered_mail": [
-        "marco.pugliese92@yahoo.com"
-      ],
+      "registered_mail": ["marco.pugliese92@yahoo.com"],
       "logo": "https://www.placedog.net/120/100",
       "id": 1
     },
@@ -76,9 +72,7 @@
       "phone": "0123456789",
       "email": "michela",
       "img": "https://www.placedog.net/300/200",
-      "registered_mail": [
-        "michela@grottino.it"
-      ],
+      "registered_mail": ["michela@grottino.it"],
       "logo": "https://www.placedog.net/120/100",
       "id": 2
     }
@@ -103,9 +97,7 @@
         "phone": "+012 3456789",
         "email": "baretto@info.com",
         "img": "https://www.placedog.net/300/200",
-        "registered_mail": [
-          "marco.pugliese92@yahoo.com"
-        ],
+        "registered_mail": ["marco.pugliese92@yahoo.com"],
         "logo": "https://www.placedog.net/120/100",
         "id": 1
       },
@@ -123,9 +115,7 @@
         "band_components": [
           "Marco Pugliese, Vincenzo Scala, Francesco Lauro, Franco Della Monica"
         ],
-        "registered_mails": [
-          "marco.pugliese92@yahoo.com"
-        ],
+        "registered_mails": ["marco.pugliese92@yahoo.com"],
         "image_url": "https://placedog.net/300/300",
         "id": 1
       }
@@ -149,9 +139,7 @@
         "phone": "+012 3456789",
         "email": "baretto@info.com",
         "img": "https://www.placedog.net/300/200",
-        "registered_mail": [
-          "marco.pugliese92@yahoo.com"
-        ],
+        "registered_mail": ["marco.pugliese92@yahoo.com"],
         "logo": "https://www.placedog.net/120/100",
         "id": 1
       },
@@ -169,18 +157,16 @@
         "band_components": [
           "Marco Pugliese, Vincenzo Scala, Francesco Lauro, Franco Della Monica"
         ],
-        "registered_mails": [
-          "marco.pugliese92@yahoo.com"
-        ],
+        "registered_mails": ["marco.pugliese92@yahoo.com"],
         "image_url": "https://placedog.net/300/300",
         "id": 1
       }
     },
     {
-      "name_event": "capodanno a tgesta in giu",
-      "detail": "a rwar UB FUY",
-      "richiesta": "FJ",
-      "date_event": "121212-12-12T12:12",
+      "name_event": "Epicode Festival",
+      "detail": "Solo per developers",
+      "richiesta": "Coders",
+      "date_event": "2024-1-11T12:12",
       "isConfirmed": true,
       "hosted_by": {
         "name_activity": "Bar Grottino",
@@ -195,9 +181,7 @@
         "phone": "0123456789",
         "email": "michela",
         "img": "https://www.placedog.net/300/200",
-        "registered_mail": [
-          "michela@grottino.it"
-        ],
+        "registered_mail": ["michela@grottino.it"],
         "logo": "https://www.placedog.net/120/100",
         "id": 2
       },
@@ -215,18 +199,16 @@
         "band_components": [
           "Marco Pugliese, Vincenzo Scala, Francesco Lauro, Franco Della Monica"
         ],
-        "registered_mails": [
-          "marco.pugliese92@yahoo.com"
-        ],
+        "registered_mails": ["marco.pugliese92@yahoo.com"],
         "image_url": "https://placedog.net/300/300",
         "id": 1
       }
     },
     {
-      "name_event": "Epicode Fest",
+      "name_event": "Epicode Party",
       "detail": "Solo per developers",
       "richiesta": "Irish folk band",
-      "date_event": "2023-12-26T19:00",
+      "date_event": "2024-12-26T19:00",
       "isConfirmed": false,
       "hosted_by": {
         "name_activity": "Bar Etto",
@@ -241,9 +223,7 @@
         "phone": "+012 3456789",
         "email": "baretto@info.com",
         "img": "https://www.placedog.net/300/200",
-        "registered_mail": [
-          "marco.pugliese92@yahoo.com"
-        ],
+        "registered_mail": ["marco.pugliese92@yahoo.com"],
         "logo": "https://www.placedog.net/120/100",
         "id": 1
       },
