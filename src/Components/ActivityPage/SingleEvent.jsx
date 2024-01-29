@@ -8,6 +8,7 @@ import { Link, useParams } from "react-router-dom";
 const SingleEvent = ({ event }) => {
   const [show, setShow] = useState(false);
   const allCandidature = useSelector((state) => state.MyFetches.candidature);
+  const allEvents = useSelector((state) => state.MyFetches.events);
   const { id } = useParams();
   const dispatch = useDispatch();
   const handleClose = () => setShow(false);
@@ -131,10 +132,12 @@ const SingleEvent = ({ event }) => {
           <Modal.Body>
             <Row>
               {allCandidature
-                .filter(
-                  (singleCandidatura) =>
-                    parseInt(singleCandidatura.event.hosted_by.id) ===
-                    parseInt(id)
+                .filter((singleCandidatura) =>
+                  allEvents.filter(
+                    (singleEvent) =>
+                      parseInt(singleEvent.id) ===
+                      parseInt(singleCandidatura.event.id)
+                  )
                 )
                 .map((singleCandidatura) => (
                   <Col key={singleCandidatura.id} className="col-12">

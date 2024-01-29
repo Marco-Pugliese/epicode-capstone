@@ -21,6 +21,17 @@
       "country": "Italia",
       "birthday": "1993-05-26",
       "id": 2
+    },
+    {
+      "name": "Andrea",
+      "surname": "Pugliese",
+      "email": "andrea@email.it",
+      "password": "andreapass",
+      "city": "",
+      "region": "",
+      "country": "",
+      "birthday": "1989-08-14",
+      "id": 3
     }
   ],
   "artists": [
@@ -39,6 +50,20 @@
       "registered_mails": ["marco.pugliese92@yahoo.com"],
       "image_url": "https://placedog.net/300/300",
       "id": 1
+    },
+    {
+      "name": "Andy",
+      "kind_of": "DJ",
+      "genre": "Disco",
+      "phone": "123456789",
+      "city": "Rivignano Teor",
+      "description": "Nessuna",
+      "region": "Friuli-Venezia Giulia",
+      "country": "Italia",
+      "band_components": ["Io"],
+      "registered_mails": ["andrea@email.it"],
+      "image_url": "https://placedog.net/300/300",
+      "id": 2
     }
   ],
   "activities": [
@@ -60,19 +85,19 @@
       "id": 1
     },
     {
-      "name_activity": "Bar Grottino",
-      "name_owner": "imaimaimaimaimaim",
-      "kind_of_activity": "batr",
-      "city": "Procida",
-      "region": "Campania",
-      "country": "Italia",
-      "strada": "via roma",
-      "civico": "29",
-      "description": "uìkdjbfakjdb",
-      "phone": "0123456789",
-      "email": "michela",
+      "name_activity": "Bar Bone",
+      "name_owner": "Andrea Pugliese",
+      "kind_of_activity": "Restaurant",
+      "city": "",
+      "region": "",
+      "country": "",
+      "strada": "Alfaqueque",
+      "civico": "78",
+      "description": "Nessuna",
+      "phone": "123456789",
+      "email": "andrea@email.it",
       "img": "https://www.placedog.net/300/200",
-      "registered_mail": ["michela@grottino.it"],
+      "registered_mail": ["andrea@email.it"],
       "logo": "https://www.placedog.net/120/100",
       "id": 2
     }
@@ -163,53 +188,11 @@
       }
     },
     {
-      "name_event": "Epicode Festival",
-      "detail": "Solo per developers",
-      "richiesta": "Coders",
-      "date_event": "2024-01-11T12:12",
-      "isConfirmed": true,
-      "hosted_by": {
-        "name_activity": "Bar Grottino",
-        "name_owner": "imaimaimaimaimaim",
-        "kind_of_activity": "batr",
-        "city": "Procida",
-        "region": "Campania",
-        "country": "Italia",
-        "strada": "via roma",
-        "civico": "29",
-        "description": "uìkdjbfakjdb",
-        "phone": "0123456789",
-        "email": "michela",
-        "img": "https://www.placedog.net/300/200",
-        "registered_mail": ["michela@grottino.it"],
-        "logo": "https://www.placedog.net/120/100",
-        "id": 2
-      },
-      "img": "https://www.placedog.net/600/200",
-      "id": 4,
-      "band": {
-        "name": "Marc-00",
-        "kind_of": "Band",
-        "genre": "Rock",
-        "phone": "+01 23456789",
-        "city": "Procida",
-        "region": "Campania",
-        "country": "Italia",
-        "description": "Progetto iniziato nel 1990 sotto la guida di Giorgio Gaber",
-        "band_components": [
-          "Marco Pugliese, Vincenzo Scala, Francesco Lauro, Franco Della Monica"
-        ],
-        "registered_mails": ["marco.pugliese92@yahoo.com"],
-        "image_url": "https://placedog.net/300/300",
-        "id": 1
-      }
-    },
-    {
       "name_event": "Epicode Party",
       "detail": "Solo per developers",
       "richiesta": "Irish folk band",
       "date_event": "2024-12-26T19:00",
-      "isConfirmed": false,
+      "isConfirmed": true,
       "hosted_by": {
         "name_activity": "Bar Etto",
         "name_owner": "Marco Campana",
@@ -228,10 +211,255 @@
         "id": 1
       },
       "img": "https://www.placedog.net/600/200",
-      "id": 5
+      "id": 5,
+      "band": {
+        "name": "Marc-00",
+        "kind_of": "Band",
+        "genre": "Rock",
+        "phone": "+01 23456789",
+        "city": "Procida",
+        "region": "Campania",
+        "country": "Italia",
+        "description": "Progetto iniziato nel 1990 sotto la guida di Giorgio Gaber",
+        "band_components": [
+          "Marco Pugliese, Vincenzo Scala, Francesco Lauro, Franco Della Monica"
+        ],
+        "registered_mails": ["marco.pugliese92@yahoo.com"],
+        "image_url": "https://placedog.net/300/300",
+        "id": 1
+      }
+    },
+    {
+      "name_event": "Carnevale",
+      "detail": "Carnevale di Rio",
+      "richiesta": "Dj",
+      "date_event": "2024-02-12T20:00",
+      "isConfirmed": true,
+      "hosted_by": {
+        "name_activity": "Bar Etto",
+        "name_owner": "Marco Campana",
+        "kind_of_activity": "Bar",
+        "city": "Procida",
+        "region": "Campania",
+        "country": "Italia",
+        "strada": "Via Roma",
+        "civico": "87",
+        "description": "Il Bar Etto incanta con la sua atmosfera accogliente e moderna. Le pareti in mattoni esposti e l'illuminazione soffusa creano un ambiente intimo. Il personale cordiale offre caffè artigianali, cocktail creativi e deliziosi stuzzichini. Un luogo ideale per socializzare e assaporare momenti rilassanti in città.",
+        "phone": "+012 3456789",
+        "email": "baretto@info.com",
+        "img": "https://www.placedog.net/300/200",
+        "registered_mail": ["marco.pugliese92@yahoo.com"],
+        "logo": "https://www.placedog.net/120/100",
+        "id": 1
+      },
+      "img": "https://www.placedog.net/600/200",
+      "id": 6,
+      "band": {
+        "name": "Marc-00",
+        "kind_of": "Band",
+        "genre": "Rock",
+        "phone": "+01 23456789",
+        "city": "Procida",
+        "region": "Campania",
+        "country": "Italia",
+        "description": "Progetto iniziato nel 1990 sotto la guida di Giorgio Gaber",
+        "band_components": [
+          "Marco Pugliese, Vincenzo Scala, Francesco Lauro, Franco Della Monica"
+        ],
+        "registered_mails": ["marco.pugliese92@yahoo.com"],
+        "image_url": "https://placedog.net/300/300",
+        "id": 1
+      }
+    },
+    {
+      "name_event": "Risto-Live",
+      "detail": "Risto-Music",
+      "richiesta": "Pop-Rock Band",
+      "date_event": "2024-01-14T19:00",
+      "isConfirmed": false,
+      "hosted_by": {
+        "name_activity": "Bar Bone",
+        "name_owner": "Andrea Pugliese",
+        "kind_of_activity": "Restaurant",
+        "city": "Siviglia",
+        "region": "Andalucia",
+        "country": "Spagna",
+        "strada": "Alfaqueque",
+        "civico": "78",
+        "description": "Nessuna",
+        "phone": "123456789",
+        "email": "andrea@email.it",
+        "img": "https://www.placedog.net/300/200",
+        "registered_mail": ["andrea@email.it"],
+        "logo": "https://www.placedog.net/120/100",
+        "id": 2
+      },
+      "img": "https://www.placedog.net/600/200",
+      "id": 7
+    },
+    {
+      "name_event": "Nuovo Evento",
+      "detail": "nessuno",
+      "richiesta": "nessuno",
+      "date_event": "2024-03-10T21:00",
+      "isConfirmed": false,
+      "hosted_by": {
+        "name_activity": "Bar Bone",
+        "name_owner": "Andrea Pugliese",
+        "kind_of_activity": "Restaurant",
+        "city": "",
+        "region": "",
+        "country": "",
+        "strada": "Alfaqueque",
+        "civico": "78",
+        "description": "Nessuna",
+        "phone": "123456789",
+        "email": "andrea@email.it",
+        "img": "https://www.placedog.net/300/200",
+        "registered_mail": ["andrea@email.it"],
+        "logo": "https://www.placedog.net/120/100",
+        "id": 2
+      },
+      "img": "https://www.placedog.net/600/200",
+      "id": 8
     }
   ],
-  "candidature": [],
+  "candidature": [
+    {
+      "band": {
+        "name": "Andy",
+        "kind_of": "DJ",
+        "genre": "Disco",
+        "phone": "123456789",
+        "city": "Rivignano Teor",
+        "description": "Nessuna",
+        "region": "Friuli-Venezia Giulia",
+        "country": "Italia",
+        "band_components": ["Io"],
+        "registered_mails": ["andrea@email.it"],
+        "image_url": "https://placedog.net/300/300",
+        "id": 2
+      },
+      "event": {
+        "name_event": "Risto-Live",
+        "detail": "Risto-Music",
+        "richiesta": "Pop-Rock Band",
+        "date_event": "2024-01-14T19:00",
+        "isConfirmed": false,
+        "hosted_by": {
+          "name_activity": "Bar Bone",
+          "name_owner": "Andrea Pugliese",
+          "kind_of_activity": "Restaurant",
+          "city": "",
+          "region": "",
+          "country": "",
+          "strada": "Alfaqueque",
+          "civico": "78",
+          "description": "Nessuna",
+          "phone": "123456789",
+          "email": "andrea@email.it",
+          "img": "https://www.placedog.net/300/200",
+          "registered_mail": ["andrea@email.it"],
+          "logo": "https://www.placedog.net/120/100",
+          "id": 2
+        },
+        "img": "https://www.placedog.net/600/200",
+        "id": 7
+      },
+      "details": "100euro",
+      "id": 1
+    },
+    {
+      "band": {
+        "name": "Marc-00",
+        "kind_of": "Band",
+        "genre": "Rock",
+        "phone": "+01 23456789",
+        "city": "Procida",
+        "region": "Campania",
+        "country": "Italia",
+        "description": "Progetto iniziato nel 1990 sotto la guida di Giorgio Gaber",
+        "band_components": [
+          "Marco Pugliese, Vincenzo Scala, Francesco Lauro, Franco Della Monica"
+        ],
+        "registered_mails": ["marco.pugliese92@yahoo.com"],
+        "image_url": "https://placedog.net/300/300",
+        "id": 1
+      },
+      "event": {
+        "name_event": "Risto-Live",
+        "detail": "Risto-Music",
+        "richiesta": "Pop-Rock Band",
+        "date_event": "2024-01-14T19:00",
+        "isConfirmed": false,
+        "hosted_by": {
+          "name_activity": "Bar Bone",
+          "name_owner": "Andrea Pugliese",
+          "kind_of_activity": "Restaurant",
+          "city": "",
+          "region": "",
+          "country": "",
+          "strada": "Alfaqueque",
+          "civico": "78",
+          "description": "Nessuna",
+          "phone": "123456789",
+          "email": "andrea@email.it",
+          "img": "https://www.placedog.net/300/200",
+          "registered_mail": ["andrea@email.it"],
+          "logo": "https://www.placedog.net/120/100",
+          "id": 2
+        },
+        "img": "https://www.placedog.net/600/200",
+        "id": 7
+      },
+      "details": "200euro",
+      "id": 2
+    },
+    {
+      "band": {
+        "name": "Andy",
+        "kind_of": "DJ",
+        "genre": "Disco",
+        "phone": "123456789",
+        "city": "Rivignano Teor",
+        "description": "Nessuna",
+        "region": "Friuli-Venezia Giulia",
+        "country": "Italia",
+        "band_components": ["Io"],
+        "registered_mails": ["andrea@email.it"],
+        "image_url": "https://placedog.net/300/300",
+        "id": 2
+      },
+      "event": {
+        "name_event": "Nuovo Evento",
+        "detail": "nessuno",
+        "richiesta": "nessuno",
+        "date_event": "2024-03-10T21:00",
+        "isConfirmed": false,
+        "hosted_by": {
+          "name_activity": "Bar Bone",
+          "name_owner": "Andrea Pugliese",
+          "kind_of_activity": "Restaurant",
+          "city": "",
+          "region": "",
+          "country": "",
+          "strada": "Alfaqueque",
+          "civico": "78",
+          "description": "Nessuna",
+          "phone": "123456789",
+          "email": "andrea@email.it",
+          "img": "https://www.placedog.net/300/200",
+          "registered_mail": ["andrea@email.it"],
+          "logo": "https://www.placedog.net/120/100",
+          "id": 2
+        },
+        "img": "https://www.placedog.net/600/200",
+        "id": 8
+      },
+      "details": "300euro",
+      "id": 3
+    }
+  ],
   "articles": [
     {
       "author": "Alice Melody",
